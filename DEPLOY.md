@@ -70,6 +70,16 @@ You usually do **not** need a separate AdSense property for `chittinandchattin.c
 
 Use [UPDATE.md](UPDATE.md). Push to `main` — Cloudflare redeploys automatically.
 
+### Scheduled episode sync
+
+Workflow: `.github/workflows/refresh-episodes.yml`
+
+- Runs every **Friday 15:00 UTC** (~11am Eastern) after Thursday episode drops
+- Pulls RSS via `scripts/pull-episodes.py`, commits only if `episodes.json` changed
+- Manual run: GitHub → **Actions** → **Refresh episodes from RSS** → **Run workflow**
+
+Ensure **Settings → Actions → General** allows workflows on this repo.
+
 ## Troubleshooting
 
 | Issue | Fix |

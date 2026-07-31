@@ -31,11 +31,26 @@ cd "G:\Laughing Dragons\Chittinnchattin.com"
 | Spill it / Healing copy | `spill-it-bestie/index.html`, `healing-inbox/index.html` |
 | AdSense slot IDs | `assets/js/config.js` → `adsense.slots` |
 | New page | Create `section/index.html`, add to `NAV` in `site.js`, add to `sitemap.xml` |
-| Refresh episode list | `python scripts/pull-episodes.py` then push |
+| Refresh episode list | `python scripts/pull-episodes.py` then push (or use GitHub Actions — see below) |
 | Brand images | `assets/brand/` |
 | Feature art | `assets/features/` |
 
 Reference copy (not served directly): `content/` folder.
+
+---
+
+## Automatic episode refresh (Fridays)
+
+New episodes usually drop on **Thursday**. A GitHub Actions workflow runs every **Friday at ~11am Eastern**, pulls the Anchor/Spotify RSS feed, and pushes to `main` only when `assets/data/episodes.json` changed. Cloudflare Pages redeploys automatically.
+
+**Manual refresh:** GitHub repo → **Actions** → **Refresh episodes from RSS** → **Run workflow**
+
+**Local refresh** (same as the workflow):
+
+```powershell
+python scripts/pull-episodes.py
+.\scripts\push-update.ps1 "Refresh episodes from RSS"
+```
 
 ---
 
@@ -47,7 +62,7 @@ Replace Instagram CTAs on `/spill-it-bestie/` and `/healing-inbox/` with an on-s
 
 ### Episodes from Spotify (via RSS)
 
-Refresh episode titles and descriptions:
+Episodes auto-refresh every Friday via `.github/workflows/refresh-episodes.yml`. Manual refresh:
 
 ```powershell
 python scripts/pull-episodes.py
