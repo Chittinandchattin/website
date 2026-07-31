@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="About Chittin' and Chattin — Sydney and Emmy, two besties with a podcast about healing, chaos, and Sips of the Week." />
+    <title>About</title>
+    <link rel="icon" href="/assets/brand/icon.png" type="image/png" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <link rel="canonical" href="https://chittinnchattin.com/about/" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7048606415692002"
+     crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/site.js"></script>
+    <script>
+      const cfg = window.SITE_CONFIG;
+      initPage({
+        title: "About",
+        description: "About Chittin' and Chattin — Sydney and Emmy, two besties with a podcast.",
+        activePath: "/about/",
+        content: `
+          <header class="page-header reveal">
+            <p class="teaser-eyebrow">The friend group</p>
+            <h1>About the show</h1>
+            <p class="page-lead">${cfg.bio}</p>
+          </header>
+          <div class="prose reveal">
+            <p>Each episode features our <strong>Sips of the Week</strong>, plus stories from travels, concert adventures, and whatever else we're currently overthinking. If you love honest conversations, a little messiness, and feeling like part of the friend group — this one's for you.</p>
+          </div>
+          <h2 class="reveal" style="font-family:var(--font-display);margin:2.5rem 0 0.5rem;">Meet the hosts</h2>
+          ${renderHostCards()}
+          <div class="prose reveal">
+            <h2 style="font-family:var(--font-display);">Follow the show</h2>
+            <ul class="meta-list">
+              <li><strong>Instagram</strong> — <a href="${cfg.links.instagram}" target="_blank" rel="noopener">@chittinnchattin</a></li>
+              <li><strong>YouTube</strong> — <a href="${cfg.links.youtube}" target="_blank" rel="noopener">@chittinandchattin</a></li>
+              <li><strong>TikTok</strong> — <a href="${cfg.links.tiktok}" target="_blank" rel="noopener">@chittinandchattin</a></li>
+              <li><strong>Spotify</strong> — <a href="${cfg.links.spotify}" target="_blank" rel="noopener">Chittin' and Chattin</a></li>
+              <li><strong>Apple Podcasts</strong> — <a href="${cfg.links.apple}" target="_blank" rel="noopener">Chittin' and Chattin</a></li>
+            </ul>
+          </div>
+        `,
+      });
+    </script>
+  </body>
+</html>

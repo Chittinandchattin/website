@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Sips of the Week — every episode's tea or drink. Archive coming soon for Chittin' and Chattin." />
+    <title>Sips of the Week</title>
+    <link rel="icon" href="/assets/brand/icon.png" type="image/png" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <link rel="canonical" href="https://chittinnchattin.com/sips/" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7048606415692002"
+     crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/site.js"></script>
+    <script>
+      initPage({
+        title: "Sips of the Week",
+        description: "Sips of the Week — every episode's tea or drink. Archive coming soon.",
+        activePath: "/sips/",
+        content: `
+          <div class="coming-soon reveal">
+            <p class="teaser-eyebrow">Sips of the Week</p>
+            <h1>Every episode, a new sip</h1>
+            <p class="page-lead">A different tea or drink each week — we're pulling them from Spotify episode info and building a full archive here.</p>
+            <figure class="coming-soon-art">
+              <img src="/assets/features/drift-bar.jpg" alt="Drift bar — Sips of the Week coming soon" loading="lazy" />
+            </figure>
+            <p>While we build this out, catch the latest episode and whatever we're sipping this week.</p>
+            <div class="hero-cta" style="margin-top:1.5rem;">
+              ${renderListenButtons()}
+            </div>
+          </div>
+        `,
+      });
+    </script>
+  </body>
+</html>
