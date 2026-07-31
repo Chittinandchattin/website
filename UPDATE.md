@@ -31,6 +31,7 @@ cd "G:\Laughing Dragons\Chittinnchattin.com"
 | Spill it / Healing copy | `spill-it-bestie/index.html`, `healing-inbox/index.html` |
 | AdSense slot IDs | `assets/js/config.js` → `adsense.slots` |
 | New page | Create `section/index.html`, add to `NAV` in `site.js`, add to `sitemap.xml` |
+| Refresh episode list | `python scripts/pull-episodes.py` then push |
 | Brand images | `assets/brand/` |
 | Feature art | `assets/features/` |
 
@@ -44,13 +45,20 @@ Reference copy (not served directly): `content/` folder.
 
 Replace Instagram CTAs on `/spill-it-bestie/` and `/healing-inbox/` with an on-site message form that posts to a bot and notifies via Telegram. Tag submissions as Spill it vs Healing.
 
-### Episodes from Spotify
+### Episodes from Spotify (via RSS)
 
-Pull metadata from Spotify show `5XmmJuVjc7S4j0aElFIeeF` (titles, descriptions, dates, URLs) into static JSON via a script, then build `/episodes/`. RSS works as a fallback data source.
+Refresh episode titles and descriptions:
+
+```powershell
+python scripts/pull-episodes.py
+.\scripts\push-update.ps1 "Refresh episodes from RSS"
+```
+
+Data lands in `assets/data/episodes.json` and powers `/episodes/`.
 
 ### Sips of the Week archive
 
-Mine episode descriptions for weekly drinks → `sips.json` → replace `/sips/` coming-soon stub with a full listing. Use Drift bar art as hero. Fill gaps from Instagram/TikTok if needed.
+Mine episode descriptions for weekly drinks → `sips.json` → replace `/sips/` coming-soon stub with a full listing. Fill gaps from Instagram/TikTok if needed.
 
 Suggested script workflow (future):
 

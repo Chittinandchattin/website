@@ -456,6 +456,48 @@ a:hover {
   box-shadow: 0 16px 40px rgba(245, 200, 66, 0.25);
 }
 
+.episode-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.episode-card {
+  padding: 1.35rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 1.25rem;
+  box-shadow: 0 6px 20px rgba(244, 168, 184, 0.12);
+}
+
+.episode-card h2 {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  margin: 0 0 0.35rem;
+  line-height: 1.25;
+}
+
+.episode-date {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+
+.episode-desc {
+  margin: 0 0 0.75rem;
+  color: var(--ink);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.episode-loading,
+.episode-error {
+  text-align: center;
+  color: var(--muted);
+  padding: 2rem 0;
+}
+
 .meta-list {
   list-style: none;
   padding: 0;

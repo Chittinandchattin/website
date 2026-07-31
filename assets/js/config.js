@@ -17,6 +17,7 @@ window.SITE_CONFIG = {
       "https://podcasts.apple.com/us/podcast/chittin-and-chattin/id1863777063",
     amazon: "https://music.amazon.com/podcasts",
   },
+  feedUrl: "https://anchor.fm/s/10d11a464/podcast/rss",
   hosts: [
     {
       name: "Sydney",

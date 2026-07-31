@@ -1,5 +1,6 @@
 const NAV = [
   { href: "/listen/", label: "Listen" },
+  { href: "/episodes/", label: "Episodes" },
   { href: "/about/", label: "About" },
   { href: "/spill-it-bestie/", label: "Spill it" },
   { href: "/healing-inbox/", label: "Healing" },
@@ -196,6 +197,58 @@ function renderFeaturePage({ eyebrow, title, intro, body, image, ctaLabel, inbox
         <p class="cross-link">Need the other inbox? <a href="${other.href}">${other.label}</a> — ${other.desc}.</p>
       </div>
     </div>`;
+}
+
+function truncate(text, max = 280) {
+  if (!text || text.length <= max) return text || "";
+  return text.slice(0, max).trim() + "…";
+}
+
+function formatEpisodeDate(pubDate) {
+  if (!pubDate) return "";
+  const d = new Date(pubDate);
+  if (Number.isNaN(d.getTime())) return pubDate;
+  return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
+}
+
+function renderEpisodeCards(episodes) {
+  if (!episodes.length) {
+    return `<p class="episode-error">No episodes found yet.</p>`;
+  }
+  return `<div class="episode-list">
+    ${episodes
+      .map((ep) => {
+        const listen =
+          ep.link && ep.link.startsWith("http")
+            ? `<a class="text-link" href="${ep.link}" target="_blank" rel="noopener">Listen &rarr;</a>`
+            : "";
+        return `<article class="episode-card reveal">
+          <h2>${ep.title}</h2>
+          <p class="episode-date">${formatEpisodeDate(ep.published)}</p>
+          <p class="episode-desc">${truncate(ep.description)}</p>
+          ${listen}
+        </article>`;
+      })
+      .join("")}
+  </div>`;
+}
+
+function initEpisodesPage() {
+  const mount = document.getElementById("episode-list-mount");
+  if (!mount) return;
+
+  fetch("/assets/data/episodes.json")
+    .then((res) => {
+      if (!res.ok) throw new Error("Failed to load episodes");
+      return res.json();
+    })
+    .then((data) => {
+      mount.innerHTML = renderEpisodeCards(data.episodes || []);
+      bindReveal();
+    })
+    .catch(() => {
+      mount.innerHTML = `<p class="episode-error">Could not load episodes. Try again later or listen on <a href="/listen/">Spotify</a>.</p>`;
+    });
 }
 
 function initPage({ title, description, activePath, content, hero = false, adSlots = true }) {
