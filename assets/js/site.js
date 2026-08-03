@@ -119,16 +119,14 @@ function renderListenGrid() {
   const items = [
     { label: "Spotify", href: links.spotify, note: "Direct on Spotify for Creators" },
     { label: "Apple Podcasts", href: links.apple, note: "Listen on iPhone & Mac" },
-    { label: "Amazon Music", href: links.amazon, note: "Search & subscribe" },
+    { label: "Amazon Music", href: links.amazon, note: "Listen on Amazon Music" },
     { label: "Pocket Casts", href: links.pocketcasts, note: "Follow in Pocket Casts" },
     { label: "Castro", href: links.castro, note: "Follow in Castro" },
     { label: "Overcast", href: links.overcast, note: "Follow in Overcast" },
     { label: "YouTube", href: links.youtube, note: "Clips, episodes & more" },
-    { label: "YouTube Music", href: links.youtubeMusic, note: "Search in YT Music" },
     { label: "Instagram", href: links.instagram, note: "DMs, Spill it & Healing inbox" },
     { label: "TikTok", href: links.tiktok, note: "Show account" },
-    { label: "iHeartRadio", href: links.iheart, note: "Search on iHeart" },
-    { label: "Deezer", href: links.deezer, note: "Search on Deezer" },
+    { label: "iHeartRadio", href: links.iheart, note: "Listen on iHeartRadio" },
     { label: "RSS Feed", href: window.SITE_CONFIG?.feedUrl, note: "Any podcast app" },
   ];
   return `<div class="listen-grid reveal">
@@ -165,7 +163,7 @@ function renderFollowShowList() {
       .filter(Boolean)
       .join("")}
   </ul>
-  <p class="follow-show-note">Hosted on Spotify for Creators - our RSS feed syndicates to most podcast apps automatically. Can't find us? Search <strong>Chittin' and Chattin</strong>.</p>`;
+  <p class="follow-show-note">Hosted on Spotify for Creators - our RSS feed syndicates to most podcast apps automatically. Can't find us? Search <strong>Chittin' and Chattin'</strong>.</p>`;
 }
 
 function renderInstagramCTA(label = "Message us on Instagram") {
@@ -458,7 +456,7 @@ function initEpisodesPage() {
       const rangeEnd = start + pageEpisodes.length;
 
       if (currentPage > 1) {
-        document.title = `Episodes (Page ${currentPage}) | ${window.SITE_CONFIG?.name || "Chittin' and Chattin"}`;
+        document.title = `Episodes (Page ${currentPage}) | ${window.SITE_CONFIG?.name || "Chittin' and Chattin'"}`;
       }
 
       mount.innerHTML = `
