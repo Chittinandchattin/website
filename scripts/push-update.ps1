@@ -5,6 +5,7 @@ param(
 )
 
 Set-Location (Split-Path $PSScriptRoot -Parent)
+. (Join-Path $PSScriptRoot "git-author.ps1")
 
 $sizeArgs = @()
 if ($Force) { $sizeArgs += "-Force" }
@@ -19,7 +20,8 @@ git add .
 git status
 
 if (-not (git diff --cached --quiet)) {
-  git -c user.name="Brandon Sparks" -c user.email="laughingdragonsproductions@gmail.com" commit -m $Message
+  $commitExit = Invoke-GitCommitWithAuthor -Message $Message
+  if ($commitExit -ne 0) { exit $commitExit }
   git push origin main
   Write-Host "Pushed to main. Cloudflare Pages will redeploy in 1-3 minutes."
 } else {

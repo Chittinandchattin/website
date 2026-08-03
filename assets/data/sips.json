@@ -1,0 +1,1049 @@
+{
+  "updated": "2026-08-01T02:38:44Z",
+  "count": 32,
+  "sips": [
+    {
+      "episodeNumber": 1,
+      "title": "We are Broken and That's Okay",
+      "published": "Tue, 23 Dec 2025 19:40:00 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/We-are-Broken-and-Thats-Okay-e3codhi",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/113046514/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-11-23%2F414914930-44100-2-24e7f721922f8.mp3",
+      "duration": "00:58:23",
+      "displayName": "Christmas Morning Loose-Leaf Black Tea",
+      "description": "Our very first Sips of the Week - M brewed a loose-leaf black tea with almonds, apple pieces, orange peel, raisins, cinnamon, and warm spices, served in a ceramic pot. Cozy, holiday-coded, and exactly the vibe for episode one while we shared our backstory and how Chittin' and Chattin' came to be.",
+      "descriptionHtml": "",
+      "name": "where M makes us some yummy tea ☕️",
+      "hosts": [],
+      "ingredients": [
+        "black tea",
+        "almonds",
+        "apple pieces",
+        "orange peel",
+        "raisins",
+        "cinnamon",
+        "spices"
+      ],
+      "method": "",
+      "notes": "black tea with almonds, apple pieces, orange peel raisins, cinnamon and some other spices in there",
+      "pairedFood": "",
+      "vessel": "ceramic teapot",
+      "sourceExcerpt": "enjoy our Sips of the Week, where M makes us some yummy tea ☕️",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-01.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 2,
+      "title": "No life story, just casual trauma dumps",
+      "published": "Fri, 02 Jan 2026 21:00:54 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/No-life-story--just-casual-trauma-dumps-e3d3i6a",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/113411722/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-2%2F415383700-44100-2-1c1c235270b95.mp3",
+      "duration": "00:50:16",
+      "displayName": "Seasonal Eggnog",
+      "description": "Sydney whipped up seasonal eggnog for our second Sips of the Week - because if you're going to build a segment, you might as well do it with something festive in the glass. We also opened the Healing Inbox for the very first time that week, so the sip set the tone for a whole new era of the pod.",
+      "descriptionHtml": "",
+      "name": "featuring Sydney whipping up some seasonal eggnog 🍸",
+      "hosts": [],
+      "ingredients": [
+        "eggnog",
+        "bourbon",
+        "nutmeg",
+        "cinnamon"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "airport 730 right to sushi",
+      "sourceExcerpt": "ur second Sips of the Week, featuring Sydney whipping up some seasonal eggnog 🍸",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-02.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 3,
+      "title": "So Both of Y'all Are The Problem",
+      "published": "Thu, 08 Jan 2026 04:53:15 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/So-Both-of-Yall-Are-The-Problem-e3dbhhb",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/113673195/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-8%2F415707142-44100-2-52aaa055ad8e2.mp3",
+      "duration": "00:51:52",
+      "displayName": "Cottage Apple Tea",
+      "description": "M's Cottage Apple Tea from the Louisville Tea Company - one of Em's absolute favorites. Green tea base with apple, nutmeg, and warming spices.",
+      "descriptionHtml": "We're back with another Sips of the Week, featuring M's yummy Cottage Apple Tea. One of Em's absolute favorites from the <a href=\"https://www.louisvilleteacompany.com/\" target=\"_blank\" rel=\"noopener\">Louisville Tea Company</a> - green tea base with apple, nutmeg, and warming spices. We couldn't find a direct link to this blend; it may have been discontinued, but the shop is still worth a browse.",
+      "name": "featuring M’s yummy Cottage Apple Tea 🍎☕️",
+      "hosts": [],
+      "ingredients": [
+        "green tea",
+        "apple",
+        "nutmeg",
+        "warming spices"
+      ],
+      "method": "",
+      "notes": "Blend may be discontinued - no product page found.",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "h another Sips of the Week, featuring M’s yummy Cottage Apple Tea 🍎☕️",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-03.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 4,
+      "title": "Tag, You're It Sugar!",
+      "published": "Wed, 14 Jan 2026 23:28:36 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Tag--Youre-It-Sugar-e3dlrdp",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/114011001/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-14%2F416137453-44100-2-81ffb4c9c361a.mp3",
+      "duration": "01:23:03",
+      "displayName": "White Chocolate Coffee + Salted Caramel Cold Foam",
+      "description": "This week we started out strong with white chocolate coffee topped with salted caramel cold foam, served in our matching Up mugs - cozy home vibes while we talked nervous system burnout, got a little vulnerable in the Healing Inbox, and had another top-tier Spill It, Bestie submission.",
+      "descriptionHtml": "",
+      "name": "a white chocolate coffee topped with salted caramel cold foam ☕",
+      "hosts": [],
+      "ingredients": [
+        "white chocolate",
+        "coffee",
+        "salted caramel cold foam"
+      ],
+      "method": "just bought another one because we know that they're good quality",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "matching Up mugs",
+      "sourceExcerpt": "start out strong with a white chocolate coffee topped with salted caramel cold foam ☕ served",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-04.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 5,
+      "title": "In The Flow State of Chaotic",
+      "published": "Thu, 22 Jan 2026 01:34:32 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/In-The-Flow-State-of-Chaotic-e3e0nqu",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/114367774/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-22%2F416593924-44100-2-757220a63d173.mp3",
+      "duration": "00:50:05",
+      "displayName": "McDonald's Dr Pepper",
+      "description": "This week's Sips of the Week was a \"nice and good\" McDonald's Dr Pepper (babaayyy). Simple, chaotic, perfect - the kind of sip that keeps you going while you're celebrating anniversaries, hyped about IU wins, and catching up on the newest Crime Junkie episode.",
+      "descriptionHtml": "",
+      "name": "a “nice and good” McDonald’s Dr",
+      "hosts": [],
+      "ingredients": [
+        "Dr Pepper"
+      ],
+      "method": "just drinking lean on it just drinking McDonald's Dr",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "is week’s Sips of the Week was a “nice and good” McDonald’s Dr",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-05.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 6,
+      "title": "Can a Woman Be a Monk?",
+      "published": "Wed, 28 Jan 2026 20:33:42 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Can-a-Woman-Be-a-Monk-e3eat1d",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/114700781/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-0-28%2F417031423-44100-2-1f4989bace019.mp3",
+      "duration": "00:51:52",
+      "displayName": "Nick's Sick Mix",
+      "description": "A beautiful and cozy recipe from Louisville Tea Company called Nick's Sick Mix - and trust us, it was sooo yummy.",
+      "descriptionHtml": "A beautiful and cozy recipe from the <a href=\"https://www.louisvilleteacompany.com/\" target=\"_blank\" rel=\"noopener\">Louisville Tea Company</a> called Nick's Sick Mix - and trust us, it was sooo yummy. Perfect for surviving a snowstorm, showing off new hair, and proudly applauding M for not getting a cat… yet.",
+      "name": "a beautiful and cozy recipe from Louisville Tea Company called “Nick’s Sick Mix” ☕️✨ - and trust us, it was sooo yummy",
+      "hosts": [],
+      "ingredients": [
+        "Nick's Sick Mix tea"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "is week’s Sips of the Week is a beautiful and cozy recipe from Louisville Tea Company called “Nick’s Sick Mix” ☕️✨ - and trust us, it was sooo yummy",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-06.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 7,
+      "title": "This is Just Me As a Human",
+      "published": "Wed, 04 Feb 2026 21:05:15 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/This-is-Just-Me-As-a-Human-e3el77u",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/115038910/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-4%2F417480646-44100-2-9023421feec18.mp3",
+      "duration": "00:53:57",
+      "displayName": "Coffee with Buffalo Trace Bourbon Sipping Cream",
+      "description": "The ultimate winter treat: coffee with Buffalo Trace bourbon sipping cream - chef's kiss. We were fully leaning into the vibes in our matching \"Overstimulated\" shirts while everything outside looked like a literal winter wonderland.",
+      "descriptionHtml": "",
+      "name": "the ultimate winter treat: coffee with Buffalo Trace bourbon sipping cream ☕️🥃 chef’s kiss",
+      "hosts": [],
+      "ingredients": [
+        "coffee",
+        "Buffalo Trace bourbon sipping cream"
+      ],
+      "method": "just to be it, but to be like, oh, I thought about you, because we take a moment",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "state of Kentucky",
+      "sourceExcerpt": "is week’s Sips of the Week is the ultimate winter treat: coffee with Buffalo Trace bourbon sipping cream ☕️🥃 chef’s kiss",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-07.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 8,
+      "title": "So We Move To L.A...",
+      "published": "Fri, 13 Feb 2026 07:02:08 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/So-We-Move-To-L-A-e3f1ilb",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/115443819/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-13%2F418023772-44100-2-a462c307ef32.mp3",
+      "duration": "01:02:33",
+      "displayName": "Coffee for the Modern Witch",
+      "description": "This week's Sips felt extra magical - coffee inspired by Coffee for the Modern Witch, the book we picked up in Salem (obviously we're leaning into our cozy, mystical era). Syd sipped from the Valentine's mug her sweet hubby gifted her, complete with a chaotic internet meme quote that truly represents her spirit.",
+      "descriptionHtml": "",
+      "name": "felt extra magical as we made coffee inspired by a book we picked up in Salem called Coffee for the Modern Witch (because obviously we’re leaning into our cozy, mystical era)",
+      "hosts": [],
+      "ingredients": [
+        "coffee"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "Valentine's mug",
+      "sourceExcerpt": "is week’s Sips of the Week felt extra magical as we made coffee inspired by a book we picked up in Salem called Coffee for the Modern Witch (because obviously we’re leaning into our cozy, mystical era)",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-08.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 9,
+      "title": "Who Gave Me Tequila?? With Our First Ever Special Guest!!",
+      "published": "Fri, 20 Feb 2026 02:15:09 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Who-Gave-Me-Tequila---With-Our-First-Ever-Special-Guest-e3fbd58",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/115765864/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-20%2F418452866-44100-2-8800a2b59187b.mp3",
+      "duration": "01:14:17",
+      "displayName": "Fresh Strawberry Margaritas",
+      "description": "We had our first ever guest - our girl Lauren! - and since we're all three bartenders, our Sips of the Week were fresh strawberry margaritas handcrafted by Laur herself. It quickly turned into a little midday margarita madness and the giggles were flowing. No exact recipe on the episode, so here's a solid baseline.",
+      "descriptionHtml": "",
+      "name": "fresh strawberry margaritas handcrafted by Laur herself. Let’s just say… it quickly turned into a little midday margarita madness and the giggles were flowing",
+      "hosts": [
+        {
+          "host": "Lauren",
+          "drink": "fresh strawberry margaritas (handcrafted)"
+        }
+      ],
+      "ingredients": [
+        "tequila",
+        "fresh lime juice",
+        "orange liqueur",
+        "fresh strawberries",
+        "agave syrup (optional)",
+        "salt for rim (optional)"
+      ],
+      "method": "Muddle 3-4 fresh strawberries in a shaker. Add 2 oz tequila, 1 oz fresh lime juice, 1 oz orange liqueur, and a small splash of agave if you like it sweeter. Shake hard with ice and strain into a salt-rimmed glass over fresh ice.",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "that our Sips of the Week were fresh strawberry margaritas handcrafted by Laur herself. Let’s just say… it quickly turned into a little midday margarita madness and the giggles were flowing",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-09.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 10,
+      "title": "Questionably Transparent",
+      "published": "Thu, 26 Feb 2026 01:52:46 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Questionably-Transparent-e3fkcgc",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/116060108/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-1-26%2F418844931-44100-2-71f10b0a896e.mp3",
+      "duration": "01:04:35",
+      "displayName": "The Raven Tea",
+      "description": "Our 10th-episode Sips were the most perfectly moody tea called The Raven - dramatic, mysterious, and honestly fitting for the unhinged tangents we went on. Cozy, chaotic, honest, and very episode-ten coded.",
+      "descriptionHtml": "",
+      "name": "black tea I don't know that word",
+      "hosts": [],
+      "ingredients": [
+        "The Raven tea blend"
+      ],
+      "method": "just in general but to also have a tea like the Raven you can literally see look at you can see my little nibs",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "is week’s Sips of the Week was the most perfectly moody tea called “The Raven” - dramatic, mysterious, and honestly fitting for the unhinged tangents we went on",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-10.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 11,
+      "title": "Get To Know Your Hosts!",
+      "published": "Thu, 05 Mar 2026 20:54:57 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Get-To-Know-Your-Hosts-e3g0df8",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/116454312/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-5%2F419377194-44100-2-0d1cd27830f9a.mp3",
+      "duration": "01:22:03",
+      "displayName": "Spicy Tea + Girl Scout Cookies",
+      "description": "A spicy tea that we very scientifically paired with Girl Scout cookies and banana peppers… because why not? Syd also managed to literally spill her tea on mic at one point, which honestly feels very on-brand for us.",
+      "descriptionHtml": "",
+      "name": "a spicy tea that we very scientifically paired with Girl Scout cookies and banana peppers … because why not? 😂 Syd also manages to literally spill her tea at one point, which honestly feels very on-brand for us",
+      "hosts": [],
+      "ingredients": [
+        "spicy tea"
+      ],
+      "method": "just hit the microphone that looks it's turmeric just wanted a little bye-bye little taste a little sippy",
+      "notes": "",
+      "pairedFood": "Girl Scout cookies and banana peppers",
+      "vessel": "",
+      "sourceExcerpt": "is week’s Sips of the Week was a spicy tea that we very scientifically paired with Girl Scout cookies and banana peppers … because why not? 😂 Syd also manages to literally spill her tea at one point, which honestly feels very on-brand for us",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-11.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 12,
+      "title": "That's Not A Rabbit Hole I've Been Down",
+      "published": "Thu, 12 Mar 2026 18:57:53 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Thats-Not-A-Rabbit-Hole-Ive-Been-Down-e3gants",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/116792700/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-12%2F419887347-44100-2-f39d9e5378865.mp3",
+      "duration": "01:13:06",
+      "displayName": "Green Tea Jasmine",
+      "description": "A cozy cup of green tea jasmine while we recapped Sydney's whirlwind trip to Cleveland - must-see spots, 27 Club Coffee, a Cavaliers game, a concert, and seriously amazing food. She was barely home a full day before packing up for Cincinnati because the motto is basically \"we can sleep when we're dead.\"",
+      "descriptionHtml": "",
+      "name": "a cozy cup of green tea jasmine while we recap Sydney’s whirlwind trip to Cleveland",
+      "hosts": [],
+      "ingredients": [
+        "green tea jasmine"
+      ],
+      "method": "just a girl and I forgot to like, actually stock up on ice",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "is week’s Sips of the Week is a cozy cup of green tea jasmine while we recap Sydney’s whirlwind trip to Cleveland",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-12.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 13,
+      "title": "And THEN his card declined",
+      "published": "Fri, 20 Mar 2026 02:37:39 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/And-THEN-his-card-declined-e3gndqn",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/117208343/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-20%2F420405859-44100-2-62374f121bf1e.mp3",
+      "duration": "00:51:42",
+      "displayName": "Coffee with Homemade Blueberry Creamer",
+      "description": "A springy dream - coffee with homemade blueberry creamer, and we are FEELING the fresh vibes. Happy Ostara! The kind of sip that makes you believe winter might actually be over, even while adults who cannot read the room are testing our patience.",
+      "descriptionHtml": "",
+      "name": "a springy dream - coffee with homemade blueberry creamer 🫐☕ and we are FEELING the fresh vibes",
+      "hosts": [],
+      "ingredients": [
+        "coffee",
+        "homemade blueberry creamer"
+      ],
+      "method": "homemade blueberry creamer 🫐☕ and we are FEELING the fresh vibes",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "is week’s Sips of the Week is a springy dream - coffee with homemade blueberry creamer 🫐☕ and we are FEELING the fresh vibes",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-13.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 14,
+      "title": "Oh No, Maybe I AM a Cat Person...",
+      "published": "Wed, 25 Mar 2026 21:26:18 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Oh-No--Maybe-I-AM-a-Cat-Person-e3gvlnu",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/117478590/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-2-25%2F420769323-44100-2-32c529e557d3e.mp3",
+      "duration": "01:01:01",
+      "displayName": "Mango Tea with Nick's Sick Mix + Honey",
+      "description": "This might actually be the BEST sip we've ever made - mango tea with Nick's Sick Mix and honey. The most soothing, perfect spring blend, even while our sinuses were fighting for their lives with this weather and spring was doing whatever it wanted.",
+      "descriptionHtml": "",
+      "name": "might actually be the BEST we’ve ever made 👀 - a mango tea with Nick’s Sick Mix + honey 🥭🍯 and it is the most soothing, perfect spring blend",
+      "hosts": [],
+      "ingredients": [
+        "mango tea",
+        "Nick's Sick Mix",
+        "honey"
+      ],
+      "method": "just depends on what Doosie were at Daisy in today",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "is week’s Sips of the Week might actually be the BEST we’ve ever made 👀 - a mango tea with Nick’s Sick Mix + honey 🥭🍯 and it is the most soothing, perfect spring blend",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-14.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 15,
+      "title": "We'll Circle Back Eventually...",
+      "published": "Sun, 05 Apr 2026 21:16:23 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Well-Circle-Back-Eventually-e3hfk6s",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/118001308/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-5%2F421466706-44100-2-158304ec04262.mp3",
+      "duration": "00:57:07",
+      "displayName": "Mango Tea Sangria with Rosé",
+      "description": "A refreshing mango tea sangria infused with rosé - and let's just say… she paired PERFECTLY with the international snack haul from Syd's trip to Jungle Jim's in Cincinnati. M really did her thing with this one.",
+      "descriptionHtml": "A refreshing mango tea sangria infused with rosé - and let's just say… she paired PERFECTLY with the international snack haul from Syd's trip to <a href=\"https://www.junglejims.com/\" target=\"_blank\" rel=\"noopener\">Jungle Jim's</a> in Cincinnati. M really did her thing with this one.",
+      "name": "a refreshing mango tea sangria infused with rosé, and let’s just say… she paired PERFECTLY with the international snack haul from Syd’s trip to Jungle Jim’s in Cincinnati 🍹🌍 M really did her thing with this one",
+      "hosts": [],
+      "ingredients": [
+        "mango tea",
+        "rosé"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "international snacks from Jungle Jim's",
+      "vessel": "",
+      "sourceExcerpt": "is week's Sips of the Week is a refreshing mango tea sangria infused with rosé, and let’s just say… she paired PERFECTLY with the international snack haul from Syd’s trip to Jungle Jim’s in Cincinnati 🍹🌍 M really did her thing with this one",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-15.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 16,
+      "title": "Heal Your Weird Out",
+      "published": "Thu, 09 Apr 2026 19:15:00 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Heal-Your-Weird-Out-e3hj32d",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/118114829/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-7%2F421617630-44100-2-8e4d608d424ae.mp3",
+      "duration": "01:04:55",
+      "displayName": "Black Cat Riesling + Turkish Delight",
+      "description": "A surprise find from Jungle Jim's - an amazing Riesling in the CUTEST black cat bottle, paired perfectly with a quirky little Turkish delight treat that Syd picked out. She really nailed the vibe on this one.",
+      "descriptionHtml": "A surprise find from <a href=\"https://www.junglejims.com/\" target=\"_blank\" rel=\"noopener\">Jungle Jim's</a> - an amazing Riesling in the CUTEST black cat bottle, paired perfectly with a quirky little Turkish delight treat that Syd picked out. She really nailed the vibe on this one - cozy, reflective, and just the right amount of unhinged.",
+      "name": "you ready? I'm so ready",
+      "hosts": [],
+      "ingredients": [
+        "Riesling wine"
+      ],
+      "method": "just going to drink the whole bottle anyway",
+      "notes": "",
+      "pairedFood": "Turkish delight",
+      "vessel": "black cat bottle",
+      "sourceExcerpt": "nhinged 🤭 Sips of the Week is a surprise find from Jungle Jim’s - an amazing Riesling in the CUTEST black cat bottle 🐈‍⬛🍷 paired perfectly with a quirky little Turkish delight treat that Syd picked out (she really nailed the vibe on this one)",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-16.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 17,
+      "title": "Let the Lizards Get Him",
+      "published": "Wed, 15 Apr 2026 18:27:00 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Let-the-Lizards-Get-Him-e3hls4l",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/118206037/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-9%2F421739821-44100-2-444b20439411d.mp3",
+      "duration": "00:52:22",
+      "displayName": "Spiced Coffee with French Vanilla + Cinnamon Sugar",
+      "description": "Sips of the Week was a cozy coffee moment - M whipped up a spiced creation and Syd made hers extra sweet with French vanilla creamer and cinnamon sugar, because balance. We were feeling accomplished filming at 11am like productive queens, fueled by M's incredible home-cooked breakfast.",
+      "descriptionHtml": "",
+      "name": "☕✨ is a cozy coffee moment-M whipped up a spiced creation and Syd made it extra sweet with French vanilla creamer + cinnamon sugar (because balance)",
+      "hosts": [
+        {
+          "host": "M",
+          "drink": "spiced coffee"
+        },
+        {
+          "host": "Syd",
+          "drink": "extra sweet with French vanilla creamer and cinnamon sugar"
+        }
+      ],
+      "ingredients": [
+        "coffee",
+        "French vanilla creamer",
+        "cinnamon sugar"
+      ],
+      "method": "whipped up a spiced creation and Syd made it extra sweet with French vanilla creamer + cinnam",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "bout it 😌 Sips of the Week ☕✨ is a cozy coffee moment-M whipped up a spiced creation and Syd made it extra sweet with French vanilla creamer + cinnamon sugar (because balance)",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-17.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 18,
+      "title": "Cruise Recap and Recovery",
+      "published": "Fri, 24 Apr 2026 17:42:36 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Cruise-Recap-and-Recovery-e3ie53f",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/119001647/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-24%2F422813555-44100-2-92a8df7407e66.mp3",
+      "duration": "01:01:39",
+      "displayName": "Mango and Spicy Chili Tea",
+      "description": "M's elite concoction - mango and spicy chili tea paired with pastries from her homemade breakfast. Chef energy, always - even while we were both just… surviving, Syd had thrown her back out again, and M's eye was swollen shut from allergies.",
+      "descriptionHtml": "",
+      "name": "M’s elite concoction-mango and spicy chili tea paired with pastries from her homemade breakfast (chef energy, always). Meanwhile, we are both just… surviving",
+      "hosts": [],
+      "ingredients": [
+        "mango tea",
+        "spicy chili tea"
+      ],
+      "method": "homemade breakfast (chef energy",
+      "notes": "",
+      "pairedFood": "homemade breakfast pastries",
+      "vessel": "",
+      "sourceExcerpt": "Sips of the Week is M’s elite concoction-mango and spicy chili tea paired with pastries from her homemade breakfast (chef energy, always). Meanwhile, we are both just… surviving",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-18.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 19,
+      "title": "Here's Your Warning... TMI",
+      "published": "Thu, 30 Apr 2026 17:33:29 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Heres-Your-Warning----TMI-e3in5rl",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/119297333/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-3-30%2F423216107-44100-2-4b250ed7a489c.mp3",
+      "duration": "01:13:58",
+      "displayName": "Japanese Mango Cream Soda + Vodka",
+      "description": "Japanese mango cream soda plus vodka… basically a mango screwdriver, and we're not mad about it. A chaotic but delicious mix for a week when life felt like a scam, everything was a scam, and we were a little all over the place - you get it.",
+      "descriptionHtml": "",
+      "name": "a chaotic (but delicious) mix-Japanese mango cream soda + vodka… basically a mango screwdriver and we’re not mad about it",
+      "hosts": [],
+      "ingredients": [
+        "Japanese mango cream soda",
+        "vodka"
+      ],
+      "method": "just these little like, um, yogurt, granola, bell thingies",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "is week’s Sips of the Week is a chaotic (but delicious) mix-Japanese mango cream soda + vodka… basically a mango screwdriver and we’re not mad about it",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-19.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 20,
+      "title": "The World is Better With You in It",
+      "published": "Thu, 07 May 2026 18:34:49 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/The-World-is-Better-With-You-in-It-e3j1u67",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/119649927/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-7%2F423698904-44100-2-9037681445cbb.mp3",
+      "duration": "00:46:45",
+      "displayName": "Brown Sugar Caramel Iced Coffee",
+      "description": "Brown sugar caramel iced coffees served in the cutest Dolly Parton cups gifted by Syd's mother-in-law - which immediately sent us into our feelings after seeing Dolly's recent video and absolutely crushed our souls. Twenty episodes of hanging out with us, and this sip felt like a milestone moment.",
+      "descriptionHtml": "",
+      "name": "brown sugar caramel iced coffees served in the cutest Dolly Parton cups gifted by Syd’s mother-in-law… which immediately sent us into our feelings after seeing Dolly’s recent video and absolutely crushed our souls",
+      "hosts": [],
+      "ingredients": [
+        "brown sugar",
+        "caramel",
+        "iced coffee"
+      ],
+      "method": "just speaking it into existence just got free tickets to Sonic 10",
+      "notes": "",
+      "pairedFood": "her. Cute",
+      "vessel": "Dolly Parton cups",
+      "sourceExcerpt": "is week’s Sips of the Week were brown sugar caramel iced coffees served in the cutest Dolly Parton cups gifted by Syd’s mother-in-law… which immediately sent us into our feelings after seeing Dolly’s recent video and absolutely crushed our souls",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-20.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 21,
+      "title": "I'm Sorry I Bursted Your Bubble",
+      "published": "Thu, 14 May 2026 19:00:00 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Im-Sorry-I-Bursted-Your-Bubble-e3j7rm2",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/119843970/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-11%2F423958018-44100-2-3fb7862839532.mp3",
+      "duration": "01:07:43",
+      "displayName": "Giant Spicy Mango Margarita",
+      "description": "This episode is powered by a GIANT spicy mango margarita literally the size of our heads, paired perfectly with killer chips and queso - as all good decisions are. We filmed ahead of time because M was back home in Colorado for Mother's Day, but the sip energy was very much present.",
+      "descriptionHtml": "",
+      "name": "a GIANT spicy mango margarita literally the size of our heads",
+      "hosts": [],
+      "ingredients": [
+        "spicy mango margarita"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "chips and queso",
+      "vessel": "",
+      "sourceExcerpt": "This episode is powered by a GIANT spicy mango margarita literally the size of our heads paired",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-21.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 22,
+      "title": "Bruised Tailbones and Healing Trauma Brains",
+      "published": "Thu, 21 May 2026 16:00:00 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Bruised-Tailbones-and-Healing-Trauma-Brains-e3jm0n0",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/120307872/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-21%2F424580516-44100-2-84687ed8410b5.mp3",
+      "duration": "01:03:15",
+      "displayName": "Peanut Butter Iced Coffee",
+      "description": "Peanut butter iced coffees paired perfectly with chips and queso while our brains rode the absolute struggle bus. Sometimes the sip matches the mental weather - and this week, we were very much on the struggle bus.",
+      "descriptionHtml": "",
+      "name": "peanut butter iced coffees paired perfectly with chips and queso while our brains rode the absolute struggle bus",
+      "hosts": [],
+      "ingredients": [
+        "peanut butter",
+        "iced coffee"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "chips and queso",
+      "vessel": "",
+      "sourceExcerpt": "Sips of the week were peanut butter iced coffees paired perfectly with chips and queso while our brains rode the absolute struggle bus",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-22.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 23,
+      "title": "The Other Day = 10 Years Ago",
+      "published": "Thu, 28 May 2026 16:30:01 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/The-Other-Day--10-Years-Ago-e3k0i12",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/120653282/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-4-28%2F425039590-44100-2-de2eb610b9fbf.mp3",
+      "duration": "00:38:08",
+      "displayName": "Cozy Coffee + Muffin Tin Brownies",
+      "description": "A cozy coffee paired with M's homemade muffin tin brownies with walnuts - which of course sent Syd into a story about her great aunt lovingly known as \"Bessie Cracking Walnuts.\" Naturally. Cozy, chaotic, honest, and cut a little short because we're working gals and had to run.",
+      "descriptionHtml": "",
+      "name": "really cute cups",
+      "hosts": [],
+      "ingredients": [
+        "coffee"
+      ],
+      "method": "homemade muffin tin brownies with walnuts - which of course sent Syd into a story about h",
+      "notes": "",
+      "pairedFood": "muffin tin brownies with walnuts",
+      "vessel": "",
+      "sourceExcerpt": "Sips of the week was a cozy coffee paired with M’s homemade muffin tin brownies with walnuts - which of course sent Syd into a story about her great aunt lovingly known as “Bessie Cracking Walnuts.” Naturally",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-23.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 24,
+      "title": "Happy Pride! We Love You in all Your Phases",
+      "published": "Thu, 04 Jun 2026 17:29:45 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Happy-Pride--We-Love-You-in-all-Your-Phases-e3kbgh5",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/121012197/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-5-4%2F425519373-44100-2-858fc4f0fb493.mp3",
+      "duration": "00:42:47",
+      "displayName": "Sunset Sarsaparilla Floats",
+      "description": "Boozy Sunset Sarsaparilla floats inspired by the Fallout universe (thank you, Costco) - and honestly, they were as fun as they sound. Happy Pride Month, friends - we celebrated love, community, and the beautiful history behind Pride with this one.",
+      "descriptionHtml": "",
+      "name": "boozy Sunset Sarsaparilla floats inspired by the Fallout universe (thank you, Costco), and honestly, they were as fun as they sound",
+      "hosts": [],
+      "ingredients": [
+        "Sunset Sarsaparilla",
+        "ice cream",
+        "vodka"
+      ],
+      "method": "we made a root beer float with Valkyrie in it just gonna talk about how great pride is",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "show. Like it was a game",
+      "sourceExcerpt": "onth. Our Sips of the Week were boozy Sunset Sarsaparilla floats inspired by the Fallout universe (thank you, Costco), and honestly, they were as fun as they sound",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-24.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 25,
+      "title": "You Gotta Talk Me Through This...",
+      "published": "Thu, 11 Jun 2026 18:04:10 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/You-Gotta-Talk-Me-Through-This-e3klogl",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/121348053/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-5-11%2F425966559-44100-2-2ea0469edb84a.mp3",
+      "duration": "00:50:33",
+      "displayName": "De-Stress Tea + Bloom Vodka Shot",
+      "description": "A much-needed two-parter: some de-stress tea that honestly revived our souls, followed by a shot of vodka mixed with Sydney's very first Bloom drink. Listen, we're bartenders and life has been life-ing lately, so we're just keeping it real with y'all.",
+      "descriptionHtml": "",
+      "name": "gonna look up when Bloom became a thing",
+      "hosts": [],
+      "ingredients": [
+        "de-stress tea",
+        "vodka",
+        "Bloom energy drink"
+      ],
+      "method": "mixed with Sydney's very first Bloom drink",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "is week's sips of the week were a much-needed two-parter: some de-stress tea that honestly revived our souls, followed by a shot of vodka mixed with Sydney's very first Bloom drink. Listen, we're bartenders and life has been life-ing lately, so we're just keeping it real with y'all",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-25.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 26,
+      "title": "Dykes on Bikes and Donuts",
+      "published": "Fri, 19 Jun 2026 18:03:35 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Dykes-on-Bikes-and-Donuts-e3l14ih",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/121720849/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-5-19%2F426467314-44100-2-792175f2d7be1.mp3",
+      "duration": "00:45:16",
+      "displayName": "Coffee + King Donuts",
+      "description": "A cozy coffee paired with an assortment of donuts from King Donuts and some absolutely incredible chocolate hazelnut-filled beignets. The kind of spread that makes you forget about the disaster-movie storms that had both of us waking up wondering if we'd ended up in the middle of an action film.",
+      "descriptionHtml": "",
+      "name": "a cozy coffee paired with an assortment of donuts from King Donuts and some absolutely incredible chocolate hazelnut-filled beignets",
+      "hosts": [],
+      "ingredients": [
+        "coffee"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "King Donuts assortment and chocolate hazelnut beignets",
+      "vessel": "",
+      "sourceExcerpt": "is week's Sips of the Week was a cozy coffee paired with an assortment of donuts from King Donuts and some absolutely incredible chocolate hazelnut-filled beignets",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-26.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 27,
+      "title": "Two Sauce Queens and Their Quirks",
+      "published": "Fri, 26 Jun 2026 18:03:33 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Two-Sauce-Queens-and-Their-Quirks-e3lao6l",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/122035861/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-5-26%2F426888488-44100-2-779921cc11c5d.mp3",
+      "duration": "00:49:07",
+      "displayName": "Passionfruit Margarita",
+      "description": "A refreshing passionfruit margarita while we welcomed the first day of summer with a little chat about paganism and the changing of the seasons. The episode name-checks a tequila seltzer, but no full recipe - here's a classic passionfruit margarita to match the vibe.",
+      "descriptionHtml": "",
+      "name": "a refreshing passionfruit margarita while we welcomed the first day of summer with a little chat about paganism and the changing of the seasons",
+      "hosts": [],
+      "ingredients": [
+        "tequila",
+        "fresh lime juice",
+        "passionfruit puree or syrup",
+        "orange liqueur",
+        "agave syrup (optional)",
+        "salt for rim (optional)"
+      ],
+      "method": "Add 2 oz tequila, 1 oz fresh lime juice, 1 oz passionfruit puree or syrup, and ½ oz orange liqueur to a shaker with ice. Shake until chilled and strain into a salt-rimmed glass over fresh ice. Adjust sweetness with agave if needed.",
+      "notes": "Episode mentions a tequila seltzer by name only - no measured recipe given.",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "is week's Sips of the Week was a refreshing passionfruit margarita while we welcomed the first day of summer with a little chat about paganism and the changing of the seasons",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-27.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 28,
+      "title": "Stars, Stripes, Milkshakes, and Tangents",
+      "published": "Sun, 05 Jul 2026 03:16:27 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Stars--Stripes--Milkshakes--and-Tangents-e3llea5",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/122386181/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-6-5%2F427370695-44100-2-dbdd6c80e098a.mp3",
+      "duration": "01:03:26",
+      "displayName": "7 Brew Milkshake Concoctions",
+      "description": "7 Brew milkshakes - we took our favorite drinks, added some ice cream, and turned them into delicious concoctions that were so worth it.",
+      "descriptionHtml": "This week's Sips were inspired by <a href=\"https://7brew.com/\" target=\"_blank\" rel=\"noopener\">7 Brew</a> - we took our favorite drinks, added some ice cream, and turned them into delicious milkshake concoctions that were so worth it. In the spirit of the 4th of July, grab your favorite drink, get comfy, and come hang out with us.",
+      "name": "inspired by 7 Brew! We took our favorite drinks, added some ice cream, and turned them into delicious milkshake concoctions that were so worth it",
+      "hosts": [
+        {
+          "host": "Em",
+          "drink": "Brewberry Freeze with vanilla ice cream"
+        },
+        {
+          "host": "Syd",
+          "drink": "Pixie Stick (almond, cherry, strawberry) topped with Moose Tracks ice cream"
+        }
+      ],
+      "ingredients": [
+        "7 Brew Brewberry Freeze",
+        "7 Brew Pixie Stick (almond, cherry, strawberry)",
+        "vanilla ice cream",
+        "Moose Tracks ice cream"
+      ],
+      "method": "Order your 7 Brew drink, blend with ice cream of choice, and enjoy as a milkshake.",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "is week's Sips of the Week were inspired by 7 Brew! We took our favorite drinks, added some ice cream, and turned them into delicious milkshake concoctions that were so worth it",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-28.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 29,
+      "title": "The Questions Around Nolan Wells & Our Weekly Chaos",
+      "published": "Fri, 10 Jul 2026 16:14:47 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/The-Questions-Around-Nolan-Wells--Our-Weekly-Chaos-e3ltpmo",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/122659992/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-6-10%2F427724822-44100-2-cfbb08fd529bc.mp3",
+      "duration": "01:00:37",
+      "displayName": "Brown Sugar Latte + Peach Cobbler",
+      "description": "We didn't even care about our Sips of the Week because we had the real Treat of the Week - M made the most incredible homemade peach cobbler using fresh peaches from a roadside stand, and honestly… it completely stole the show. We paired it with a classic brown sugar latte as we both continue our yearly transition into fall the second the Fourth of July is over.",
+      "descriptionHtml": "",
+      "name": "driving around randomly and there was the cutest little lock",
+      "hosts": [],
+      "ingredients": [
+        "brown sugar latte",
+        "coffee",
+        "peaches"
+      ],
+      "method": "homemade peach cobbler using fresh peaches from a roadside stand",
+      "notes": "From social post recipe note; paired with coffee.",
+      "pairedFood": "homemade peach crisp",
+      "vessel": "",
+      "sourceExcerpt": "about our Sips of the Week because we had the real Treat of the Week! M made the most incredible homemade peach cobbler using fresh peaches from a roadside stand, and honestly...it completely stole the show",
+      "sources": [
+        "rss",
+        "transcript",
+        "content/episode 29.txt",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-29.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 30,
+      "title": "Trauma Glitching & Soap Box Crash Outs",
+      "published": "Thu, 16 Jul 2026 17:51:12 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Trauma-Glitching--Soap-Box-Crash-Outs-e3m5ulc",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/122927212/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-6-16%2F428084072-44100-2-55463b32e07a1.mp3",
+      "duration": "00:56:20",
+      "displayName": "Tea Frog",
+      "description": "Happy Episode 30! A summery blend called Tea Frog, served in the new spooky cups Syd brought back from her trip home. She also introduced M to the infamous Double Kiwi gas station pizza rolls - if you've never had them, consider this your official sign to change that.",
+      "descriptionHtml": "",
+      "name": "a summery blend called Tea Frog, served in the new spooky cups Syd brought back from her trip home",
+      "hosts": [],
+      "ingredients": [
+        "Tea Frog tea blend"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "spooky cups from Syd's trip home",
+      "sourceExcerpt": "is week's Sip of the Week is a summery blend called Tea Frog, served in the new spooky cups Syd brought back from her trip home",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-30.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 31,
+      "title": "Can't Even External Monologue",
+      "published": "Thu, 23 Jul 2026 16:23:27 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Cant-Even-External-Monologue-e3mev0h",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/123222481/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-6-23%2F428485394-44100-2-995fd0d8dbcc7.mp3",
+      "duration": "01:00:16",
+      "displayName": "McDonald's Refreshers",
+      "description": "McDonald's Refreshers served in our cutest glasses - because we're classy like that. Syd sipped a Sprite Berry Blast while M enjoyed the Mango Pineapple, and somehow our adorable hats spiraled into one of the messiest Spill It, Bestie conversations we've had yet.",
+      "descriptionHtml": "",
+      "name": "McDonald's Refreshers served in our cutest glasses-because we're classy like that",
+      "hosts": [
+        {
+          "host": "Syd",
+          "drink": "Sprite Berry Blast Refresher"
+        },
+        {
+          "host": "M",
+          "drink": "Mango Pineapple Refresher"
+        }
+      ],
+      "ingredients": [
+        "mango",
+        "refresher"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "cutest glasses",
+      "sourceExcerpt": "is week's Sips of the Week are McDonald's Refreshers served in our cutest glasses-because we're classy like that",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-31.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 32,
+      "title": "Paganism, Plot Twists & Frozen Margaritas",
+      "published": "Fri, 31 Jul 2026 18:14:32 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Paganism--Plot-Twists--Frozen-Margaritas-e3mq6ke",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/123590734/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-6-31%2F428982963-44100-2-e39eb504f9d4a.mp3",
+      "duration": "00:46:41",
+      "displayName": "Strawberry Watermelon Mint Frozen Margaritas",
+      "description": "STRAWBERRY WATERMELON MINT FROZEN MARGARITAS - because honestly… we deserved this one. Syd is soaking up her last few days of \"freedom\" before starting a new job, M is schooling us on paganism and the moon, and this sip was the perfect reward.",
+      "descriptionHtml": "",
+      "name": "STRAWBERRY WATERMELON MINT FROZEN MARGARITAS, because honestly… we deserved this one",
+      "hosts": [],
+      "ingredients": [
+        "strawberry",
+        "watermelon",
+        "mint",
+        "tequila",
+        "margarita"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "Sips of the Week are STRAWBERRY WATERMELON MINT FROZEN MARGARITAS, because honestly… we deserved this one",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-32.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    }
+  ]
+}

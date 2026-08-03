@@ -4,6 +4,11 @@ Desktop.ini
 SpillitBestie2_files/
 SpillitBestie2.jpg
 content/
+scripts/__pycache__/
+
+# Local audio/transcript pipeline (not served on site)
+audio/
+transcripts/
 
 # Root-level source images (canonical copies live in assets/)
 /*.jpg

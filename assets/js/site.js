@@ -119,13 +119,21 @@ function renderListenGrid() {
   const items = [
     { label: "Spotify", href: links.spotify, note: "Direct on Spotify for Creators" },
     { label: "Apple Podcasts", href: links.apple, note: "Listen on iPhone & Mac" },
+    { label: "Amazon Music", href: links.amazon, note: "Search & subscribe" },
+    { label: "Pocket Casts", href: links.pocketcasts, note: "Follow in Pocket Casts" },
+    { label: "Castro", href: links.castro, note: "Follow in Castro" },
+    { label: "Overcast", href: links.overcast, note: "Follow in Overcast" },
     { label: "YouTube", href: links.youtube, note: "Clips, episodes & more" },
+    { label: "YouTube Music", href: links.youtubeMusic, note: "Search in YT Music" },
     { label: "Instagram", href: links.instagram, note: "DMs, Spill it & Healing inbox" },
     { label: "TikTok", href: links.tiktok, note: "Show account" },
-    { label: "Amazon Music", href: links.amazon, note: "Search Chittin' and Chattin" },
+    { label: "iHeartRadio", href: links.iheart, note: "Search on iHeart" },
+    { label: "Deezer", href: links.deezer, note: "Search on Deezer" },
+    { label: "RSS Feed", href: window.SITE_CONFIG?.feedUrl, note: "Any podcast app" },
   ];
   return `<div class="listen-grid reveal">
     ${items
+      .filter((item) => item.href)
       .map(
         (item) => `<a class="listen-card" href="${item.href}" target="_blank" rel="noopener">
         <span class="listen-label">${item.label}</span>
@@ -134,6 +142,30 @@ function renderListenGrid() {
       )
       .join("")}
   </div>`;
+}
+
+function renderFollowShowList() {
+  const cfg = window.SITE_CONFIG || {};
+  const links = cfg.links || {};
+  const items = cfg.followShow || [];
+  if (!items.length) {
+    return `<ul class="meta-list">
+      <li><strong>Instagram</strong> - <a href="${links.instagram || "#"}" target="_blank" rel="noopener">@chittinnchattin</a></li>
+    </ul>`;
+  }
+  return `<ul class="meta-list">
+    ${items
+      .map((item) => {
+        const href =
+          item.hrefKey === "feedUrl" ? cfg.feedUrl || links.feedUrl : links[item.hrefKey];
+        if (!href) return "";
+        const handle = escapeHtml(item.handle || item.label);
+        return `<li><strong>${escapeHtml(item.label)}</strong> - <a href="${href}" target="_blank" rel="noopener">${handle}</a></li>`;
+      })
+      .filter(Boolean)
+      .join("")}
+  </ul>
+  <p class="follow-show-note">Hosted on Spotify for Creators - our RSS feed syndicates to most podcast apps automatically. Can't find us? Search <strong>Chittin' and Chattin</strong>.</p>`;
 }
 
 function renderInstagramCTA(label = "Message us on Instagram") {
@@ -194,7 +226,7 @@ function renderFeaturePage({ eyebrow, title, intro, body, image, ctaLabel, inbox
       <div class="prose">
         ${body}
         ${renderInstagramCTA(ctaLabel)}
-        <p class="cross-link">Need the other inbox? <a href="${other.href}">${other.label}</a> — ${other.desc}.</p>
+        <p class="cross-link">Need the other inbox? <a href="${other.href}">${other.label}</a> - ${other.desc}.</p>
       </div>
     </div>`;
 }
@@ -204,6 +236,113 @@ function truncate(text, max = 280) {
   return text.slice(0, max).trim() + "…";
 }
 
+function escapeHtml(text) {
+  if (!text) return "";
+  return String(text)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function renderSipReviewBanner(sips) {
+  const needs = sips.filter((s) => s.needsListen).map((s) => s.episodeNumber);
+  if (!needs.length) return "";
+  const list = needs.join(", ");
+  return `<aside class="sip-review-banner reveal" role="note">
+    <strong>Episodes needing review:</strong> ${list}
+    <span class="sip-review-note">- listen and update <code>sips-overrides.json</code> if you catch more detail.</span>
+  </aside>`;
+}
+
+function renderSipDetail(sip) {
+  const parts = [];
+  if (sip.descriptionHtml) {
+    parts.push(`<p class="sip-description">${sip.descriptionHtml}</p>`);
+  } else if (sip.description) {
+    parts.push(`<p class="sip-description">${escapeHtml(sip.description)}</p>`);
+  }
+  const hosts = sip.hosts || [];
+  if (hosts.length) {
+    parts.push(
+      `<ul class="sip-meta-list">${hosts
+        .map((h) => `<li><strong>${escapeHtml(h.host)}:</strong> ${escapeHtml(h.drink)}</li>`)
+        .join("")}</ul>`
+    );
+  }
+  const ingredients = sip.ingredients || [];
+  if (ingredients.length) {
+    parts.push(`<p class="sip-detail-line"><strong>Ingredients:</strong> ${escapeHtml(ingredients.join(", "))}</p>`);
+  }
+  if (sip.method) {
+    parts.push(`<p class="sip-detail-line"><strong>Method:</strong> ${escapeHtml(sip.method)}</p>`);
+  }
+  if (sip.pairedFood) {
+    parts.push(`<p class="sip-detail-line"><strong>Paired with:</strong> ${escapeHtml(sip.pairedFood)}</p>`);
+  }
+  if (sip.vessel) {
+    parts.push(`<p class="sip-detail-line"><strong>Vessel:</strong> ${escapeHtml(sip.vessel)}</p>`);
+  }
+  if (sip.notes) {
+    parts.push(`<p class="sip-detail-line"><strong>Notes:</strong> ${escapeHtml(sip.notes)}</p>`);
+  }
+  const listen =
+    sip.link && sip.link.startsWith("http")
+      ? `<a class="btn btn-primary sip-listen" href="${escapeHtml(sip.link)}" target="_blank" rel="noopener">Listen on Spotify</a>`
+      : "";
+  return `<div class="sip-detail">${parts.join("")}${listen}</div>`;
+}
+
+function renderSipCards(sips) {
+  if (!sips.length) {
+    return `<p class="episode-error">No sips found yet.</p>`;
+  }
+  const sorted = [...sips].sort((a, b) => a.episodeNumber - b.episodeNumber);
+  return `${renderSipReviewBanner(sorted)}
+  <div class="sip-list">
+    ${sorted
+      .map((sip) => {
+        const badge = sip.needsListen
+          ? `<span class="sip-badge sip-badge-review">needs review</span>`
+          : sip.completeness === "partial"
+            ? `<span class="sip-badge sip-badge-partial">partial</span>`
+            : "";
+        const title = escapeHtml(sip.displayName || sip.name || "Sip of the Week");
+        return `<details class="sip-card reveal">
+          <summary class="sip-summary">
+            <span class="sip-ep">Ep ${sip.episodeNumber}</span>
+            <span class="sip-summary-text">
+              <span class="sip-title">${title}</span>
+              <span class="sip-episode-title">${escapeHtml(sip.title)}</span>
+              <span class="sip-date">${formatEpisodeDate(sip.published)}</span>
+            </span>
+            ${badge}
+          </summary>
+          ${renderSipDetail(sip)}
+        </details>`;
+      })
+      .join("")}
+  </div>`;
+}
+
+function initSipsPage() {
+  const mount = document.getElementById("sip-list-mount");
+  if (!mount) return;
+
+  fetch("/assets/data/sips.json")
+    .then((res) => {
+      if (!res.ok) throw new Error("Failed to load sips");
+      return res.json();
+    })
+    .then((data) => {
+      mount.innerHTML = renderSipCards(data.sips || []);
+      bindReveal();
+    })
+    .catch(() => {
+      mount.innerHTML = `<p class="episode-error">Could not load sips. Try again later or listen on <a href="/listen/">Spotify</a>.</p>`;
+    });
+}
+
 function formatEpisodeDate(pubDate) {
   if (!pubDate) return "";
   const d = new Date(pubDate);
@@ -211,22 +350,80 @@ function formatEpisodeDate(pubDate) {
   return d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 }
 
-function renderEpisodeCards(episodes) {
+const EPISODES_PER_PAGE = 10;
+
+function sortEpisodes(episodes) {
+  return [...episodes].sort((a, b) => {
+    const na = a.episodeNumber || 0;
+    const nb = b.episodeNumber || 0;
+    if (na !== nb) return nb - na;
+    return new Date(b.published || 0) - new Date(a.published || 0);
+  });
+}
+
+function getEpisodePageParam() {
+  const raw = new URLSearchParams(window.location.search).get("page") || "1";
+  const page = parseInt(raw, 10);
+  return Number.isFinite(page) && page > 0 ? page : 1;
+}
+
+function episodePageHref(page) {
+  return page <= 1 ? "/episodes/" : `/episodes/?page=${page}`;
+}
+
+function renderEpisodePagination(currentPage, totalPages) {
+  if (totalPages <= 1) return "";
+  const prev =
+    currentPage > 1
+      ? `<a class="episode-page-nav" href="${episodePageHref(currentPage - 1)}">&larr; Newer</a>`
+      : `<span class="episode-page-nav is-disabled">&larr; Newer</span>`;
+  const next =
+    currentPage < totalPages
+      ? `<a class="episode-page-nav" href="${episodePageHref(currentPage + 1)}">Older &rarr;</a>`
+      : `<span class="episode-page-nav is-disabled">Older &rarr;</span>`;
+  const nums = Array.from({ length: totalPages }, (_, i) => {
+    const n = i + 1;
+    if (n === currentPage) {
+      return `<span class="episode-page-num active" aria-current="page">${n}</span>`;
+    }
+    return `<a class="episode-page-num" href="${episodePageHref(n)}">${n}</a>`;
+  }).join("");
+  return `<nav class="episode-pagination reveal" aria-label="Episode pages">
+    ${prev}
+    <div class="episode-page-nums">${nums}</div>
+    ${next}
+  </nav>`;
+}
+
+function renderEpisodeCards(episodes, fallbackImage) {
   if (!episodes.length) {
     return `<p class="episode-error">No episodes found yet.</p>`;
   }
   return `<div class="episode-list">
     ${episodes
       .map((ep) => {
+        const listenHref =
+          ep.link && ep.link.startsWith("http") ? ep.link : "#";
+        const thumb = ep.imageUrl || fallbackImage || "/assets/brand/icon.png";
+        const epLabel = ep.episodeNumber ? `<span class="episode-num">Ep ${ep.episodeNumber}</span>` : "";
+        const duration = ep.duration
+          ? `<span class="episode-duration">${escapeHtml(ep.duration)}</span>`
+          : "";
         const listen =
-          ep.link && ep.link.startsWith("http")
-            ? `<a class="text-link" href="${ep.link}" target="_blank" rel="noopener">Listen &rarr;</a>`
+          listenHref !== "#"
+            ? `<a class="text-link" href="${escapeHtml(listenHref)}" target="_blank" rel="noopener">Listen on Spotify &rarr;</a>`
             : "";
         return `<article class="episode-card reveal">
-          <h2>${ep.title}</h2>
-          <p class="episode-date">${formatEpisodeDate(ep.published)}</p>
-          <p class="episode-desc">${truncate(ep.description)}</p>
-          ${listen}
+          <a class="episode-thumb-link" href="${escapeHtml(listenHref)}" target="_blank" rel="noopener" aria-label="Listen: ${escapeHtml(ep.title)}">
+            <img class="episode-thumb" src="${escapeHtml(thumb)}" alt="" width="128" height="128" loading="lazy" />
+          </a>
+          <div class="episode-card-body">
+            <div class="episode-card-meta">${epLabel}${duration}</div>
+            <h2><a href="${escapeHtml(listenHref)}" target="_blank" rel="noopener">${escapeHtml(ep.title)}</a></h2>
+            <p class="episode-date">${formatEpisodeDate(ep.published)}</p>
+            <p class="episode-desc">${truncate(ep.description)}</p>
+            ${listen}
+          </div>
         </article>`;
       })
       .join("")}
@@ -243,7 +440,34 @@ function initEpisodesPage() {
       return res.json();
     })
     .then((data) => {
-      mount.innerHTML = renderEpisodeCards(data.episodes || []);
+      const all = sortEpisodes(data.episodes || []);
+      const totalPages = Math.max(1, Math.ceil(all.length / EPISODES_PER_PAGE));
+      const requestedPage = getEpisodePageParam();
+      const currentPage = Math.min(requestedPage, totalPages);
+
+      if (requestedPage !== currentPage && requestedPage > 1) {
+        window.location.replace(episodePageHref(currentPage));
+        return;
+      }
+
+      const start = (currentPage - 1) * EPISODES_PER_PAGE;
+      const pageEpisodes = all.slice(start, start + EPISODES_PER_PAGE);
+      const fallback =
+        data.spotifyThumbnailUrl || data.channelImageUrl || "/assets/brand/icon.png";
+      const rangeStart = all.length ? start + 1 : 0;
+      const rangeEnd = start + pageEpisodes.length;
+
+      if (currentPage > 1) {
+        document.title = `Episodes (Page ${currentPage}) | ${window.SITE_CONFIG?.name || "Chittin' and Chattin"}`;
+      }
+
+      mount.innerHTML = `
+        <p class="episode-page-summary reveal">Showing ${rangeStart}-${rangeEnd} of ${all.length} episodes</p>
+        ${renderEpisodeCards(pageEpisodes, fallback)}
+        <div class="ad-slot ad-mid">${renderAdSlot("inContent", "ad-unit")}</div>
+        ${renderEpisodePagination(currentPage, totalPages)}
+      `;
+      pushAds();
       bindReveal();
     })
     .catch(() => {

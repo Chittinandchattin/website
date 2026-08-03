@@ -1,0 +1,2 @@
+# Optional dependencies for the Sips pipeline (local scripts only)
+openai-whisper>=20250625

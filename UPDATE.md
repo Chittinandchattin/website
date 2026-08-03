@@ -73,17 +73,30 @@ Data lands in `assets/data/episodes.json` and powers `/episodes/`.
 
 ### Sips of the Week archive
 
-Mine episode descriptions for weekly drinks → `sips.json` → replace `/sips/` coming-soon stub with a full listing. Fill gaps from Instagram/TikTok if needed.
+Live at **`/sips/`** — reads from `assets/data/sips.json`. Build and refresh the sip log from RSS show notes, optional opening transcripts, and hand edits.
 
-Suggested script workflow (future):
+**Data files (committed):**
+- `assets/data/sips.json` — one row per episode
+- `assets/data/sips.txt` — plain-text copy-paste list
+- `assets/data/sips-checklist.csv` — spreadsheet for manual fill-in
+- `assets/data/sips-overrides.json` — your edits (merged on re-run)
+
+**Local only (gitignored):** `audio/openings/`, `transcripts/openings/`
+
+**Prerequisites:** Python 3, `ffmpeg` on PATH, `pip install openai-whisper` (or `faster-whisper`)
 
 ```powershell
-# Example — implement when ready
-python scripts/pull-spotify-episodes.py
-python scripts/extract-sips.py
+python scripts/pull-episodes.py
+python scripts/download-openings.py      # downloads RSS MP3s, trims first 10 min
+python scripts/transcribe-openings.py    # local Whisper → transcripts/openings/
+python scripts/extract-sips.py           # merges RSS + transcripts + overrides → sips.json
 git add assets/data/
 .\scripts\push-update.ps1 "Refresh episodes and sips"
 ```
+
+Single episode: `--episode 3` on download/transcribe scripts. Re-transcribe: `--force`.
+
+Hand-fill gaps in `sips-overrides.json` (keyed by `episodeNumber`), then re-run `extract-sips.py`. Episodes flagged `needsListen` show a review banner on `/sips/`.
 
 ---
 
