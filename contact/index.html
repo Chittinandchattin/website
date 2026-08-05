@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Contact Chittin' and Chattin." />
-    <title>Contact</title>
+    <meta name="description" content="Contact Chittin' and Chattin — send a message about the show, site, or partnerships." />
+    <title>Contact Us</title>
     <link rel="icon" href="/assets/brand/icon.png" type="image/png" />
     <link rel="stylesheet" href="/assets/css/site.css" />
     <link rel="canonical" href="https://chittinnchattin.com/contact/" />
@@ -16,27 +16,22 @@
     <script src="/assets/js/config.js"></script>
     <script src="/assets/js/site.js"></script>
     <script>
-      const cfg = window.SITE_CONFIG;
       initPage({
-        title: "Contact",
-        description: "Contact Chittin' and Chattin.",
+        title: "Contact Us",
+        description: "Contact Chittin' and Chattin — send a message about the show, site, or partnerships.",
         activePath: "/contact/",
         content: `
           <header class="page-header reveal">
-            <p class="teaser-eyebrow">Say hi</p>
-            <h1>Contact</h1>
-            <p class="page-lead">For Spill it or Healing inbox messages, Instagram DMs are fastest. For everything else, email works too.</p>
+            <p class="teaser-eyebrow">Get in touch</p>
+            <h1>Contact Us</h1>
+            <p class="page-lead">Questions about the show, partnerships, or the site — send us a note below.</p>
           </header>
-          <div class="prose reveal">
-            <ul class="meta-list">
-              <li><strong>Email</strong> - <a href="mailto:${cfg.contactEmail}">${cfg.contactEmail}</a></li>
-              <li><strong>Instagram</strong> - <a href="${cfg.links.instagram}" target="_blank" rel="noopener">@chittinnchattin</a></li>
-              <li><strong>Spill it, bestie</strong> - <a href="/spill-it-bestie/">How to submit</a></li>
-              <li><strong>Healing inbox</strong> - <a href="/healing-inbox/">How to submit</a></li>
-            </ul>
-          </div>
+          ${renderContactForm({
+            intro: "Want to spill tea or share something for Healing inbox? Use <a href=\"/spill-it-bestie/\">Spill it, bestie</a> or <a href=\"/healing-inbox/\">Healing inbox</a> instead.",
+          })}
         `,
       });
+      bindContactForm({ subjectPrefix: "Chittin' and Chattin'" });
     </script>
   </body>
 </html>

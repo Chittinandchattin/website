@@ -44,7 +44,6 @@ function renderFooter() {
       <nav class="footer-nav" aria-label="Explore">
         <strong>Explore</strong>
         ${NAV.map((item) => `<a href="${item.href}">${item.label}</a>`).join("")}
-        <a href="/contact/">Contact</a>
       </nav>
       <nav class="footer-nav" aria-label="Social">
         <strong>Follow</strong>
@@ -58,6 +57,7 @@ function renderFooter() {
         <a href="/privacy/">Privacy</a>
         <a href="/terms/">Terms</a>
         <a href="/about/">About</a>
+        <a href="/contact/">Contact Us</a>
       </nav>
     </div>
     <div class="container footer-bottom">
@@ -167,10 +167,15 @@ function renderFollowShowList() {
 }
 
 function renderInstagramCTA(label = "Message us on Instagram") {
-  const ig = window.SITE_CONFIG?.links?.instagram || "#";
+  const cfg = window.SITE_CONFIG || {};
+  const ig = cfg.links?.instagram || "#";
+  const inboxEmail = cfg.inboxEmail;
+  const emailLine = inboxEmail
+    ? `<p class="cta-note">Instagram DMs are fastest. Or email <a href="mailto:${inboxEmail}">${inboxEmail}</a>.</p>`
+    : `<p class="cta-note">Opens Instagram in a new tab.</p>`;
   return `<div class="cta-panel reveal">
     <a class="btn btn-primary btn-lg" href="${ig}" target="_blank" rel="noopener">${label}</a>
-    <p class="cta-note">Opens Instagram in a new tab. A private on-site inbox is coming soon.</p>
+    ${emailLine}
   </div>`;
 }
 
@@ -526,4 +531,92 @@ function bindReveal() {
     { threshold: 0.08, rootMargin: "0px 0px -4% 0px" }
   );
   nodes.forEach((n) => io.observe(n));
+}
+
+function renderContactForm({ intro = "" } = {}) {
+  return `
+    <div class="prose reveal">
+      ${intro ? `<p>${intro}</p>` : ""}
+      <form class="contact-form" id="contact-form" novalidate>
+        <input type="checkbox" name="botcheck" class="contact-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+        <div class="form-field">
+          <label for="contact-name">Name</label>
+          <input type="text" id="contact-name" name="name" required autocomplete="name" maxlength="80" />
+        </div>
+        <div class="form-field">
+          <label for="contact-email">Email</label>
+          <input type="email" id="contact-email" name="email" required autocomplete="email" />
+        </div>
+        <div class="form-field">
+          <label for="contact-subject">Subject <span class="optional">(optional)</span></label>
+          <input type="text" id="contact-subject" name="subject" maxlength="120" />
+        </div>
+        <div class="form-field">
+          <label for="contact-message">Message</label>
+          <textarea id="contact-message" name="message" required rows="6" maxlength="5000"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Send message</button>
+        <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
+      </form>
+    </div>`;
+}
+
+function bindContactForm(options = {}) {
+  const form = document.getElementById("contact-form");
+  if (!form) return;
+
+  const statusEl = document.getElementById("contact-form-status");
+  const cfg = window.SITE_CONFIG || {};
+  const accessKey = cfg.web3formsAccessKey;
+  const subjectPrefix = options.subjectPrefix || cfg.name || "Website";
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    if (!accessKey) {
+      if (statusEl) {
+        statusEl.textContent = "Contact form is not configured yet. Please try again later.";
+        statusEl.className = "form-status form-status-error";
+      }
+      return;
+    }
+
+    if (submitBtn) submitBtn.disabled = true;
+    if (statusEl) {
+      statusEl.textContent = "Sending…";
+      statusEl.className = "form-status form-status-pending";
+    }
+
+    const fd = new FormData(form);
+    fd.append("access_key", accessKey);
+    fd.append("from_name", subjectPrefix);
+    const subject = fd.get("subject");
+    fd.set("subject", subject ? `${subjectPrefix}: ${subject}` : `${subjectPrefix} — Contact form`);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: fd,
+        headers: { Accept: "application/json" },
+      });
+      const data = await res.json();
+      if (data.success) {
+        form.reset();
+        if (statusEl) {
+          statusEl.textContent = "Thanks — your message was sent. We'll get back to you soon.";
+          statusEl.className = "form-status form-status-success";
+        }
+      } else {
+        throw new Error(data.message || "Something went wrong.");
+      }
+    } catch (err) {
+      if (statusEl) {
+        statusEl.textContent = err.message || "Could not send your message. Please try again.";
+        statusEl.className = "form-status form-status-error";
+      }
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
+    }
+  });
 }

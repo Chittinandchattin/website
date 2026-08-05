@@ -443,6 +443,78 @@ a:hover {
   margin: 0.75rem 0 0;
 }
 
+.contact-form {
+  margin-top: 1.5rem;
+  max-width: 36rem;
+}
+
+.contact-honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-field {
+  margin-bottom: 1.25rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.form-field .optional {
+  font-weight: 400;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: 2px solid rgba(245, 200, 66, 0.45);
+  outline-offset: 2px;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 8rem;
+}
+
+.contact-form .btn {
+  margin-top: 0.5rem;
+}
+
+.form-status {
+  margin: 1rem 0 0;
+  font-size: 0.95rem;
+}
+
+.form-status-pending {
+  color: var(--muted);
+}
+
+.form-status-success {
+  color: #7dd87d;
+}
+
+.form-status-error {
+  color: #f08080;
+}
+
 .coming-soon {
   text-align: center;
   padding: 2rem 0 3rem;
