@@ -166,10 +166,10 @@ function renderFollowShowList() {
   <p class="follow-show-note">Hosted on Spotify for Creators - our RSS feed syndicates to most podcast apps automatically. Can't find us? Search <strong>Chittin' and Chattin'</strong>.</p>`;
 }
 
-function renderInstagramCTA(label = "Message us on Instagram") {
+function renderInstagramCTA(label = "Message us on Instagram", inboxType) {
   const cfg = window.SITE_CONFIG || {};
   const ig = cfg.links?.instagram || "#";
-  const inboxEmail = cfg.inboxEmail;
+  const inboxEmail = inboxType ? cfg.inboxEmails?.[inboxType] : null;
   const emailLine = inboxEmail
     ? `<p class="cta-note">Instagram DMs are fastest. Or email <a href="mailto:${inboxEmail}">${inboxEmail}</a>.</p>`
     : `<p class="cta-note">Opens Instagram in a new tab.</p>`;
@@ -228,7 +228,7 @@ function renderFeaturePage({ eyebrow, title, intro, body, image, ctaLabel, inbox
       </figure>
       <div class="prose">
         ${body}
-        ${renderInstagramCTA(ctaLabel)}
+        ${renderInstagramCTA(ctaLabel, inboxType)}
         <p class="cross-link">Need the other inbox? <a href="${other.href}">${other.label}</a> - ${other.desc}.</p>
       </div>
     </div>`;
