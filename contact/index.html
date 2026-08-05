@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Contact Chittin' and Chattin — send a message about the show, site, or partnerships." />
+    <meta name="description" content="Contact Chittin' and Chattin — show submissions and Laughing Dragons Productions for site and business inquiries." />
     <title>Contact Us</title>
     <link rel="icon" href="/assets/brand/icon.png" type="image/png" />
     <link rel="stylesheet" href="/assets/css/site.css" />
@@ -16,22 +16,31 @@
     <script src="/assets/js/config.js"></script>
     <script src="/assets/js/site.js"></script>
     <script>
+      const cfg = window.SITE_CONFIG;
+      const ldContact = cfg.links?.laughingDragonsContact || "https://laughing-dragons.com/contact/";
       initPage({
         title: "Contact Us",
-        description: "Contact Chittin' and Chattin — send a message about the show, site, or partnerships.",
+        description: "Contact Chittin' and Chattin — show submissions and Laughing Dragons Productions for site and business inquiries.",
         activePath: "/contact/",
         content: `
           <header class="page-header reveal">
             <p class="teaser-eyebrow">Get in touch</p>
             <h1>Contact Us</h1>
-            <p class="page-lead">Questions about the show, partnerships, or the site — send us a note below.</p>
+            <p class="page-lead">Chittin' and Chattin is its own show — here's how to reach the right place.</p>
           </header>
-          ${renderContactForm({
-            intro: "Want to spill tea or share something for Healing inbox? Use <a href=\"/spill-it-bestie/\">Spill it, bestie</a> or <a href=\"/healing-inbox/\">Healing inbox</a> instead.",
-          })}
+          <div class="prose reveal">
+            <h2>Show submissions</h2>
+            <p>Want to share tea with Sydney and Emmy? Use the inbox that fits:</p>
+            <ul class="meta-list">
+              <li><strong>Spill it, bestie</strong> — <a href="/spill-it-bestie/">Funny, messy, chaotic tea</a></li>
+              <li><strong>Healing inbox</strong> — <a href="/healing-inbox/">Tender questions and stories</a></li>
+            </ul>
+            <h2>Site, business &amp; partnerships</h2>
+            <p>Production, site questions, privacy, and everything outside the show inboxes goes through <strong>Laughing Dragons Productions</strong> — a separate site with its own contact form.</p>
+            <p><a class="btn btn-primary" href="${ldContact}">Contact Laughing Dragons</a></p>
+          </div>
         `,
       });
-      bindContactForm({ subjectPrefix: "Chittin' and Chattin'" });
     </script>
   </body>
 </html>

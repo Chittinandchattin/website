@@ -8,10 +8,10 @@ window.SITE_CONFIG = {
     spill: "travelwitheasewithme+spillit@gmail.com",
     healing: "travelwitheasewithme+healinginbox@gmail.com",
   },
-  web3formsAccessKey: "",
   bio:
     "Hey y'all-ready to sip some tea, ramble about everything, and dive into whatever is happening in our brains? Grab a drink, get cozy, and hang out with two besties navigating life, healing through their trauma, and laughing through the chaos (tissues may be required).",
   links: {
+    laughingDragonsContact: "https://laughing-dragons.com/contact/",
     instagram: "https://www.instagram.com/chittinnchattin/",
     youtube: "https://www.youtube.com/@chittinandchattin",
     tiktok: "https://www.tiktok.com/@chittinandchattin",
