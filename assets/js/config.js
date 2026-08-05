@@ -5,8 +5,8 @@ window.SITE_CONFIG = {
   tagline: "Two besties, one mic, infinite tea - healing, chaos, and Sips of the Week.",
   domain: "https://chittinandchattin.com",
   web3forms: {
-    spill: "",
-    healing: "",
+    spill: "1114430c-42fe-4195-8aa8-fbdfeaacc9e8",
+    healing: "92105694-ab70-40b9-b495-a5f235818b20",
   },
   inboxEmails: {
     spill: "travelwitheasewithme+spillit@gmail.com",
