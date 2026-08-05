@@ -1,11 +1,11 @@
-# Deploy Chittinnchattin.com to Cloudflare Pages
+# Deploy chittinandchattin.com to Cloudflare Pages
 
 Static site — no build step. Cloudflare serves files from the repo root.
 
 ## 1. Push this repo to GitHub
 
 ```powershell
-cd "G:\Laughing Dragons\Chittinnchattin.com"
+cd "G:\Laughing Dragons\chittinandchattin.com"
 git init
 git add .
 git commit -m "Initial Chittin' and Chattin podcast site"
@@ -29,7 +29,7 @@ Preview URL: `https://chittinnchattin-site.pages.dev` (name may vary).
 
 ## 3. Custom domains
 
-**Canonical:** `chittinnchattin.com` + `www.chittinnchattin.com`
+**Canonical:** `chittinandchattin.com` + `www.chittinandchattin.com`
 
 1. Pages project → **Custom domains** → add both
 2. If domains are on Cloudflare, DNS is automatic
@@ -40,10 +40,10 @@ Add both to the same Pages project, then create a **Redirect Rule** (or Bulk Red
 
 | Match | Redirect to |
 |-------|-------------|
-| `chittinandchattin.com/*` | `https://chittinnchattin.com/$1` (301) |
-| `www.chittinandchattin.com/*` | `https://chittinnchattin.com/$1` (301) |
+| `chittinandchattin.com/*` | `https://chittinandchattin.com/$1` (301) |
+| `www.chittinandchattin.com/*` | `https://chittinandchattin.com/$1` (301) |
 
-All canonical URLs in this repo use `https://chittinnchattin.com`.
+All canonical URLs in this repo use `https://chittinandchattin.com`.
 
 ## 4. AdSense (shared account)
 
@@ -53,8 +53,8 @@ Every page includes the AdSense script in `<head>`. Root `ads.txt` is set for `p
 
 After the domain is live:
 
-1. AdSense → **Sites** → **Add site** → `chittinnchattin.com`
-2. Verify `https://chittinnchattin.com/ads.txt`
+1. AdSense → **Sites** → **Add site** → `chittinandchattin.com`
+2. Verify `https://chittinandchattin.com/ads.txt`
 3. Privacy, Terms, About, and Contact are linked in the footer
 4. Create ad units and paste slot IDs into `assets/js/config.js` → `adsense.slots`
 5. Wait for review (can take days)
@@ -64,7 +64,7 @@ You usually do **not** need a separate AdSense property for `chittinandchattin.c
 ## 5. Search Console
 
 1. Add property at [Google Search Console](https://search.google.com/search-console)
-2. Submit `https://chittinnchattin.com/sitemap.xml`
+2. Submit `https://chittinandchattin.com/sitemap.xml`
 
 ## 6. Ongoing updates
 
@@ -87,4 +87,4 @@ Ensure **Settings → Actions → General** allows workflows on this repo.
 | 404 on `/listen/` | Ensure `listen/index.html` exists |
 | ads.txt 404 | File must be at repo root |
 | Ads not showing | Site may need AdSense approval; add slot IDs in config.js |
-| Wrong domain in canonicals | All pages use `chittinnchattin.com` |
+| Wrong domain in canonicals | All pages use `chittinandchattin.com` |

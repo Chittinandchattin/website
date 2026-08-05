@@ -3,7 +3,11 @@ window.SITE_CONFIG = {
   name: "Chittin' and Chattin'",
   legalName: "Chittin' and Chattin'",
   tagline: "Two besties, one mic, infinite tea - healing, chaos, and Sips of the Week.",
-  domain: "https://chittinnchattin.com",
+  domain: "https://chittinandchattin.com",
+  web3forms: {
+    spill: "",
+    healing: "",
+  },
   inboxEmails: {
     spill: "travelwitheasewithme+spillit@gmail.com",
     healing: "travelwitheasewithme+healinginbox@gmail.com",

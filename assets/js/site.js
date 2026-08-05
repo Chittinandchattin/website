@@ -166,16 +166,31 @@ function renderFollowShowList() {
   <p class="follow-show-note">Hosted on Spotify for Creators - our RSS feed syndicates to most podcast apps automatically. Can't find us? Search <strong>Chittin' and Chattin'</strong>.</p>`;
 }
 
-function renderInstagramCTA(label = "Message us on Instagram", inboxType) {
+function renderInboxCTA(label = "Message us on Instagram", inboxType) {
   const cfg = window.SITE_CONFIG || {};
   const ig = cfg.links?.instagram || "#";
-  const inboxEmail = inboxType ? cfg.inboxEmails?.[inboxType] : null;
-  const emailLine = inboxEmail
-    ? `<p class="cta-note">Instagram DMs are fastest. Or email <a href="mailto:${inboxEmail}">${inboxEmail}</a>.</p>`
-    : `<p class="cta-note">Opens Instagram in a new tab.</p>`;
+  const formId = `inbox-form-${inboxType}`;
+  const statusId = `inbox-form-status-${inboxType}`;
   return `<div class="cta-panel reveal">
     <a class="btn btn-primary btn-lg" href="${ig}" target="_blank" rel="noopener">${label}</a>
-    ${emailLine}
+    <p class="cta-note">Instagram DMs are fastest. Or send your submission below.</p>
+    <form class="contact-form inbox-form" id="${formId}" data-inbox-type="${inboxType}" novalidate>
+      <input type="checkbox" name="botcheck" class="contact-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <div class="form-field">
+        <label for="${formId}-name">Name</label>
+        <input type="text" id="${formId}-name" name="name" required autocomplete="name" maxlength="80" />
+      </div>
+      <div class="form-field">
+        <label for="${formId}-email">Email</label>
+        <input type="email" id="${formId}-email" name="email" required autocomplete="email" />
+      </div>
+      <div class="form-field">
+        <label for="${formId}-message">Your message</label>
+        <textarea id="${formId}-message" name="message" required rows="6" maxlength="5000"></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Send submission</button>
+      <p class="form-status" id="${statusId}" role="status" aria-live="polite"></p>
+    </form>
   </div>`;
 }
 
@@ -228,7 +243,7 @@ function renderFeaturePage({ eyebrow, title, intro, body, image, ctaLabel, inbox
       </figure>
       <div class="prose">
         ${body}
-        ${renderInstagramCTA(ctaLabel, inboxType)}
+        ${renderInboxCTA(ctaLabel, inboxType)}
         <p class="cross-link">Need the other inbox? <a href="${other.href}">${other.label}</a> - ${other.desc}.</p>
       </div>
     </div>`;
@@ -535,20 +550,73 @@ function bindReveal() {
 
 function renderChittinContactPage() {
   const cfg = window.SITE_CONFIG || {};
-  const emails = cfg.inboxEmails || {};
   const ig = cfg.links?.instagram || "#";
   return `
     <header class="page-header reveal">
       <p class="teaser-eyebrow">Get in touch</p>
       <h1>Contact Us</h1>
-      <p class="page-lead">Reach Sydney and Emmy through our show inboxes — Instagram DMs or email.</p>
+      <p class="page-lead">Reach Sydney and Emmy through our show inboxes — Instagram DMs or the submission form on each page.</p>
     </header>
     <div class="prose reveal">
       <p>Pick the inbox that fits what you want to share. We read every message.</p>
       <ul class="meta-list">
-        <li><strong>Spill it, bestie</strong> — funny, messy, chaotic tea. <a href="/spill-it-bestie/">Learn more</a> · <a href="mailto:${emails.spill}">${emails.spill}</a></li>
-        <li><strong>Healing inbox</strong> — tender questions and stories. <a href="/healing-inbox/">Learn more</a> · <a href="mailto:${emails.healing}">${emails.healing}</a></li>
+        <li><strong>Spill it, bestie</strong> — funny, messy, chaotic tea. <a href="/spill-it-bestie/">Submit here</a></li>
+        <li><strong>Healing inbox</strong> — tender questions and stories. <a href="/healing-inbox/">Submit here</a></li>
       </ul>
       <p>Instagram is fastest for both: <a href="${ig}" target="_blank" rel="noopener">@chittinnchattin</a></p>
     </div>`;
+}
+
+function bindInboxForm({ inboxType, subjectPrefix }) {
+  const form = document.getElementById(`inbox-form-${inboxType}`);
+  if (!form) return;
+
+  const statusEl = document.getElementById(`inbox-form-status-${inboxType}`);
+  const cfg = window.SITE_CONFIG || {};
+  const accessKey = cfg.web3forms?.[inboxType];
+  const redirectUrl = `${cfg.domain || ""}/submissionsent/`;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    if (!accessKey) {
+      if (statusEl) {
+        statusEl.textContent = "Submission form is not configured yet. Please try again later.";
+        statusEl.className = "form-status form-status-error";
+      }
+      return;
+    }
+
+    if (submitBtn) submitBtn.disabled = true;
+    if (statusEl) {
+      statusEl.textContent = "Sending…";
+      statusEl.className = "form-status form-status-pending";
+    }
+
+    const fd = new FormData(form);
+    fd.append("access_key", accessKey);
+    fd.append("from_name", subjectPrefix);
+    fd.set("subject", subjectPrefix);
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: fd,
+        headers: { Accept: "application/json" },
+      });
+      const data = await res.json();
+      if (data.success) {
+        window.location.href = redirectUrl;
+        return;
+      }
+      throw new Error(data.message || "Something went wrong.");
+    } catch (err) {
+      if (statusEl) {
+        statusEl.textContent = err.message || "Could not send your submission. Please try again.";
+        statusEl.className = "form-status form-status-error";
+      }
+      if (submitBtn) submitBtn.disabled = false;
+    }
+  });
 }

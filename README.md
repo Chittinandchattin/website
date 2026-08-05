@@ -1,6 +1,6 @@
 # Chittin' and Chattin — Podcast Site
 
-Static site for **chittinnchattin.com** — listen links, host bios, Spill it / Healing inbox (Instagram for now), and Sips archive stub.
+Static site for **chittinandchattin.com** — listen links, host bios, Spill it / Healing inbox (Instagram for now), and Sips archive stub.
 
 ## Stack
 
@@ -12,7 +12,7 @@ Static site for **chittinnchattin.com** — listen links, host bios, Spill it / 
 ## Preview locally
 
 ```powershell
-cd "G:\Laughing Dragons\Chittinnchattin.com"
+cd "G:\Laughing Dragons\chittinandchattin.com"
 .\scripts\preview.ps1
 ```
 
