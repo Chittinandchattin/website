@@ -533,90 +533,22 @@ function bindReveal() {
   nodes.forEach((n) => io.observe(n));
 }
 
-function renderContactForm({ intro = "" } = {}) {
-  return `
-    <div class="prose reveal">
-      ${intro ? `<p>${intro}</p>` : ""}
-      <form class="contact-form" id="contact-form" novalidate>
-        <input type="checkbox" name="botcheck" class="contact-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
-        <div class="form-field">
-          <label for="contact-name">Name</label>
-          <input type="text" id="contact-name" name="name" required autocomplete="name" maxlength="80" />
-        </div>
-        <div class="form-field">
-          <label for="contact-email">Email</label>
-          <input type="email" id="contact-email" name="email" required autocomplete="email" />
-        </div>
-        <div class="form-field">
-          <label for="contact-subject">Subject <span class="optional">(optional)</span></label>
-          <input type="text" id="contact-subject" name="subject" maxlength="120" />
-        </div>
-        <div class="form-field">
-          <label for="contact-message">Message</label>
-          <textarea id="contact-message" name="message" required rows="6" maxlength="5000"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send message</button>
-        <p class="form-status" id="contact-form-status" role="status" aria-live="polite"></p>
-      </form>
-    </div>`;
-}
-
-function bindContactForm(options = {}) {
-  const form = document.getElementById("contact-form");
-  if (!form) return;
-
-  const statusEl = document.getElementById("contact-form-status");
+function renderChittinContactPage() {
   const cfg = window.SITE_CONFIG || {};
-  const accessKey = cfg.web3formsAccessKey;
-  const subjectPrefix = options.subjectPrefix || cfg.name || "Website";
-
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const submitBtn = form.querySelector('button[type="submit"]');
-
-    if (!accessKey) {
-      if (statusEl) {
-        statusEl.textContent = "Contact form is not configured yet. Please try again later.";
-        statusEl.className = "form-status form-status-error";
-      }
-      return;
-    }
-
-    if (submitBtn) submitBtn.disabled = true;
-    if (statusEl) {
-      statusEl.textContent = "Sending…";
-      statusEl.className = "form-status form-status-pending";
-    }
-
-    const fd = new FormData(form);
-    fd.append("access_key", accessKey);
-    fd.append("from_name", subjectPrefix);
-    const subject = fd.get("subject");
-    fd.set("subject", subject ? `${subjectPrefix}: ${subject}` : `${subjectPrefix} — Contact form`);
-
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: fd,
-        headers: { Accept: "application/json" },
-      });
-      const data = await res.json();
-      if (data.success) {
-        form.reset();
-        if (statusEl) {
-          statusEl.textContent = "Thanks — your message was sent. We'll get back to you soon.";
-          statusEl.className = "form-status form-status-success";
-        }
-      } else {
-        throw new Error(data.message || "Something went wrong.");
-      }
-    } catch (err) {
-      if (statusEl) {
-        statusEl.textContent = err.message || "Could not send your message. Please try again.";
-        statusEl.className = "form-status form-status-error";
-      }
-    } finally {
-      if (submitBtn) submitBtn.disabled = false;
-    }
-  });
+  const emails = cfg.inboxEmails || {};
+  const ig = cfg.links?.instagram || "#";
+  return `
+    <header class="page-header reveal">
+      <p class="teaser-eyebrow">Get in touch</p>
+      <h1>Contact Us</h1>
+      <p class="page-lead">Reach Sydney and Emmy through our show inboxes — Instagram DMs or email.</p>
+    </header>
+    <div class="prose reveal">
+      <p>Pick the inbox that fits what you want to share. We read every message.</p>
+      <ul class="meta-list">
+        <li><strong>Spill it, bestie</strong> — funny, messy, chaotic tea. <a href="/spill-it-bestie/">Learn more</a> · <a href="mailto:${emails.spill}">${emails.spill}</a></li>
+        <li><strong>Healing inbox</strong> — tender questions and stories. <a href="/healing-inbox/">Learn more</a> · <a href="mailto:${emails.healing}">${emails.healing}</a></li>
+      </ul>
+      <p>Instagram is fastest for both: <a href="${ig}" target="_blank" rel="noopener">@chittinnchattin</a></p>
+    </div>`;
 }
