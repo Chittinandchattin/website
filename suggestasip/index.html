@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Suggest a Sip for Chittin' and Chattin - send Sydney and Emmy your favorite drinks, sips, and ideas for Sips of the Week." />
+    <title>Suggest a Sip</title>
+    <link rel="icon" href="/assets/brand/icon.png" type="image/png" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <link rel="canonical" href="https://chittinandchattin.com/suggestasip/" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7048606415692002"
+     crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/site.js"></script>
+    <script>
+      initPage({
+        title: "Suggest a Sip",
+        description: "Suggest a Sip for Chittin' and Chattin - send Sydney and Emmy your favorite drinks, sips, and ideas for Sips of the Week.",
+        activePath: "/suggestasip/",
+        content: renderSipSuggestPage({
+          eyebrow: "Suggest a Sip",
+          title: "Suggest a Sip",
+          intro: "Syd and Em love Sips of the Week. Trying something new every episode is half the fun.",
+          body: `<p>This page is where you send in your <strong>favorite drinks, sips, and ideas</strong>. Coffee, tea, cocktails, mocktails, weird gas-station finds: if you love it, they want to try it.</p>
+            <p>We want to sip anything good y'all love. No pressure to write a novel. Name the drink, drop any tips (where to get it, how you make it, why it hits), and hit send.</p>
+            <p>DM us on Instagram, or use the form below to share your suggestion.</p>`,
+          image: "/assets/features/sips-of-the-week.png",
+          ctaLabel: "Message us on Instagram",
+          inboxType: "sip",
+        }),
+      });
+      bindInboxForm({
+        inboxType: "sip",
+        subjectPrefix: "Chittin' and Chattin' - Suggest a Sip",
+      });
+    </script>
+  </body>
+</html>

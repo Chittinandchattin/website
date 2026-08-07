@@ -311,6 +311,19 @@ a:hover {
   color: #b84d6a;
 }
 
+.teaser-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  align-items: baseline;
+}
+
+.sip-suggest-cta {
+  margin: 0 0 1.75rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
 .teaser {
   padding: 3.5rem 0;
 }
@@ -1007,5 +1020,88 @@ a:hover {
   .reveal {
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Suggest a Sip collage page */
+.page-inner:has(.sip-suggest-page) {
+  width: 100%;
+  max-width: none;
+  padding-inline: 0;
+}
+
+.sip-suggest-page {
+  position: relative;
+  overflow: hidden;
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem) 4rem;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(244, 168, 184, 0.22), transparent 42%),
+    radial-gradient(circle at 88% 12%, rgba(255, 184, 154, 0.2), transparent 38%),
+    radial-gradient(circle at 78% 82%, rgba(201, 168, 232, 0.18), transparent 40%),
+    radial-gradient(circle at 8% 78%, rgba(245, 200, 66, 0.12), transparent 36%),
+    linear-gradient(160deg, rgba(255, 248, 243, 0.95) 0%, rgba(255, 232, 240, 0.85) 45%, rgba(255, 244, 230, 0.9) 100%);
+  border-radius: 1.25rem;
+  border: 1px solid var(--border);
+}
+
+.sip-decor-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.sip-decor {
+  position: absolute;
+  width: clamp(3.5rem, 9vw, 5.5rem);
+  height: auto;
+  opacity: 0.55;
+  filter: drop-shadow(0 6px 14px rgba(61, 47, 53, 0.08));
+}
+
+.sip-decor-1 { top: 4%; left: 2%; transform: rotate(-14deg); }
+.sip-decor-2 { top: 8%; right: 3%; transform: rotate(10deg); width: clamp(3rem, 8vw, 4.75rem); }
+.sip-decor-3 { top: 38%; left: 1%; transform: rotate(8deg); width: clamp(4rem, 10vw, 6rem); opacity: 0.5; }
+.sip-decor-4 { top: 42%; right: 2%; transform: rotate(-12deg); }
+.sip-decor-5 { bottom: 18%; left: 4%; transform: rotate(-6deg); width: clamp(3.25rem, 8vw, 5rem); }
+.sip-decor-6 { bottom: 12%; right: 5%; transform: rotate(16deg); width: clamp(3.75rem, 9vw, 5.75rem); }
+.sip-decor-7 { bottom: 4%; left: 18%; transform: rotate(22deg) scale(0.85); opacity: 0.4; }
+.sip-decor-8 { bottom: 6%; right: 16%; transform: rotate(-18deg) scale(0.9); opacity: 0.42; }
+
+.sip-suggest-content {
+  position: relative;
+  z-index: 1;
+  width: var(--container);
+  max-width: 100%;
+  margin-inline: auto;
+}
+
+.sip-suggest-page .page-header,
+.sip-suggest-page .feature-layout {
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.65);
+  padding: clamp(1rem, 3vw, 1.75rem);
+}
+
+.sip-suggest-page .page-header {
+  margin-bottom: 1.25rem;
+}
+
+.sip-suggest-page .feature-layout {
+  padding: clamp(1rem, 3vw, 2rem);
+}
+
+@media (max-width: 720px) {
+  .sip-decor-3,
+  .sip-decor-7,
+  .sip-decor-8 {
+    display: none;
+  }
+
+  .sip-decor {
+    opacity: 0.38;
+    width: clamp(2.75rem, 12vw, 4rem);
   }
 }

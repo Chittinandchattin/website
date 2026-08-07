@@ -5,6 +5,7 @@ const NAV = [
   { href: "/spill-it-bestie/", label: "Spill it" },
   { href: "/healing-inbox/", label: "Healing" },
   { href: "/sips/", label: "Sips" },
+  { href: "/suggestasip/", label: "Suggest a Sip" },
 ];
 
 function isNavActive(activePath, item) {
@@ -171,9 +172,15 @@ function renderInboxCTA(label = "Message us on Instagram", inboxType) {
   const ig = cfg.links?.instagram || "#";
   const formId = `inbox-form-${inboxType}`;
   const statusId = `inbox-form-status-${inboxType}`;
+  const messageLabel = inboxType === "sip" ? "Your sip suggestion" : "Your message";
+  const ctaNote =
+    inboxType === "sip"
+      ? "Instagram DMs work too. Or send your sip idea below."
+      : "Instagram DMs are fastest. Or send your submission below.";
+  const submitLabel = inboxType === "sip" ? "Send suggestion" : "Send submission";
   return `<div class="cta-panel reveal">
     <a class="btn btn-primary btn-lg" href="${ig}" target="_blank" rel="noopener">${label}</a>
-    <p class="cta-note">Instagram DMs are fastest. Or send your submission below.</p>
+    <p class="cta-note">${ctaNote}</p>
     <form class="contact-form inbox-form" id="${formId}" data-inbox-type="${inboxType}" novalidate>
       <input type="checkbox" name="botcheck" class="contact-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
       <div class="form-field">
@@ -185,10 +192,10 @@ function renderInboxCTA(label = "Message us on Instagram", inboxType) {
         <input type="email" id="${formId}-email" name="email" required autocomplete="email" />
       </div>
       <div class="form-field">
-        <label for="${formId}-message">Your message</label>
+        <label for="${formId}-message">${messageLabel}</label>
         <textarea id="${formId}-message" name="message" required rows="6" maxlength="5000"></textarea>
       </div>
-      <button type="submit" class="btn btn-primary">Send submission</button>
+      <button type="submit" class="btn btn-primary">${submitLabel}</button>
       <p class="form-status" id="${statusId}" role="status" aria-live="polite"></p>
     </form>
   </div>`;
@@ -210,14 +217,21 @@ function renderHostCards() {
   </div>`;
 }
 
-function renderTeaser({ eyebrow, title, body, href, cta, image, reverse = false }) {
+function renderTeaser({ eyebrow, title, body, href, cta, image, reverse = false, secondaryHref, secondaryCta }) {
+  const secondaryLink =
+    secondaryHref && secondaryCta
+      ? `<a class="text-link teaser-link-secondary" href="${secondaryHref}">${secondaryCta} &rarr;</a>`
+      : "";
   return `<section class="teaser${reverse ? " teaser-reverse" : ""}">
     <div class="container teaser-inner">
       <div class="teaser-copy reveal">
         <p class="teaser-eyebrow">${eyebrow}</p>
         <h2>${title}</h2>
         <p>${body}</p>
-        <a class="text-link" href="${href}">${cta} &rarr;</a>
+        <div class="teaser-links">
+          <a class="text-link" href="${href}">${cta} &rarr;</a>
+          ${secondaryLink}
+        </div>
       </div>
       <div class="teaser-visual reveal" aria-hidden="true">
         <div class="teaser-frame" style="background-image:url('${image}')"></div>
@@ -226,12 +240,18 @@ function renderTeaser({ eyebrow, title, body, href, cta, image, reverse = false 
   </section>`;
 }
 
-function renderFeaturePage({ eyebrow, title, intro, body, image, ctaLabel, inboxType }) {
+function renderFeatureCrossLink(inboxType) {
+  if (inboxType === "sip") {
+    return `<p class="cross-link">Browse past <a href="/sips/">Sips of the Week</a>, or share tea in our <a href="/spill-it-bestie/">Spill it</a> and <a href="/healing-inbox/">Healing</a> inboxes.</p>`;
+  }
   const other =
     inboxType === "spill"
       ? { href: "/healing-inbox/", label: "Healing Inbox", desc: "tender things that want care and space" }
       : { href: "/spill-it-bestie/", label: "Spill it, bestie", desc: "funny, messy, chaotic tea" };
+  return `<p class="cross-link">Need the other inbox? <a href="${other.href}">${other.label}</a> - ${other.desc}.</p>`;
+}
 
+function renderFeaturePage({ eyebrow, title, intro, body, image, ctaLabel, inboxType }) {
   return `<header class="page-header reveal">
       <p class="teaser-eyebrow">${eyebrow}</p>
       <h1>${title}</h1>
@@ -244,9 +264,35 @@ function renderFeaturePage({ eyebrow, title, intro, body, image, ctaLabel, inbox
       <div class="prose">
         ${body}
         ${renderInboxCTA(ctaLabel, inboxType)}
-        <p class="cross-link">Need the other inbox? <a href="${other.href}">${other.label}</a> - ${other.desc}.</p>
+        ${renderFeatureCrossLink(inboxType)}
       </div>
     </div>`;
+}
+
+const SIP_DECOR_ITEMS = [
+  { src: "/assets/features/sip-decor/mug.svg", class: "sip-decor-1" },
+  { src: "/assets/features/sip-decor/wine-glass.svg", class: "sip-decor-2" },
+  { src: "/assets/features/sip-decor/cocktail.svg", class: "sip-decor-3" },
+  { src: "/assets/features/sip-decor/iced-tea.svg", class: "sip-decor-4" },
+  { src: "/assets/features/sip-decor/coffee.svg", class: "sip-decor-5" },
+  { src: "/assets/features/sip-decor/bubble-tea.svg", class: "sip-decor-6" },
+  { src: "/assets/features/sip-decor/mug.svg", class: "sip-decor-7" },
+  { src: "/assets/features/sip-decor/cocktail.svg", class: "sip-decor-8" },
+];
+
+function renderSipSuggestDecor() {
+  return SIP_DECOR_ITEMS.map(
+    (item) => `<img class="sip-decor ${item.class}" src="${item.src}" alt="" loading="lazy" />`
+  ).join("");
+}
+
+function renderSipSuggestPage(options) {
+  return `<div class="sip-suggest-page">
+    <div class="sip-decor-layer" aria-hidden="true">${renderSipSuggestDecor()}</div>
+    <div class="sip-suggest-content">
+      ${renderFeaturePage(options)}
+    </div>
+  </div>`;
 }
 
 function truncate(text, max = 280) {
@@ -555,15 +601,16 @@ function renderChittinContactPage() {
     <header class="page-header reveal">
       <p class="teaser-eyebrow">Get in touch</p>
       <h1>Contact Us</h1>
-      <p class="page-lead">Reach Sydney and Emmy through our show inboxes — Instagram DMs or the submission form on each page.</p>
+      <p class="page-lead">Use one of our inbox forms to reach Sydney and Emmy - we read every submission.</p>
     </header>
     <div class="prose reveal">
-      <p>Pick the inbox that fits what you want to share. We read every message.</p>
+      <p>Pick the inbox that fits what you want to share:</p>
       <ul class="meta-list">
-        <li><strong>Spill it, bestie</strong> — funny, messy, chaotic tea. <a href="/spill-it-bestie/">Submit here</a></li>
-        <li><strong>Healing inbox</strong> — tender questions and stories. <a href="/healing-inbox/">Submit here</a></li>
+        <li><strong>Spill it, bestie</strong> - funny, messy, chaotic tea. <a href="/spill-it-bestie/">Open the form</a></li>
+        <li><strong>Healing inbox</strong> - tender questions and stories. <a href="/healing-inbox/">Open the form</a></li>
+        <li><strong>Suggest a Sip</strong> - favorite drinks and sip ideas. <a href="/suggestasip/">Open the form</a></li>
       </ul>
-      <p>Instagram is fastest for both: <a href="${ig}" target="_blank" rel="noopener">@chittinnchattin</a></p>
+      <p>You can also DM us on Instagram: <a href="${ig}" target="_blank" rel="noopener">@chittinnchattin</a></p>
     </div>`;
 }
 

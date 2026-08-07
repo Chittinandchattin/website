@@ -7,10 +7,7 @@ window.SITE_CONFIG = {
   web3forms: {
     spill: "1114430c-42fe-4195-8aa8-fbdfeaacc9e8",
     healing: "92105694-ab70-40b9-b495-a5f235818b20",
-  },
-  inboxEmails: {
-    spill: "travelwitheasewithme+spillit@gmail.com",
-    healing: "travelwitheasewithme+healinginbox@gmail.com",
+    sip: "3525561a-615c-4796-9255-125cdeb27ad6",
   },
   bio:
     "Hey y'all-ready to sip some tea, ramble about everything, and dive into whatever is happening in our brains? Grab a drink, get cozy, and hang out with two besties navigating life, healing through their trauma, and laughing through the chaos (tissues may be required).",
