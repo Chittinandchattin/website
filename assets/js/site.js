@@ -67,11 +67,21 @@ function renderFooter() {
   </footer>`;
 }
 
+function hasConfiguredAdSlots() {
+  const slots = window.SITE_CONFIG?.adsense?.slots || {};
+  return Object.values(slots).some((id) => Boolean(id));
+}
+
+function adSlotWrap(slotKey, wrapClass, unitClass = "ad-unit") {
+  const inner = renderAdSlot(slotKey, unitClass);
+  return inner ? `<div class="ad-slot ${wrapClass}">${inner}</div>` : "";
+}
+
 function renderAdSlot(key, className = "ad-unit") {
   const cfg = window.SITE_CONFIG?.adsense || {};
   const slot = cfg.slots?.[key];
   if (!cfg.publisherId || !slot) {
-    return `<div class="${className} ad-placeholder" aria-hidden="true">Ad space</div>`;
+    return "";
   }
   return `<ins class="adsbygoogle ${className}"
     style="display:block"
@@ -459,6 +469,11 @@ function renderEpisodePagination(currentPage, totalPages) {
   </nav>`;
 }
 
+function episodeDetailHref(episodeNumber) {
+  if (!episodeNumber || episodeNumber < 28) return null;
+  return `/episodes/detail.html?ep=${episodeNumber}`;
+}
+
 function renderEpisodeCards(episodes, fallbackImage) {
   if (!episodes.length) {
     return `<p class="episode-error">No episodes found yet.</p>`;
@@ -468,6 +483,8 @@ function renderEpisodeCards(episodes, fallbackImage) {
       .map((ep) => {
         const listenHref =
           ep.link && ep.link.startsWith("http") ? ep.link : "#";
+        const detailHref = episodeDetailHref(ep.episodeNumber);
+        const titleHref = detailHref || listenHref;
         const thumb = ep.imageUrl || fallbackImage || "/assets/brand/icon.png";
         const epLabel = ep.episodeNumber ? `<span class="episode-num">Ep ${ep.episodeNumber}</span>` : "";
         const duration = ep.duration
@@ -477,16 +494,21 @@ function renderEpisodeCards(episodes, fallbackImage) {
           listenHref !== "#"
             ? `<a class="text-link" href="${escapeHtml(listenHref)}" target="_blank" rel="noopener">Listen on Spotify &rarr;</a>`
             : "";
+        const notes =
+          detailHref
+            ? `<a class="text-link" href="${escapeHtml(detailHref)}">Read show notes &rarr;</a>`
+            : "";
+        const links = [listen, notes].filter(Boolean).join(" ");
         return `<article class="episode-card reveal">
-          <a class="episode-thumb-link" href="${escapeHtml(listenHref)}" target="_blank" rel="noopener" aria-label="Listen: ${escapeHtml(ep.title)}">
+          <a class="episode-thumb-link" href="${escapeHtml(titleHref)}"${detailHref ? "" : ' target="_blank" rel="noopener"'} aria-label="${escapeHtml(ep.title)}">
             <img class="episode-thumb" src="${escapeHtml(thumb)}" alt="" width="128" height="128" loading="lazy" />
           </a>
           <div class="episode-card-body">
             <div class="episode-card-meta">${epLabel}${duration}</div>
-            <h2><a href="${escapeHtml(listenHref)}" target="_blank" rel="noopener">${escapeHtml(ep.title)}</a></h2>
+            <h2><a href="${escapeHtml(titleHref)}"${detailHref ? "" : ' target="_blank" rel="noopener"'}>${escapeHtml(ep.title)}</a></h2>
             <p class="episode-date">${formatEpisodeDate(ep.published)}</p>
             <p class="episode-desc">${truncate(ep.description)}</p>
-            ${listen}
+            ${links ? `<p class="episode-links">${links}</p>` : ""}
           </div>
         </article>`;
       })
@@ -528,14 +550,70 @@ function initEpisodesPage() {
       mount.innerHTML = `
         <p class="episode-page-summary reveal">Showing ${rangeStart}-${rangeEnd} of ${all.length} episodes</p>
         ${renderEpisodeCards(pageEpisodes, fallback)}
-        <div class="ad-slot ad-mid">${renderAdSlot("inContent", "ad-unit")}</div>
+        ${adSlotWrap("inContent", "ad-mid")}
         ${renderEpisodePagination(currentPage, totalPages)}
       `;
-      pushAds();
+      if (hasConfiguredAdSlots()) pushAds();
       bindReveal();
     })
     .catch(() => {
       mount.innerHTML = `<p class="episode-error">Could not load episodes. Try again later or listen on <a href="/listen/">Spotify</a>.</p>`;
+    });
+}
+
+function initEpisodeDetailPage() {
+  const mount = document.getElementById("episode-detail-mount");
+  if (!mount) return;
+
+  const raw = new URLSearchParams(window.location.search).get("ep");
+  const epNum = parseInt(raw, 10);
+  if (!Number.isFinite(epNum)) {
+    mount.innerHTML = `<p class="episode-error">Episode not found. <a href="/episodes/">Browse all episodes</a>.</p>`;
+    return;
+  }
+
+  fetch("/assets/data/episodes.json")
+    .then((res) => {
+      if (!res.ok) throw new Error("Failed to load episodes");
+      return res.json();
+    })
+    .then((data) => {
+      const ep = (data.episodes || []).find((row) => row.episodeNumber === epNum);
+      if (!ep) {
+        mount.innerHTML = `<p class="episode-error">Episode ${epNum} not found. <a href="/episodes/">Browse all episodes</a>.</p>`;
+        return;
+      }
+      const thumb = ep.imageUrl || data.spotifyThumbnailUrl || data.channelImageUrl || "/assets/brand/icon.png";
+      const listen =
+        ep.link && ep.link.startsWith("http")
+          ? `<a class="btn btn-primary" href="${escapeHtml(ep.link)}" target="_blank" rel="noopener">Listen on Spotify</a>`
+          : "";
+      const duration = ep.duration ? `<span class="episode-duration">${escapeHtml(ep.duration)}</span>` : "";
+      document.title = `Ep ${epNum}: ${ep.title} | ${window.SITE_CONFIG?.name || "Chittin' and Chattin'"}`;
+      const meta = document.querySelector('meta[name="description"]');
+      if (meta) meta.content = truncate(ep.description, 160);
+
+      mount.innerHTML = `
+        <article class="episode-detail prose reveal">
+          <p class="teaser-eyebrow"><a href="/episodes/">&larr; All episodes</a></p>
+          <div class="episode-detail-head">
+            <img class="episode-detail-thumb" src="${escapeHtml(thumb)}" alt="" width="160" height="160" />
+            <div>
+              <p class="episode-card-meta"><span class="episode-num">Ep ${epNum}</span>${duration}</p>
+              <h1>${escapeHtml(ep.title)}</h1>
+              <p class="episode-date">${formatEpisodeDate(ep.published)}</p>
+              ${listen}
+            </div>
+          </div>
+          <div class="episode-detail-body">
+            <h2>Show notes</h2>
+            <p>${escapeHtml(ep.description)}</p>
+          </div>
+        </article>`;
+      bindReveal();
+    })
+    .catch(() => {
+      mount.innerHTML = `<p class="episode-error">Could not load this episode. <a href="/episodes/">Try the episodes list</a>.</p>`;
     });
 }
 
@@ -552,14 +630,14 @@ function initPage({ title, description, activePath, content, hero = false, adSlo
     ${renderHeader(activePath)}
     ${hero ? renderHero() : ""}
     <main class="${hero ? "page-main" : "container page-main page-inner"}">
-      ${!hero && adSlots ? `<div class="ad-slot ad-top">${renderAdSlot("header", "ad-unit")}</div>` : ""}
+      ${!hero && adSlots ? adSlotWrap("header", "ad-top") : ""}
       ${content}
-      ${adSlots ? `<div class="ad-slot ad-bottom">${renderAdSlot("footer", "ad-unit")}</div>` : ""}
+      ${adSlots ? adSlotWrap("footer", "ad-bottom") : ""}
     </main>
     ${renderFooter()}
   `;
 
-  if (adSlots) pushAds();
+  if (adSlots && hasConfiguredAdSlots()) pushAds();
   bindNav();
   bindReveal();
 }
