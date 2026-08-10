@@ -1,4 +1,4 @@
-name: Refresh episodes from RSS
+name: Refresh episodes and sips from RSS
 
 on:
   schedule:
@@ -17,11 +17,12 @@ jobs:
         with:
           python-version: "3.x"
       - run: python scripts/pull-episodes.py
+      - run: python scripts/extract-sips.py
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/data/episodes.json
-          git diff --staged --quiet && echo "No episode changes" && exit 0
-          git commit -m "chore: refresh episodes from RSS"
+          git add assets/data/episodes.json assets/data/sips.json assets/data/sips.txt assets/data/sips-checklist.csv
+          git diff --staged --quiet && echo "No episode or sips changes" && exit 0
+          git commit -m "chore: refresh episodes and sips from RSS"
           git push

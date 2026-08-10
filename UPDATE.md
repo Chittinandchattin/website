@@ -42,9 +42,9 @@ Reference copy (not served directly): `content/` folder.
 
 ## Automatic episode refresh (Mondays)
 
-New episodes usually drop on **Thursday**, but sometimes land **Friday or Saturday**. A GitHub Actions workflow runs every **Monday at ~7am Eastern**, pulls the Anchor/Spotify RSS feed, and pushes to `main` only when `assets/data/episodes.json` changed. Cloudflare Pages redeploys automatically.
+New episodes usually drop on **Thursday**, but sometimes land **Friday or Saturday**. A GitHub Actions workflow runs every **Monday at ~7am Eastern**, pulls the Anchor/Spotify RSS feed, refreshes **`assets/data/episodes.json`** and the **Sips of the Week** archive (`sips.json`, `sips.txt`, `sips-checklist.csv`), and pushes to `main` only when something changed. Cloudflare Pages redeploys automatically.
 
-**Manual refresh:** GitHub repo → **Actions** → **Refresh episodes from RSS** → **Run workflow**
+**Manual refresh:** GitHub repo → **Actions** → **Refresh episodes and sips from RSS** → **Run workflow**
 
 **Local refresh** (same as the workflow):
 
@@ -57,7 +57,7 @@ python scripts/pull-episodes.py
 
 ### Episodes from Spotify (via RSS)
 
-Episodes auto-refresh every Monday via `.github/workflows/refresh-episodes.yml`. Manual refresh:
+Episodes and sips auto-refresh every Monday via `.github/workflows/refresh-episodes.yml`. Manual refresh:
 
 ```powershell
 python scripts/pull-episodes.py
