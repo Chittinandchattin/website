@@ -348,13 +348,13 @@ function renderSipDetail(sip) {
   if (ingredients.length) {
     parts.push(`<p class="sip-detail-line"><strong>Ingredients:</strong> ${escapeHtml(ingredients.join(", "))}</p>`);
   }
-  if (sip.method) {
+  if (sip.method && !sipFieldLooksLikeGarbage(sip.method, "method")) {
     parts.push(`<p class="sip-detail-line"><strong>Method:</strong> ${escapeHtml(sip.method)}</p>`);
   }
-  if (sip.pairedFood) {
+  if (sip.pairedFood && !sipFieldLooksLikeGarbage(sip.pairedFood, "pairedFood")) {
     parts.push(`<p class="sip-detail-line"><strong>Paired with:</strong> ${escapeHtml(sip.pairedFood)}</p>`);
   }
-  if (sip.vessel) {
+  if (sip.vessel && !sipFieldLooksLikeGarbage(sip.vessel, "vessel")) {
     parts.push(`<p class="sip-detail-line"><strong>Vessel:</strong> ${escapeHtml(sip.vessel)}</p>`);
   }
   if (sip.notes) {
@@ -474,7 +474,52 @@ function episodeDetailHref(episodeNumber) {
   return `/episodes/detail.html?ep=${episodeNumber}`;
 }
 
-function renderEpisodeCards(episodes, fallbackImage) {
+const BRAND_EPISODE_THUMB = "/assets/brand/icon.png";
+
+function isShowLevelEpisodeImage(imageUrl, spotifyThumbnailUrl, channelImageUrl) {
+  if (!imageUrl) return true;
+  return imageUrl === spotifyThumbnailUrl || imageUrl === channelImageUrl;
+}
+
+function resolveEpisodeThumb(ep, feedMeta) {
+  const spotify = feedMeta?.spotifyThumbnailUrl || "";
+  const channel = feedMeta?.channelImageUrl || "";
+  const imageUrl = ep.imageUrl || "";
+  if (isShowLevelEpisodeImage(imageUrl, spotify, channel)) {
+    return BRAND_EPISODE_THUMB;
+  }
+  return imageUrl || BRAND_EPISODE_THUMB;
+}
+
+function sipFieldLooksLikeGarbage(text, fieldType) {
+  if (!text || !String(text).trim()) return false;
+  const lower = String(text).toLowerCase().trim();
+  const badStarts = ["just ", "gonna ", "you ready", "i don't know", "really cute cups"];
+  if (badStarts.some((s) => lower.startsWith(s))) return true;
+  const badTokens = [
+    "airport",
+    "sushi",
+    "state of kentucky",
+    "doosie",
+    "valkyrie",
+    "sonic 10",
+    "730",
+    "her. cute",
+    "show. like it was a game",
+  ];
+  if (badTokens.some((t) => lower.includes(t))) return true;
+  if (/\(\s*$/.test(text) || /\s+\w{1,4}$/.test(text.trim())) return true;
+  if (fieldType === "vessel") {
+    const vesselWords = /\b(mug|mugs|cup|cups|glass|glasses|bottle|pot|teapot|shaker|tumbler|stein|flask|thermos|jar)\b/i;
+    if (!vesselWords.test(text) && !/\bmatching\b/i.test(text) && !/\bDolly Parton\b/i.test(text)) {
+      return true;
+    }
+  }
+  if (fieldType === "method" && lower.length < 12) return true;
+  return false;
+}
+
+function renderEpisodeCards(episodes, feedMeta) {
   if (!episodes.length) {
     return `<p class="episode-error">No episodes found yet.</p>`;
   }
@@ -485,7 +530,7 @@ function renderEpisodeCards(episodes, fallbackImage) {
           ep.link && ep.link.startsWith("http") ? ep.link : "#";
         const detailHref = episodeDetailHref(ep.episodeNumber);
         const titleHref = detailHref || listenHref;
-        const thumb = ep.imageUrl || fallbackImage || "/assets/brand/icon.png";
+        const thumb = resolveEpisodeThumb(ep, feedMeta);
         const epLabel = ep.episodeNumber ? `<span class="episode-num">Ep ${ep.episodeNumber}</span>` : "";
         const duration = ep.duration
           ? `<span class="episode-duration">${escapeHtml(ep.duration)}</span>`
@@ -538,8 +583,6 @@ function initEpisodesPage() {
 
       const start = (currentPage - 1) * EPISODES_PER_PAGE;
       const pageEpisodes = all.slice(start, start + EPISODES_PER_PAGE);
-      const fallback =
-        data.spotifyThumbnailUrl || data.channelImageUrl || "/assets/brand/icon.png";
       const rangeStart = all.length ? start + 1 : 0;
       const rangeEnd = start + pageEpisodes.length;
 
@@ -549,7 +592,7 @@ function initEpisodesPage() {
 
       mount.innerHTML = `
         <p class="episode-page-summary reveal">Showing ${rangeStart}-${rangeEnd} of ${all.length} episodes</p>
-        ${renderEpisodeCards(pageEpisodes, fallback)}
+        ${renderEpisodeCards(pageEpisodes, data)}
         ${adSlotWrap("inContent", "ad-mid")}
         ${renderEpisodePagination(currentPage, totalPages)}
       `;
@@ -583,7 +626,7 @@ function initEpisodeDetailPage() {
         mount.innerHTML = `<p class="episode-error">Episode ${epNum} not found. <a href="/episodes/">Browse all episodes</a>.</p>`;
         return;
       }
-      const thumb = ep.imageUrl || data.spotifyThumbnailUrl || data.channelImageUrl || "/assets/brand/icon.png";
+      const thumb = resolveEpisodeThumb(ep, data);
       const listen =
         ep.link && ep.link.startsWith("http")
           ? `<a class="btn btn-primary" href="${escapeHtml(ep.link)}" target="_blank" rel="noopener">Listen on Spotify</a>`

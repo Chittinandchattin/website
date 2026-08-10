@@ -8,26 +8,16 @@ import shutil
 import subprocess
 import sys
 import tempfile
-import urllib.request
 from pathlib import Path
 
 from sips_common import (
     OPENING_SECONDS,
     OPENINGS_DIR,
+    download_file,
     episodes_with_numbers,
     load_episodes,
     opening_audio_path,
 )
-
-
-def download_file(url: str, dest: Path) -> None:
-    req = urllib.request.Request(url, headers={"User-Agent": "ChittinnchattinSite/1.0"})
-    with urllib.request.urlopen(req, timeout=120) as resp, dest.open("wb") as out:
-        while True:
-            chunk = resp.read(1024 * 256)
-            if not chunk:
-                break
-            out.write(chunk)
 
 
 def trim_opening(source: Path, dest: Path, seconds: int) -> None:

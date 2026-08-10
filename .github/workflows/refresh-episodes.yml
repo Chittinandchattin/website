@@ -2,7 +2,7 @@ name: Refresh episodes from RSS
 
 on:
   schedule:
-    - cron: "0 15 * * 5" # Friday ~11am Eastern
+    - cron: "0 11 * * 1" # Monday ~7am Eastern (EDT)
   workflow_dispatch:
 
 permissions:

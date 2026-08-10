@@ -74,7 +74,7 @@ Use [UPDATE.md](UPDATE.md). Push to `main` — Cloudflare redeploys automaticall
 
 Workflow: `.github/workflows/refresh-episodes.yml`
 
-- Runs every **Friday 15:00 UTC** (~11am Eastern) after Thursday episode drops
+- Runs every **Monday 11:00 UTC** (~7am Eastern) to catch Thursday–Saturday episode drops
 - Pulls RSS via `scripts/pull-episodes.py`, commits only if `episodes.json` changed
 - Manual run: GitHub → **Actions** → **Refresh episodes from RSS** → **Run workflow**
 

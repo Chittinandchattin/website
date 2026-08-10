@@ -5,6 +5,7 @@ from __future__ import annotations
 
 import json
 import re
+import urllib.request
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -14,6 +15,7 @@ OVERRIDES_PATH = ROOT / "assets" / "data" / "sips-overrides.json"
 CHECKLIST_PATH = ROOT / "assets" / "data" / "sips-checklist.csv"
 PLAINTEXT_PATH = ROOT / "assets" / "data" / "sips.txt"
 OPENINGS_DIR = ROOT / "audio" / "openings"
+EPISODES_DIR = ROOT / "audio" / "episodes"
 TRANSCRIPTS_DIR = ROOT / "transcripts" / "openings"
 CONTENT_DIR = ROOT / "content"
 
@@ -116,6 +118,22 @@ def episode_slug(episode_number: int) -> str:
 
 def opening_audio_path(episode_number: int) -> Path:
     return OPENINGS_DIR / f"{episode_slug(episode_number)}.mp3"
+
+
+def full_episode_audio_path(episode_number: int) -> Path:
+    return EPISODES_DIR / f"{episode_slug(episode_number)}.mp3"
+
+
+def download_file(url: str, dest: Path) -> None:
+    """Stream-download a URL to dest."""
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    req = urllib.request.Request(url, headers={"User-Agent": "ChittinnchattinSite/1.0"})
+    with urllib.request.urlopen(req, timeout=300) as resp, dest.open("wb") as out:
+        while True:
+            chunk = resp.read(1024 * 256)
+            if not chunk:
+                break
+            out.write(chunk)
 
 
 def transcript_path(episode_number: int) -> Path:
@@ -385,6 +403,57 @@ def _looks_like_garbage(text: str) -> bool:
     return False
 
 
+VESSEL_WORDS = re.compile(
+    r"\b(mug|mugs|cup|cups|glass|glasses|bottle|pot|teapot|shaker|tumbler|stein|flask|thermos|jar)\b",
+    re.IGNORECASE,
+)
+
+GARBAGE_FIELD_TOKENS = (
+    "airport",
+    "sushi",
+    "state of kentucky",
+    "doosie",
+    "valkyrie",
+    "sonic 10",
+    "730",
+    "her. cute",
+    "show. like it was a game",
+)
+
+
+def _looks_like_garbage_field(text: str, field_type: str) -> bool:
+    """Heuristic for method, vessel, and pairedFood transcript noise."""
+    if not text or not str(text).strip():
+        return False
+    lower = str(text).lower().strip()
+    bad_starts = (
+        "just ",
+        "gonna ",
+        "you ready",
+        "i don't know",
+        "really cute cups",
+    )
+    if any(lower.startswith(s) for s in bad_starts):
+        return True
+    if any(token in lower for token in GARBAGE_FIELD_TOKENS):
+        return True
+    if re.search(r"\(\s*$", text) or re.search(r"\([^)]*$", text):
+        return True
+    if re.search(r"\s+\w{1,4}$", text.strip()) and field_type == "method":
+        return True
+    if field_type == "vessel":
+        if VESSEL_WORDS.search(text) or re.search(r"\bmatching\b", text, re.I):
+            return False
+        if re.search(r"\bDolly Parton\b", text):
+            return False
+        return True
+    if field_type == "method" and len(lower) < 12:
+        return True
+    if field_type == "pairedFood" and len(lower) < 4:
+        return True
+    return False
+
+
 def _short_display_name(text: str) -> str:
     """Derive a short title from a sip phrase."""
     text = clean_fragment(text)
@@ -452,9 +521,16 @@ def merge_sip_fields(rss: dict, transcript: dict, override: dict) -> dict:
         merged["name"] = transcript["name"]
 
     for key in ("method", "notes", "pairedFood", "vessel", "manualNotes"):
-        for layer in (override, rss, transcript):
+        if key in override:
+            val = override.get(key)
+            if val and not _looks_like_garbage_field(val, key):
+                merged[key] = val
+            else:
+                merged[key] = ""
+            continue
+        for layer in (rss, transcript):
             val = layer.get(key)
-            if val:
+            if val and not _looks_like_garbage_field(val, key):
                 merged[key] = val
                 break
 

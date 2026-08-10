@@ -23,7 +23,8 @@
         "bourbon",
         "nutmeg",
         "cinnamon"
-      ]
+      ],
+      "vessel": ""
     },
     "3": {
       "displayName": "Cottage Apple Tea",
@@ -46,14 +47,16 @@
         "coffee",
         "salted caramel cold foam"
       ],
-      "vessel": "matching Up mugs"
+      "vessel": "matching Up mugs",
+      "method": ""
     },
     "5": {
       "displayName": "McDonald's Dr Pepper",
       "description": "This week's Sips of the Week was a \"nice and good\" McDonald's Dr Pepper (babaayyy). Simple, chaotic, perfect - the kind of sip that keeps you going while you're celebrating anniversaries, hyped about IU wins, and catching up on the newest Crime Junkie episode.",
       "ingredients": [
         "Dr Pepper"
-      ]
+      ],
+      "method": ""
     },
     "6": {
       "displayName": "Nick's Sick Mix",
@@ -69,7 +72,9 @@
       "ingredients": [
         "coffee",
         "Buffalo Trace bourbon sipping cream"
-      ]
+      ],
+      "method": "",
+      "vessel": ""
     },
     "8": {
       "displayName": "Coffee for the Modern Witch",
@@ -104,7 +109,8 @@
       "description": "Our 10th-episode Sips were the most perfectly moody tea called The Raven - dramatic, mysterious, and honestly fitting for the unhinged tangents we went on. Cozy, chaotic, honest, and very episode-ten coded.",
       "ingredients": [
         "The Raven tea blend"
-      ]
+      ],
+      "method": ""
     },
     "11": {
       "displayName": "Spicy Tea + Girl Scout Cookies",
@@ -112,14 +118,16 @@
       "pairedFood": "Girl Scout cookies and banana peppers",
       "ingredients": [
         "spicy tea"
-      ]
+      ],
+      "method": ""
     },
     "12": {
       "displayName": "Green Tea Jasmine",
       "description": "A cozy cup of green tea jasmine while we recapped Sydney's whirlwind trip to Cleveland - must-see spots, 27 Club Coffee, a Cavaliers game, a concert, and seriously amazing food. She was barely home a full day before packing up for Cincinnati because the motto is basically \"we can sleep when we're dead.\"",
       "ingredients": [
         "green tea jasmine"
-      ]
+      ],
+      "method": ""
     },
     "13": {
       "displayName": "Coffee with Homemade Blueberry Creamer",
@@ -127,7 +135,8 @@
       "ingredients": [
         "coffee",
         "homemade blueberry creamer"
-      ]
+      ],
+      "method": "Add homemade blueberry creamer to your coffee."
     },
     "14": {
       "displayName": "Mango Tea with Nick's Sick Mix + Honey",
@@ -136,7 +145,8 @@
         "mango tea",
         "Nick's Sick Mix",
         "honey"
-      ]
+      ],
+      "method": ""
     },
     "15": {
       "displayName": "Mango Tea Sangria with Rosé",
@@ -156,7 +166,8 @@
         "Riesling wine"
       ],
       "pairedFood": "Turkish delight",
-      "vessel": "black cat bottle"
+      "vessel": "black cat bottle",
+      "method": ""
     },
     "17": {
       "displayName": "Spiced Coffee with French Vanilla + Cinnamon Sugar",
@@ -175,7 +186,8 @@
         "coffee",
         "French vanilla creamer",
         "cinnamon sugar"
-      ]
+      ],
+      "method": ""
     },
     "18": {
       "displayName": "Mango and Spicy Chili Tea",
@@ -184,7 +196,8 @@
         "mango tea",
         "spicy chili tea"
       ],
-      "pairedFood": "homemade breakfast pastries"
+      "pairedFood": "homemade breakfast pastries",
+      "method": ""
     },
     "19": {
       "displayName": "Japanese Mango Cream Soda + Vodka",
@@ -192,7 +205,8 @@
       "ingredients": [
         "Japanese mango cream soda",
         "vodka"
-      ]
+      ],
+      "method": ""
     },
     "20": {
       "displayName": "Brown Sugar Caramel Iced Coffee",
@@ -202,7 +216,9 @@
         "caramel",
         "iced coffee"
       ],
-      "vessel": "Dolly Parton cups"
+      "vessel": "Dolly Parton cups",
+      "method": "",
+      "pairedFood": ""
     },
     "21": {
       "displayName": "Giant Spicy Mango Margarita",
@@ -227,7 +243,8 @@
       "ingredients": [
         "coffee"
       ],
-      "pairedFood": "muffin tin brownies with walnuts"
+      "pairedFood": "muffin tin brownies with walnuts",
+      "method": ""
     },
     "24": {
       "displayName": "Sunset Sarsaparilla Floats",
@@ -236,7 +253,9 @@
         "Sunset Sarsaparilla",
         "ice cream",
         "vodka"
-      ]
+      ],
+      "method": "",
+      "vessel": ""
     },
     "25": {
       "displayName": "De-Stress Tea + Bloom Vodka Shot",
@@ -245,7 +264,8 @@
         "de-stress tea",
         "vodka",
         "Bloom energy drink"
-      ]
+      ],
+      "method": "Steep de-stress tea; follow with a shot of vodka mixed with Bloom."
     },
     "26": {
       "displayName": "Coffee + King Donuts",
