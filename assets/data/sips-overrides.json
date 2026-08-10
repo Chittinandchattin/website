@@ -356,6 +356,16 @@
         "tequila",
         "margarita"
       ]
+    },
+    "33": {
+      "displayName": "Lemon Ginger Tea with Brown Sugar Cinnamon Syrup",
+      "description": "A cozy lemon ginger tea sweetened with brown sugar cinnamon syrup - delicious and a little spiritually charged. M brewed it after a Google deep-dive on what helps with cramps (lemon and ginger), then added Torani brown sugar cinnamon syrup because balance. Lemon for purification, ginger for fire and courage - and apparently episode 33 numerology energy too.",
+      "ingredients": [
+        "lemon ginger tea",
+        "Torani brown sugar cinnamon syrup"
+      ],
+      "method": "Steep lemon ginger tea, then add brown sugar cinnamon syrup to taste.",
+      "vessel": "TJ Maxx mugs"
     }
   }
 }

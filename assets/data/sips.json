@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-09T21:57:07Z",
-  "count": 32,
+  "updated": "2026-08-10T12:00:53Z",
+  "count": 33,
   "sips": [
     {
       "episodeNumber": 1,
@@ -1041,6 +1041,37 @@
         "override"
       ],
       "transcriptPath": "transcripts/openings/ep-32.txt",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 33,
+      "title": "We're Connecting Dots Again...",
+      "published": "Sat, 08 Aug 2026 16:25:27 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Were-Connecting-Dots-Again-e3n46s9",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/123918665/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-7-8%2F429467178-44100-2-7814c805db66b.mp3",
+      "duration": "00:56:53",
+      "displayName": "Lemon Ginger Tea with Brown Sugar Cinnamon Syrup",
+      "description": "A cozy lemon ginger tea sweetened with brown sugar cinnamon syrup - delicious and a little spiritually charged. M brewed it after a Google deep-dive on what helps with cramps (lemon and ginger), then added Torani brown sugar cinnamon syrup because balance. Lemon for purification, ginger for fire and courage - and apparently episode 33 numerology energy too.",
+      "descriptionHtml": "",
+      "name": "a cozy lemon ginger tea with brown sugar cinnamon syrup - delicious and a little spiritually charged, apparently",
+      "hosts": [],
+      "ingredients": [
+        "lemon ginger tea",
+        "Torani brown sugar cinnamon syrup"
+      ],
+      "method": "Steep lemon ginger tea, then add brown sugar cinnamon syrup to taste.",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "TJ Maxx mugs",
+      "sourceExcerpt": "is week’s Sips of the Week is a cozy lemon ginger tea with brown sugar cinnamon syrup - delicious and a little spiritually charged, apparently",
+      "sources": [
+        "rss",
+        "transcript",
+        "override"
+      ],
+      "transcriptPath": "transcripts/openings/ep-33.txt",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
