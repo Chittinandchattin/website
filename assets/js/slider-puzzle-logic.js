@@ -2,6 +2,7 @@ const SLIDER_IMAGES = [
   { id: "hero", label: "Besties cartoon", src: "/assets/brand/hero.png" },
   { id: "healing", label: "Healing inbox", src: "/assets/features/healing-inbox.jpg" },
   { id: "realtime", label: "Real-time realization", src: "/assets/features/real-time-realization.jpg" },
+  { id: "spill", label: "Spill it, bestie", src: "/assets/features/spill-it-bestie-puzzle.png" },
 ];
 
 const SLIDER_DIFFICULTIES = {
@@ -14,6 +15,7 @@ const SLIDER_WIN_MESSAGES = {
   hero: [
     { title: "Bestie, you did that!", body: "It's time for Chittin' and Chattin'!" },
     { title: "Puzzle complete!", body: "Sydney and M are back - grab your sip and press play." },
+    { title: "Morning tea, and dopamine.", body: "That little spark to start the day." },
   ],
   healing: [
     { title: "So soft, so solved.", body: "Your gentle moment is whole again." },
@@ -22,6 +24,10 @@ const SLIDER_WIN_MESSAGES = {
   realtime: [
     { title: "Real-time realization!", body: "Every piece clicked into place." },
     { title: "You solved it!", body: "That little aha feels so good." },
+  ],
+  spill: [
+    { title: "Spill it, bestie!", body: "The tea is back in the cup - now go spill the real tea." },
+    { title: "It's just spilt tea babes!", body: "You already cleaned it up!" },
   ],
 };
 
