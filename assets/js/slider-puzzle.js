@@ -43,7 +43,7 @@ function initSliderPuzzle() {
           <p class="slider-puzzle-art" id="slider-art-label"></p>
         </div>
         <figure class="slider-puzzle-ref">
-          <img id="slider-ref-img" src="" alt="Reference: completed puzzle image" width="96" height="54" loading="lazy" />
+          <img id="slider-ref-img" src="" alt="Reference: completed puzzle image" width="192" height="108" loading="lazy" />
           <figcaption>Reference</figcaption>
         </figure>
       </div>
@@ -56,7 +56,6 @@ function initSliderPuzzle() {
         </div>
       </div>
       <p class="slider-puzzle-hint">Click tiles in the same row or column as the empty square to slide them into place. Tap farther from the open slot to move more tiles at once. Arrow keys move one tile at a time.</p>
-      <p class="slider-puzzle-test-hint">Test URLs: <code>?image=hero</code>, <code>?image=healing</code>, <code>?image=realtime</code>, <code>?diff=hard</code>, <code>?seed=42</code></p>
     </section>
   `;
 

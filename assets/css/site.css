@@ -1160,24 +1160,14 @@ a:hover {
   color: var(--muted);
 }
 
-.slider-puzzle-test-hint {
-  margin: 0.75rem 0 0;
-  text-align: center;
-  font-size: 0.8rem;
-  color: var(--muted);
-}
-
-.slider-puzzle-test-hint code {
-  font-size: 0.75rem;
-}
-
 .slider-puzzle-ref {
   margin: 0;
   text-align: center;
 }
 
 .slider-puzzle-ref img {
-  width: 96px;
+  width: 192px;
+  max-width: min(42vw, 192px);
   height: auto;
   border-radius: 0.5rem;
   border: 2px solid var(--border);
