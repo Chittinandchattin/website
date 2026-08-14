@@ -6,6 +6,7 @@ const NAV = [
   { href: "/healing-inbox/", label: "Healing" },
   { href: "/sips/", label: "Sips" },
   { href: "/suggestasip/", label: "Suggest a Sip" },
+  { href: "/puzzle/", label: "Puzzle" },
 ];
 
 function isNavActive(activePath, item) {
@@ -722,7 +723,7 @@ function renderChittinContactPage() {
     <header class="page-header reveal">
       <p class="teaser-eyebrow">Get in touch</p>
       <h1>Contact Us</h1>
-      <p class="page-lead">Use one of our inbox forms to reach Sydney and Emmy - we read every submission.</p>
+      <p class="page-lead">Use one of our inbox forms to reach Sydney and M - we read every submission.</p>
     </header>
     <div class="prose reveal">
       <p>Pick the inbox that fits what you want to share:</p>

@@ -89,3 +89,23 @@ Ensure **Settings → Actions → General** allows workflows on this repo.
 | ads.txt 404 | File must be at repo root |
 | Ads not showing | Site may need AdSense approval; add slot IDs in config.js |
 | Wrong domain in canonicals | All pages use `chittinandchattin.com` |
+
+## Free-tier map
+
+Jarvis (`desktop-agent`) runs a daily **free-tier matrix** for this site and the static fleet. Matrix file: `G:\openclaw\business\jarvis\state\free-tier-matrix.json`. Briefing HUD: `GET http://127.0.0.1:8765/briefing/free-tier/matrix`.
+
+| Service | Free ceiling | This stack | Risk today |
+|---------|--------------|------------|------------|
+| **Cloudflare Pages** (static) | Unlimited requests & bandwidth | Git-connected Pages, no build | None at ~12k req/mo |
+| **Cloudflare Pages builds** | 500/month | Manual pushes + weekly Action | Low |
+| **Cloudflare file limits** | 20k files; 25 MiB max per file | Small static tree | Low |
+| **Cloudflare Workers** | 100k requests/day | Not used (no Functions) | N/A |
+| **GitHub Actions** | Free on public repos; else 2k min/mo | 1 weekly RSS workflow | Low |
+| **Git LFS / Packages** | Not used | — | N/A |
+| **Web3Forms** | 250 submissions/month | Spill / healing / sip forms | Soft cap if forms go viral |
+| **Google AdSense** | Policy + serving limits (not a request quota) | Script + ads.txt live; **slot IDs empty** — see [ADSENSE-MANUAL.md](ADSENSE-MANUAL.md) | Revenue blocked until units created |
+| **Podcast audio** | Anchor/Spotify hosting | Off-site; site stores URLs only | Not on Cloudflare |
+
+**House rules (local):** `scripts/check-site-size.ps1` blocks push above 1 GB deployable size (warn 80%, block 95%). Cloudflare’s hard per-file limit is **25 MiB**.
+
+**Monitoring:** Cloudflare analytics pull needs `~/.openclaw/secrets/cloudflare.env` (see `desktop-agent/secrets/cloudflare.env.example`). Zone ID goes in Jarvis `config.toml` → `[free_tier_monitor]`.

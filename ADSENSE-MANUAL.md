@@ -2,6 +2,18 @@
 
 Code changes from the AdSense readiness batch are live after deploy. Complete these steps in **Google AdSense**:
 
+## Current status (code)
+
+| Item | Status |
+|------|--------|
+| Publisher script on every page | Live (`ca-pub-7048606415692002`) |
+| `ads.txt` at repo root | Live |
+| Privacy / Terms / About / Contact | Linked in footer |
+| **Ad unit slot IDs** in `assets/js/config.js` | **Empty** — no `<ins>` units render until IDs are pasted |
+| Home hero | `adSlots: false` (no header ad on homepage) |
+
+Until slot IDs are filled, browsers load the AdSense bootstrap script but **no display ads are requested** and there is no ad revenue from this site.
+
 ## 1. Create ad units
 
 AdSense → **Ads** → **By ad unit** → **Display ads**
@@ -12,7 +24,7 @@ AdSense → **Ads** → **By ad unit** → **Display ads**
 | Chittin Footer | chittinandchattin.com |
 | Chittin In-content (optional) | chittinandchattin.com |
 
-Update `assets/js/config.js` slot IDs and push.
+Update `assets/js/config.js` → `adsense.slots` (`header`, `footer`, `inContent`) and push.
 
 ## 2. EU consent (CMP)
 
@@ -37,3 +49,7 @@ Confirm ads.txt detected.
 Submit **chittinandchattin.com first** (higher readiness, no kids content).
 
 Publisher: `ca-pub-7048606415692002`
+
+## Jarvis monitoring
+
+Jarvis free-tier matrix flags `slots_configured: false` until slot IDs exist. AdSense **email** alerts (policy / serving limits) use the existing Gmail monitor in `desktop-agent` — separate from hosting quotas. See [DEPLOY.md](DEPLOY.md) → Free-tier map.

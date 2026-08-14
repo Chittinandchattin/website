@@ -16,7 +16,9 @@ cd "G:\Laughing Dragons\chittinandchattin.com"
 .\scripts\preview.ps1
 ```
 
-Open `http://localhost:8080/`
+Open `http://localhost:8780/` — puzzle at `/puzzle/`
+
+If port 8080 shows a different site, another app is using it; always use the URL printed by `preview.ps1`.
 
 ## Push updates
 

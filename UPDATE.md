@@ -12,7 +12,7 @@ Every push to `main` triggers Cloudflare Pages redeploy (usually 1–3 minutes).
 
 ```powershell
 cd "G:\Laughing Dragons\chittinandchattin.com"
-.\scripts\preview.ps1          # http://localhost:8080
+.\scripts\preview.ps1          # http://localhost:8780 (puzzle: /puzzle/)
 .\scripts\push-update.ps1 "Your commit message"
 ```
 
@@ -35,6 +35,8 @@ cd "G:\Laughing Dragons\chittinandchattin.com"
 | Refresh episode list | `python scripts/pull-episodes.py` then push (or use GitHub Actions — see below) |
 | Brand images | `assets/brand/` |
 | Feature art | `assets/features/` |
+| Slider puzzle game | `puzzle/index.html`, `assets/js/slider-puzzle.js`, `assets/js/slider-puzzle-logic.js` |
+| Test slider puzzle | `node scripts/test-slider-puzzle.mjs` |
 
 Reference copy (not served directly): `content/` folder.
 

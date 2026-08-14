@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A cozy slider puzzle while you listen - Easy 3x3, Med 4x4, or Hard 5x5." />
+    <title>Slider puzzle</title>
+    <link rel="icon" href="/assets/brand/icon.png" type="image/png" />
+    <link rel="stylesheet" href="/assets/css/site.css" />
+    <link rel="canonical" href="https://chittinandchattin.com/puzzle/" />
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7048606415692002"
+     crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="/assets/js/config.js"></script>
+    <script src="/assets/js/site.js"></script>
+    <script src="/assets/js/slider-puzzle-logic.js"></script>
+    <script src="/assets/js/slider-puzzle.js"></script>
+    <script>
+      initPage({
+        title: "Slider puzzle",
+        description: "A cozy slider puzzle while you listen - Easy 3x3, Med 4x4, or Hard 5x5.",
+        activePath: "/puzzle/",
+        content: `
+          <header class="page-header reveal">
+            <p class="teaser-eyebrow">Bestie break</p>
+            <h1>Slider puzzle</h1>
+            <p class="page-lead">While you're sipping your tea and listening to us chit-chat, take a cozy moment to relax with a little puzzle.</p>
+            <p class="page-lead">Click tiles to slide them and fix the picture. The farther a tile is from the open spot, the more tiles move in one go.</p>
+          </header>
+          <div id="slider-puzzle-mount" class="reveal"></div>
+        `,
+      });
+      initSliderPuzzle();
+    </script>
+  </body>
+</html>

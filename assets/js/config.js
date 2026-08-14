@@ -51,7 +51,7 @@ window.SITE_CONFIG = {
       handle: "@sydneylashae10",
     },
     {
-      name: "Emmy",
+      name: "M",
       tiktok: "https://www.tiktok.com/@emmy.m047",
       handle: "@emmy.m047",
     },
