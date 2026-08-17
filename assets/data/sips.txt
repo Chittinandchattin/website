@@ -1,6 +1,6 @@
 CHITTIN' AND CHATTIN' - SIPS OF THE WEEK
-Updated: 2026-08-10T12:00:53Z
-Episodes: 33
+Updated: 2026-08-17T11:17:56Z
+Episodes: 34
 
 ============================================================
 
@@ -11,7 +11,6 @@ Sip: Christmas Morning Loose-Leaf Black Tea
 Description: Our very first Sips of the Week - M brewed a loose-leaf black tea with almonds, apple pieces, orange peel, raisins, cinnamon, and warm spices, served in a ceramic pot. Cozy, holiday-coded, and exactly the vibe for episode one while we shared our backstory and how Chittin' and Chattin' came to be.
 Ingredients: black tea, almonds, apple pieces, orange peel, raisins, cinnamon, spices
 Vessel: ceramic teapot
-Notes: black tea with almonds, apple pieces, orange peel raisins, cinnamon and some other spices in there
 Status: full
 Link: https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/We-are-Broken-and-Thats-Okay-e3codhi
 
@@ -371,7 +370,6 @@ Sip: McDonald's Refreshers
 Description: McDonald's Refreshers served in our cutest glasses - because we're classy like that. Syd sipped a Sprite Berry Blast while M enjoyed the Mango Pineapple, and somehow our adorable hats spiraled into one of the messiest Spill It, Bestie conversations we've had yet.
   Syd: Sprite Berry Blast Refresher
   M: Mango Pineapple Refresher
-Ingredients: mango, refresher
 Vessel: cutest glasses
 Status: full
 Link: https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Cant-Even-External-Monologue-e3mev0h
@@ -399,5 +397,17 @@ Method: Steep lemon ginger tea, then add brown sugar cinnamon syrup to taste.
 Vessel: TJ Maxx mugs
 Status: full
 Link: https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Were-Connecting-Dots-Again-e3n46s9
+
+------------------------------------------------------------
+
+EPISODE 34: Buckle Up Buttercup... The Moon Knows
+Published: Fri, 14 Aug 2026 17:06:24 GMT
+
+Sip: farmers market vibes with blueberry iced tea and lemonade for a…
+Description: Sips of the Week are farmers market vibes with blueberry iced tea and lemonade for a little homemade Arnold Palmer! 🫐🍋 And in a shocking confession, Sydney reveals she HATED tea her entire childhood… despite being raised a southern bumpkin. Naturally, one conversation spirals into another, and suddenly we’re hearing the absolutely hilarious story of how basic training somehow changed Sydney’s opinion on mustard
+Ingredients: blueberry, tea
+Method: homemade Arnold Palmer! 🫐🍋 And in a shocking confession
+Status: full
+Link: https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Buckle-Up-Buttercup----The-Moon-Knows-e3ndlbc
 
 ------------------------------------------------------------

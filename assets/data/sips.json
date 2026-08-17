@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-10T12:00:53Z",
-  "count": 33,
+  "updated": "2026-08-17T11:17:56Z",
+  "count": 34,
   "sips": [
     {
       "episodeNumber": 1,
@@ -24,16 +24,15 @@
         "spices"
       ],
       "method": "",
-      "notes": "black tea with almonds, apple pieces, orange peel raisins, cinnamon and some other spices in there",
+      "notes": "",
       "pairedFood": "",
       "vessel": "ceramic teapot",
       "sourceExcerpt": "enjoy our Sips of the Week, where M makes us some yummy tea ☕️",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-01.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -63,10 +62,9 @@
       "sourceExcerpt": "ur second Sips of the Week, featuring Sydney whipping up some seasonal eggnog 🍸",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-02.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -96,10 +94,9 @@
       "sourceExcerpt": "h another Sips of the Week, featuring M’s yummy Cottage Apple Tea 🍎☕️",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-03.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -128,10 +125,9 @@
       "sourceExcerpt": "start out strong with a white chocolate coffee topped with salted caramel cold foam ☕ served",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-04.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -158,10 +154,9 @@
       "sourceExcerpt": "is week’s Sips of the Week was a “nice and good” McDonald’s Dr",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-05.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -188,10 +183,9 @@
       "sourceExcerpt": "is week’s Sips of the Week is a beautiful and cozy recipe from Louisville Tea Company called “Nick’s Sick Mix” ☕️✨ - and trust us, it was sooo yummy",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-06.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -219,10 +213,9 @@
       "sourceExcerpt": "is week’s Sips of the Week is the ultimate winter treat: coffee with Buffalo Trace bourbon sipping cream ☕️🥃 chef’s kiss",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-07.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -249,10 +242,9 @@
       "sourceExcerpt": "is week’s Sips of the Week felt extra magical as we made coffee inspired by a book we picked up in Salem called Coffee for the Modern Witch (because obviously we’re leaning into our cozy, mystical era)",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-08.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -289,10 +281,9 @@
       "sourceExcerpt": "that our Sips of the Week were fresh strawberry margaritas handcrafted by Laur herself. Let’s just say… it quickly turned into a little midday margarita madness and the giggles were flowing",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-09.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -307,7 +298,7 @@
       "displayName": "The Raven Tea",
       "description": "Our 10th-episode Sips were the most perfectly moody tea called The Raven - dramatic, mysterious, and honestly fitting for the unhinged tangents we went on. Cozy, chaotic, honest, and very episode-ten coded.",
       "descriptionHtml": "",
-      "name": "black tea I don't know that word",
+      "name": "the most perfectly moody tea called “The Raven” - dramatic, mysterious, and honestly fitting for the unhinged tangents we went on",
       "hosts": [],
       "ingredients": [
         "The Raven tea blend"
@@ -319,10 +310,9 @@
       "sourceExcerpt": "is week’s Sips of the Week was the most perfectly moody tea called “The Raven” - dramatic, mysterious, and honestly fitting for the unhinged tangents we went on",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-10.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -349,10 +339,9 @@
       "sourceExcerpt": "is week’s Sips of the Week was a spicy tea that we very scientifically paired with Girl Scout cookies and banana peppers … because why not? 😂 Syd also manages to literally spill her tea at one point, which honestly feels very on-brand for us",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-11.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -379,10 +368,9 @@
       "sourceExcerpt": "is week’s Sips of the Week is a cozy cup of green tea jasmine while we recap Sydney’s whirlwind trip to Cleveland",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-12.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -410,10 +398,9 @@
       "sourceExcerpt": "is week’s Sips of the Week is a springy dream - coffee with homemade blueberry creamer 🫐☕ and we are FEELING the fresh vibes",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-13.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -442,10 +429,9 @@
       "sourceExcerpt": "is week’s Sips of the Week might actually be the BEST we’ve ever made 👀 - a mango tea with Nick’s Sick Mix + honey 🥭🍯 and it is the most soothing, perfect spring blend",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-14.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -473,10 +459,9 @@
       "sourceExcerpt": "is week's Sips of the Week is a refreshing mango tea sangria infused with rosé, and let’s just say… she paired PERFECTLY with the international snack haul from Syd’s trip to Jungle Jim’s in Cincinnati 🍹🌍 M really did her thing with this one",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-15.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -491,7 +476,7 @@
       "displayName": "Black Cat Riesling + Turkish Delight",
       "description": "A surprise find from Jungle Jim's - an amazing Riesling in the CUTEST black cat bottle, paired perfectly with a quirky little Turkish delight treat that Syd picked out. She really nailed the vibe on this one.",
       "descriptionHtml": "A surprise find from <a href=\"https://www.junglejims.com/\" target=\"_blank\" rel=\"noopener\">Jungle Jim's</a> - an amazing Riesling in the CUTEST black cat bottle, paired perfectly with a quirky little Turkish delight treat that Syd picked out. She really nailed the vibe on this one - cozy, reflective, and just the right amount of unhinged.",
-      "name": "you ready? I'm so ready",
+      "name": "a surprise find from Jungle Jim’s - an amazing Riesling in the CUTEST black cat bottle 🐈‍⬛🍷 paired perfectly with a quirky little Turkish delight treat that Syd picked out (she really nailed the vibe on this one)",
       "hosts": [],
       "ingredients": [
         "Riesling wine"
@@ -503,10 +488,9 @@
       "sourceExcerpt": "nhinged 🤭 Sips of the Week is a surprise find from Jungle Jim’s - an amazing Riesling in the CUTEST black cat bottle 🐈‍⬛🍷 paired perfectly with a quirky little Turkish delight treat that Syd picked out (she really nailed the vibe on this one)",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-16.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -544,10 +528,9 @@
       "sourceExcerpt": "bout it 😌 Sips of the Week ☕✨ is a cozy coffee moment-M whipped up a spiced creation and Syd made it extra sweet with French vanilla creamer + cinnamon sugar (because balance)",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-17.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -575,10 +558,9 @@
       "sourceExcerpt": "Sips of the Week is M’s elite concoction-mango and spicy chili tea paired with pastries from her homemade breakfast (chef energy, always). Meanwhile, we are both just… surviving",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-18.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -606,10 +588,9 @@
       "sourceExcerpt": "is week’s Sips of the Week is a chaotic (but delicious) mix-Japanese mango cream soda + vodka… basically a mango screwdriver and we’re not mad about it",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-19.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -638,10 +619,9 @@
       "sourceExcerpt": "is week’s Sips of the Week were brown sugar caramel iced coffees served in the cutest Dolly Parton cups gifted by Syd’s mother-in-law… which immediately sent us into our feelings after seeing Dolly’s recent video and absolutely crushed our souls",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-20.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -668,10 +648,9 @@
       "sourceExcerpt": "This episode is powered by a GIANT spicy mango margarita literally the size of our heads paired",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-21.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -699,10 +678,9 @@
       "sourceExcerpt": "Sips of the week were peanut butter iced coffees paired perfectly with chips and queso while our brains rode the absolute struggle bus",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-22.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -717,7 +695,7 @@
       "displayName": "Cozy Coffee + Muffin Tin Brownies",
       "description": "A cozy coffee paired with M's homemade muffin tin brownies with walnuts - which of course sent Syd into a story about her great aunt lovingly known as \"Bessie Cracking Walnuts.\" Naturally. Cozy, chaotic, honest, and cut a little short because we're working gals and had to run.",
       "descriptionHtml": "",
-      "name": "really cute cups",
+      "name": "a cozy coffee paired with M’s homemade muffin tin brownies with walnuts - which of course sent Syd into a story about her great aunt lovingly known as “Bessie Cracking Walnuts.” Naturally",
       "hosts": [],
       "ingredients": [
         "coffee"
@@ -729,10 +707,9 @@
       "sourceExcerpt": "Sips of the week was a cozy coffee paired with M’s homemade muffin tin brownies with walnuts - which of course sent Syd into a story about her great aunt lovingly known as “Bessie Cracking Walnuts.” Naturally",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-23.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -761,10 +738,9 @@
       "sourceExcerpt": "onth. Our Sips of the Week were boozy Sunset Sarsaparilla floats inspired by the Fallout universe (thank you, Costco), and honestly, they were as fun as they sound",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-24.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -779,7 +755,7 @@
       "displayName": "De-Stress Tea + Bloom Vodka Shot",
       "description": "A much-needed two-parter: some de-stress tea that honestly revived our souls, followed by a shot of vodka mixed with Sydney's very first Bloom drink. Listen, we're bartenders and life has been life-ing lately, so we're just keeping it real with y'all.",
       "descriptionHtml": "",
-      "name": "gonna look up when Bloom became a thing",
+      "name": "a much-needed two-parter: some de-stress tea that honestly revived our souls, followed by a shot of vodka mixed with Sydney's very first Bloom drink. Listen, we're bartenders and life has been life-ing lately, so we're just keeping it real with y'all",
       "hosts": [],
       "ingredients": [
         "de-stress tea",
@@ -793,10 +769,9 @@
       "sourceExcerpt": "is week's sips of the week were a much-needed two-parter: some de-stress tea that honestly revived our souls, followed by a shot of vodka mixed with Sydney's very first Bloom drink. Listen, we're bartenders and life has been life-ing lately, so we're just keeping it real with y'all",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-25.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -823,10 +798,9 @@
       "sourceExcerpt": "is week's Sips of the Week was a cozy coffee paired with an assortment of donuts from King Donuts and some absolutely incredible chocolate hazelnut-filled beignets",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-26.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -858,10 +832,9 @@
       "sourceExcerpt": "is week's Sips of the Week was a refreshing passionfruit margarita while we welcomed the first day of summer with a little chat about paganism and the changing of the seasons",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-27.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -900,10 +873,9 @@
       "sourceExcerpt": "is week's Sips of the Week were inspired by 7 Brew! We took our favorite drinks, added some ice cream, and turned them into delicious milkshake concoctions that were so worth it",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-28.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -918,7 +890,7 @@
       "displayName": "Brown Sugar Latte + Peach Cobbler",
       "description": "We didn't even care about our Sips of the Week because we had the real Treat of the Week - M made the most incredible homemade peach cobbler using fresh peaches from a roadside stand, and honestly… it completely stole the show. We paired it with a classic brown sugar latte as we both continue our yearly transition into fall the second the Fourth of July is over.",
       "descriptionHtml": "",
-      "name": "driving around randomly and there was the cutest little lock",
+      "name": "because we had the real Treat of the Week! M made the most incredible homemade peach cobbler using fresh peaches from a roadside stand, and honestly...it completely stole the show",
       "hosts": [],
       "ingredients": [
         "brown sugar latte",
@@ -932,11 +904,10 @@
       "sourceExcerpt": "about our Sips of the Week because we had the real Treat of the Week! M made the most incredible homemade peach cobbler using fresh peaches from a roadside stand, and honestly...it completely stole the show",
       "sources": [
         "rss",
-        "transcript",
-        "content/episode 29.txt",
+        "episode 29.txt",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-29.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -963,10 +934,9 @@
       "sourceExcerpt": "is week's Sip of the Week is a summery blend called Tea Frog, served in the new spooky cups Syd brought back from her trip home",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-30.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -992,10 +962,7 @@
           "drink": "Mango Pineapple Refresher"
         }
       ],
-      "ingredients": [
-        "mango",
-        "refresher"
-      ],
+      "ingredients": [],
       "method": "",
       "notes": "",
       "pairedFood": "",
@@ -1003,10 +970,9 @@
       "sourceExcerpt": "is week's Sips of the Week are McDonald's Refreshers served in our cutest glasses-because we're classy like that",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-31.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -1037,10 +1003,9 @@
       "sourceExcerpt": "Sips of the Week are STRAWBERRY WATERMELON MINT FROZEN MARGARITAS, because honestly… we deserved this one",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-32.txt",
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
@@ -1068,10 +1033,38 @@
       "sourceExcerpt": "is week’s Sips of the Week is a cozy lemon ginger tea with brown sugar cinnamon syrup - delicious and a little spiritually charged, apparently",
       "sources": [
         "rss",
-        "transcript",
         "override"
       ],
-      "transcriptPath": "transcripts/openings/ep-33.txt",
+      "transcriptPath": "",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 34,
+      "title": "Buckle Up Buttercup... The Moon Knows",
+      "published": "Fri, 14 Aug 2026 17:06:24 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Buckle-Up-Buttercup----The-Moon-Knows-e3ndlbc",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/124228396/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-7-14%2F429850249-44100-2-e02c2e864c35e.mp3",
+      "duration": "00:53:24",
+      "displayName": "farmers market vibes with blueberry iced tea and lemonade for a…",
+      "description": "Sips of the Week are farmers market vibes with blueberry iced tea and lemonade for a little homemade Arnold Palmer! 🫐🍋 And in a shocking confession, Sydney reveals she HATED tea her entire childhood… despite being raised a southern bumpkin. Naturally, one conversation spirals into another, and suddenly we’re hearing the absolutely hilarious story of how basic training somehow changed Sydney’s opinion on mustard",
+      "descriptionHtml": "",
+      "name": "farmers market vibes with blueberry iced tea and lemonade for a little homemade Arnold Palmer! 🫐🍋 And in a shocking confession, Sydney reveals she HATED tea her entire childhood… despite being raised a southern bumpkin",
+      "hosts": [],
+      "ingredients": [
+        "blueberry",
+        "tea"
+      ],
+      "method": "homemade Arnold Palmer! 🫐🍋 And in a shocking confession",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "Sips of the Week are farmers market vibes with blueberry iced tea and lemonade for a little homemade Arnold Palmer! 🫐🍋 And in a shocking confession, Sydney reveals she HATED tea her entire childhood… despite being raised a southern bumpkin",
+      "sources": [
+        "rss"
+      ],
+      "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
       "manualNotes": ""
