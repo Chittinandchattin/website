@@ -136,7 +136,7 @@ function renderListenGrid() {
     { label: "Castro", href: links.castro, note: "Follow in Castro" },
     { label: "Overcast", href: links.overcast, note: "Follow in Overcast" },
     { label: "YouTube", href: links.youtube, note: "Clips, episodes & more" },
-    { label: "Instagram", href: links.instagram, note: "DMs, Spill it & Healing inbox" },
+    { label: "Instagram", href: links.instagram, note: "Clips, community & DMs" },
     { label: "TikTok", href: links.tiktok, note: "Show account" },
     { label: "iHeartRadio", href: links.iheart, note: "Listen on iHeartRadio" },
     { label: "RSS Feed", href: window.SITE_CONFIG?.feedUrl, note: "Any podcast app" },
@@ -178,22 +178,34 @@ function renderFollowShowList() {
   <p class="follow-show-note">Hosted on Spotify for Creators - our RSS feed syndicates to most podcast apps automatically. Can't find us? Search <strong>Chittin' and Chattin'</strong>.</p>`;
 }
 
-function renderInboxCTA(label = "Message us on Instagram", inboxType) {
+function renderInboxCTA(inboxType) {
   const cfg = window.SITE_CONFIG || {};
   const ig = cfg.links?.instagram || "#";
   const formId = `inbox-form-${inboxType}`;
   const statusId = `inbox-form-status-${inboxType}`;
-  const messageLabel = inboxType === "sip" ? "Your sip suggestion" : "Your message";
-  const ctaNote =
+  const messageLabel =
     inboxType === "sip"
-      ? "Instagram DMs work too. Or send your sip idea below."
-      : "Instagram DMs are fastest. Or send your submission below.";
-  const submitLabel = inboxType === "sip" ? "Send suggestion" : "Send submission";
+      ? "Your sip suggestion"
+      : inboxType === "contact"
+        ? "How can we help?"
+        : "Your message";
+  const submitLabel =
+    inboxType === "sip" ? "Send suggestion" : inboxType === "contact" ? "Send message" : "Send submission";
+  const igLink = `<a href="${ig}" target="_blank" rel="noopener">Instagram</a>`;
+  const ctaNote =
+    inboxType === "contact"
+      ? "Collabs, business inquiries, or interest in being on the show."
+      : inboxType === "sip"
+        ? `Use the form above to send your sip idea. You can also DM us on ${igLink}.`
+        : `Use the form above to send your submission. You can also DM us on ${igLink}.`;
   return `<div class="cta-panel reveal">
-    <a class="btn btn-primary btn-lg" href="${ig}" target="_blank" rel="noopener">${label}</a>
-    <p class="cta-note">${ctaNote}</p>
     <form class="contact-form inbox-form" id="${formId}" data-inbox-type="${inboxType}" novalidate>
       <input type="checkbox" name="botcheck" class="contact-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      ${
+        inboxType === "contact"
+          ? `<input type="hidden" name="for_host" id="${formId}-for-host" value="" />`
+          : ""
+      }
       <div class="form-field">
         <label for="${formId}-name">Name</label>
         <input type="text" id="${formId}-name" name="name" required autocomplete="name" maxlength="80" />
@@ -209,6 +221,7 @@ function renderInboxCTA(label = "Message us on Instagram", inboxType) {
       <button type="submit" class="btn btn-primary">${submitLabel}</button>
       <p class="form-status" id="${statusId}" role="status" aria-live="polite"></p>
     </form>
+    <p class="cta-note">${ctaNote}</p>
   </div>`;
 }
 
@@ -218,11 +231,17 @@ function renderHostCards() {
   return `<div class="host-grid reveal">
     ${hosts
       .map(
-        (host) => `<article class="host-card">
+        (host) => {
+        const fanMailHost = host.name === "Sydney" ? "Syd" : host.name;
+        return `<article class="host-card">
         <h3>${host.name}</h3>
         <p class="host-handle">${host.handle}</p>
-        <a class="text-link" href="${host.tiktok}" target="_blank" rel="noopener">TikTok &rarr;</a>
-      </article>`
+        <div class="host-card-links">
+          <a class="text-link" href="${host.tiktok}" target="_blank" rel="noopener">TikTok &rarr;</a>
+          <a class="text-link" href="/fan-mail/?host=${fanMailHost}">Fan mail &rarr;</a>
+        </div>
+      </article>`;
+      }
       )
       .join("")}
   </div>`;
@@ -257,12 +276,12 @@ function renderFeatureCrossLink(inboxType) {
   }
   const other =
     inboxType === "spill"
-      ? { href: "/healing-inbox/", label: "Healing Inbox", desc: "tender things that want care and space" }
+      ? { href: "/healing-inbox/", label: "Healing inbox", desc: "tender things that want care and space" }
       : { href: "/spill-it-bestie/", label: "Spill it, bestie", desc: "funny, messy, chaotic tea" };
   return `<p class="cross-link">Need the other inbox? <a href="${other.href}">${other.label}</a> - ${other.desc}.</p>`;
 }
 
-function renderFeaturePage({ eyebrow, title, intro, body, image, ctaLabel, inboxType }) {
+function renderFeaturePage({ eyebrow, title, intro, body, image, inboxType }) {
   return `<header class="page-header reveal">
       <p class="teaser-eyebrow">${eyebrow}</p>
       <h1>${title}</h1>
@@ -274,7 +293,7 @@ function renderFeaturePage({ eyebrow, title, intro, body, image, ctaLabel, inbox
       </figure>
       <div class="prose">
         ${body}
-        ${renderInboxCTA(ctaLabel, inboxType)}
+        ${renderInboxCTA(inboxType)}
         ${renderFeatureCrossLink(inboxType)}
       </div>
     </div>`;
@@ -483,6 +502,9 @@ function isShowLevelEpisodeImage(imageUrl, spotifyThumbnailUrl, channelImageUrl)
 }
 
 function resolveEpisodeThumb(ep, feedMeta) {
+  if (ep.localThumbPath) {
+    return ep.localThumbPath;
+  }
   const spotify = feedMeta?.spotifyThumbnailUrl || "";
   const channel = feedMeta?.channelImageUrl || "";
   const imageUrl = ep.imageUrl || "";
@@ -716,6 +738,31 @@ function bindReveal() {
   nodes.forEach((n) => io.observe(n));
 }
 
+function renderFanMailPage() {
+  return `
+    <header class="page-header reveal">
+      <p class="teaser-eyebrow">Fan mail</p>
+      <h1>Fan mail</h1>
+      <p class="page-lead">Want to work with us, collaborate, or be part of the show? Pick who you want to reach, then send your message.</p>
+    </header>
+    <div class="prose reveal">
+      <section class="fan-mail-section" id="fan-mail">
+        <div class="fan-mail-picker" id="fan-mail-picker">
+          <p class="fan-mail-prompt">Who do you want to message?</p>
+          <div class="fan-mail-host-buttons">
+            <button type="button" class="btn btn-primary fan-mail-host-btn" data-host="M">M</button>
+            <button type="button" class="btn btn-primary fan-mail-host-btn" data-host="Syd">Syd</button>
+          </div>
+        </div>
+        <div class="fan-mail-form-wrap is-collapsed" id="fan-mail-form-wrap" hidden>
+          <p class="fan-mail-selected">Messaging <strong id="fan-mail-host-label"></strong> — <button type="button" class="text-link" id="fan-mail-change-host">Choose someone else</button></p>
+          ${renderInboxCTA("contact")}
+        </div>
+      </section>
+      <p class="cross-link">Sharing a listener story or sip idea? Use our <a href="/spill-it-bestie/">Spill it</a>, <a href="/healing-inbox/">Healing</a>, or <a href="/suggestasip/">Suggest a Sip</a> inboxes instead.</p>
+    </div>`;
+}
+
 function renderChittinContactPage() {
   const cfg = window.SITE_CONFIG || {};
   const ig = cfg.links?.instagram || "#";
@@ -723,17 +770,57 @@ function renderChittinContactPage() {
     <header class="page-header reveal">
       <p class="teaser-eyebrow">Get in touch</p>
       <h1>Contact Us</h1>
-      <p class="page-lead">Use one of our inbox forms to reach Sydney and M - we read every submission.</p>
+      <p class="page-lead">Reach Sydney and M through fan mail, listener inboxes, or Instagram.</p>
     </header>
     <div class="prose reveal">
-      <p>Pick the inbox that fits what you want to share:</p>
+      <h2>Fan mail</h2>
+      <p>Collabs, business inquiries, or interest in being on the show — <a href="/fan-mail/">open fan mail</a> and choose M or Syd.</p>
+      <h2>Listener inboxes</h2>
+      <p>Sharing a story or sip idea for the show? Pick the inbox that fits:</p>
       <ul class="meta-list">
         <li><strong>Spill it, bestie</strong> - funny, messy, chaotic tea. <a href="/spill-it-bestie/">Open the form</a></li>
         <li><strong>Healing inbox</strong> - tender questions and stories. <a href="/healing-inbox/">Open the form</a></li>
         <li><strong>Suggest a Sip</strong> - favorite drinks and sip ideas. <a href="/suggestasip/">Open the form</a></li>
       </ul>
-      <p>You can also DM us on Instagram: <a href="${ig}" target="_blank" rel="noopener">@chittinnchattin</a></p>
+      <p>You can also DM us on Instagram: <a href="${ig}" target="_blank" rel="noopener">@chittinnchattin</a>.</p>
     </div>`;
+}
+
+function bindFanMailPage() {
+  const picker = document.getElementById("fan-mail-picker");
+  const formWrap = document.getElementById("fan-mail-form-wrap");
+  const hostLabel = document.getElementById("fan-mail-host-label");
+  const changeBtn = document.getElementById("fan-mail-change-host");
+  const forHostInput = document.getElementById("inbox-form-contact-for-host");
+  const cfg = window.SITE_CONFIG || {};
+
+  if (!picker || !formWrap || !forHostInput) return;
+
+  function selectHost(host) {
+    forHostInput.value = host;
+    if (hostLabel) hostLabel.textContent = host;
+    picker.hidden = true;
+    formWrap.hidden = false;
+    formWrap.classList.remove("is-collapsed");
+    const nameInput = document.getElementById("inbox-form-contact-name");
+    if (nameInput) nameInput.focus();
+  }
+
+  function resetHost() {
+    forHostInput.value = "";
+    formWrap.hidden = true;
+    formWrap.classList.add("is-collapsed");
+    picker.hidden = false;
+  }
+
+  picker.querySelectorAll(".fan-mail-host-btn").forEach((btn) => {
+    btn.addEventListener("click", () => selectHost(btn.dataset.host));
+  });
+
+  if (changeBtn) changeBtn.addEventListener("click", resetHost);
+
+  const urlHost = new URLSearchParams(window.location.search).get("host");
+  if (urlHost === "M" || urlHost === "Syd") selectHost(urlHost);
 }
 
 function bindInboxForm({ inboxType, subjectPrefix }) {
@@ -751,10 +838,24 @@ function bindInboxForm({ inboxType, subjectPrefix }) {
 
     if (!accessKey) {
       if (statusEl) {
-        statusEl.textContent = "Submission form is not configured yet. Please try again later.";
+        statusEl.textContent =
+          inboxType === "contact"
+            ? "Contact form is not configured yet. Add web3forms.contact in config.js after creating the form in Web3Forms."
+            : "Submission form is not configured yet. Please try again later.";
         statusEl.className = "form-status form-status-error";
       }
       return;
+    }
+
+    if (inboxType === "contact") {
+      const forHost = form.querySelector('[name="for_host"]')?.value;
+      if (!forHost) {
+        if (statusEl) {
+          statusEl.textContent = "Choose M or Syd above before sending your message.";
+          statusEl.className = "form-status form-status-error";
+        }
+        return;
+      }
     }
 
     if (submitBtn) submitBtn.disabled = true;
@@ -765,8 +866,11 @@ function bindInboxForm({ inboxType, subjectPrefix }) {
 
     const fd = new FormData(form);
     fd.append("access_key", accessKey);
-    fd.append("from_name", subjectPrefix);
-    fd.set("subject", subjectPrefix);
+    const forHost = inboxType === "contact" ? form.querySelector('[name="for_host"]')?.value : "";
+    const subject =
+      inboxType === "contact" && forHost ? `${subjectPrefix} - ${forHost}` : subjectPrefix;
+    fd.append("from_name", subject);
+    fd.set("subject", subject);
 
     try {
       const res = await fetch("https://api.web3forms.com/submit", {

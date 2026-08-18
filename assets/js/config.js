@@ -4,13 +4,20 @@ window.SITE_CONFIG = {
   legalName: "Chittin' and Chattin'",
   tagline: "Two besties, one mic, infinite tea - healing, chaos, and Sips of the Week.",
   domain: "https://chittinandchattin.com",
+  emails: {
+    inboxes: "Chittinandchattin+inboxes@gmail.com",
+    contact: "Chittinandchattin+m&syd@gmail.com",
+    contactM: "Chittinandchattin+M@gmail.com",
+    contactSyd: "Chittinandchattin+Syd@gmail.com",
+  },
   web3forms: {
     spill: "1114430c-42fe-4195-8aa8-fbdfeaacc9e8",
     healing: "92105694-ab70-40b9-b495-a5f235818b20",
     sip: "3525561a-615c-4796-9255-125cdeb27ad6",
+    contact: "0172b271-2050-4acc-a4e9-9903bb287bec",
   },
   bio:
-    "Hey y'all-ready to sip some tea, ramble about everything, and dive into whatever is happening in our brains? Grab a drink, get cozy, and hang out with two besties navigating life, healing through their trauma, and laughing through the chaos (tissues may be required).",
+    "Hey y'all - ready to sip some tea, ramble about everything, and dive into whatever is happening in our brains? Grab a drink, get cozy, and hang out with two besties navigating life, healing through their trauma, and laughing through the chaos (tissues may be required).",
   links: {
     instagram: "https://www.instagram.com/chittinnchattin/",
     youtube: "https://www.youtube.com/@chittinandchattin",

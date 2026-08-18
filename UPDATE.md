@@ -30,6 +30,8 @@ cd "G:\Laughing Dragons\chittinandchattin.com"
 | Host TikToks | `assets/js/config.js` → `hosts` |
 | Spill it / Healing copy | `spill-it-bestie/index.html`, `healing-inbox/index.html` |
 | Suggest a Sip inbox | `suggestasip/index.html`, `assets/js/config.js` → `web3forms.sip` |
+| Fan mail page | `fan-mail/index.html`, `assets/js/config.js` → `web3forms.contact` |
+| Delivery email addresses | `assets/js/config.js` → `emails.inboxes`, `emails.contact` |
 | AdSense slot IDs | `assets/js/config.js` → `adsense.slots` |
 | New page | Create `section/index.html`, add to `NAV` in `site.js`, add to `sitemap.xml` |
 | Refresh episode list | `python scripts/pull-episodes.py` then push (or use GitHub Actions — see below) |
@@ -39,6 +41,38 @@ cd "G:\Laughing Dragons\chittinandchattin.com"
 | Test slider puzzle | `node scripts/test-slider-puzzle.mjs` |
 
 Reference copy (not served directly): `content/` folder.
+
+---
+
+## Email & form delivery (Web3Forms → shared Gmail)
+
+Shared inbox: **Chittinandchattin@gmail.com**
+
+| Form | Web3Forms key | Deliver to |
+|------|---------------|------------|
+| Spill it, bestie | `web3forms.spill` | `Chittinandchattin+inboxes@gmail.com` |
+| Healing inbox | `web3forms.healing` | `Chittinandchattin+inboxes@gmail.com` |
+| Suggest a Sip | `web3forms.sip` | `Chittinandchattin+inboxes@gmail.com` |
+| Fan / business contact | `web3forms.contact` | `Chittinandchattin+m&syd@gmail.com` |
+
+Fan mail page: **https://chittinandchattin.com/fan-mail/** — one Web3Forms key; M/Syd buttons append `- M` or `- Syd` to the subject (e.g. `Chittin' and Chattin' - Fan mail - Syd`). Filter in Gmail on subject contains `Fan mail - M` or `Fan mail - Syd`.
+
+### Web3Forms dashboard ([web3forms.com](https://web3forms.com))
+
+1. Edit **Spill**, **Healing**, and **Sip** forms → set notification email to `Chittinandchattin+inboxes@gmail.com` (keys in `config.js` stay the same).
+2. Create a **new** form for fan mail → destination `Chittinandchattin+m&syd@gmail.com` → access key is in `web3forms.contact`.
+
+### Gmail filters (in the shared account)
+
+Create labels, then filters:
+
+1. **To** contains `+inboxes@` → label **Inboxes**, never spam
+2. **To** contains `+m&syd@` → label **Fan mail**, never spam
+3. Subject contains `Fan mail - M` → label **Fan mail - M**
+4. Subject contains `Fan mail - Syd` → label **Fan mail - Syd**
+5. Optional sub-filters on **Subject** (inside Inboxes): `Spill it`, `Healing`, `Suggest a Sip`
+
+Test each form from a **different** email account (not the shared Gmail).
 
 ---
 
@@ -68,7 +102,33 @@ python scripts/pull-episodes.py
 
 Data lands in `assets/data/episodes.json` and powers `/episodes/`.
 
-**Episode thumbnails:** The Anchor RSS feed only includes **show-level** artwork (the studio/ring-light photo), not unique art per episode. On `/episodes/`, when an episode image matches that shared show art, the site shows the podcast icon from `assets/brand/icon.png` instead of repeating the same recording setup photo on every card. If you later upload unique cover art per episode in Spotify for Creators, those distinct URLs will display automatically.
+**Episode thumbnails:** RSS only has show-level art, so cards use the brand icon until you run the thumbnail fetcher. Video episodes on Spotify have unique stills via Spotify’s Pathfinder API.
+
+**Local test (all episodes):**
+
+```powershell
+# One-shot: pull RSS, fetch thumbs, start preview server
+.\scripts\preview-episode-thumbs.ps1
+```
+
+If Spotify blocks automatic token fetch, grab a token once from your browser:
+
+1. Open https://open.spotify.com/show/5XmmJuVjc7S4j0aElFIeeF
+2. DevTools → Network → filter `get_access_token` → copy `accessToken`
+3. Run:
+
+```powershell
+$env:SPOTIFY_ACCESS_TOKEN = "paste-token-here"
+.\scripts\preview-episode-thumbs.ps1
+```
+
+Dry-run matches only: `.\scripts\preview-episode-thumbs.ps1 -DryRun`
+
+Outputs:
+- `assets/episodes/thumbs/ep-XX.jpg` — committed image files
+- `localThumbPath` on each episode in `assets/data/episodes.json`
+
+`pull-episodes.py` preserves existing `localThumbPath` / `spotifyEpisodeId` on Friday RSS refresh.
 
 ### Sips of the Week archive
 

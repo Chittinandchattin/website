@@ -419,6 +419,40 @@ a:hover {
   margin: 0 0 0.75rem;
 }
 
+.host-card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.fan-mail-section {
+  margin-bottom: 2rem;
+}
+
+.fan-mail-prompt {
+  font-size: 1.125rem;
+  margin: 0.75rem 0 0;
+}
+
+.fan-mail-host-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0 0.5rem;
+}
+
+.fan-mail-host-btn {
+  min-width: 5.5rem;
+}
+
+.fan-mail-selected {
+  margin: 0 0 1rem;
+}
+
+.fan-mail-form-wrap.is-collapsed {
+  display: none;
+}
+
 .feature-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
