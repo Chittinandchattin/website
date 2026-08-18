@@ -75,6 +75,37 @@ def fetch_spotify_show_thumbnail(show_url: str) -> str:
         return ""
 
 
+def normalize_title_key(text: str) -> str:
+    text = (text or "").lower()
+    text = re.sub(r"[^\w\s]", " ", text)
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def merge_episode_metadata(new_episodes: list[dict], existing_payload: dict | None) -> None:
+    """Keep downloaded thumb fields when RSS is refreshed."""
+    if not existing_payload:
+        return
+    old_by_num = {
+        ep.get("episodeNumber"): ep
+        for ep in existing_payload.get("episodes", [])
+        if ep.get("episodeNumber") is not None
+    }
+    old_by_title = {
+        normalize_title_key(ep.get("title", "")): ep for ep in existing_payload.get("episodes", [])
+    }
+    for ep in new_episodes:
+        old = old_by_num.get(ep.get("episodeNumber"))
+        if old is None:
+            old = old_by_title.get(normalize_title_key(ep.get("title", "")))
+        if not old:
+            continue
+        for key in ("localThumbPath", "spotifyEpisodeId", "thumbUpdated"):
+            if old.get(key):
+                ep[key] = old[key]
+        if old.get("localThumbPath") and old.get("imageUrl"):
+            ep["imageUrl"] = old["imageUrl"]
+
+
 def fetch_episodes(feed_url: str) -> tuple[list[dict], str, str]:
     req = urllib.request.Request(feed_url, headers={"User-Agent": "ChittinnchattinSite/1.0"})
     with urllib.request.urlopen(req, timeout=30) as resp:
@@ -136,6 +167,13 @@ def main() -> int:
     from datetime import UTC, datetime
 
     OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    existing_payload = None
+    if OUT_PATH.exists():
+        try:
+            existing_payload = json.loads(OUT_PATH.read_text(encoding="utf-8"))
+        except json.JSONDecodeError:
+            existing_payload = None
+    merge_episode_metadata(episodes, existing_payload)
     payload = {
         "feedUrl": FEED_URL,
         "spotifyShowUrl": SPOTIFY_SHOW_URL,

@@ -1,0 +1,371 @@
+{
+  "comment": "Hand-edited sip details keyed by episodeNumber. Re-run extract-sips.py to merge.",
+  "overrides": {
+    "1": {
+      "displayName": "Christmas Morning Loose-Leaf Black Tea",
+      "description": "Our very first Sips of the Week - M brewed a loose-leaf black tea with almonds, apple pieces, orange peel, raisins, cinnamon, and warm spices, served in a ceramic pot. Cozy, holiday-coded, and exactly the vibe for episode one while we shared our backstory and how Chittin' and Chattin' came to be.",
+      "ingredients": [
+        "black tea",
+        "almonds",
+        "apple pieces",
+        "orange peel",
+        "raisins",
+        "cinnamon",
+        "spices"
+      ],
+      "vessel": "ceramic teapot"
+    },
+    "2": {
+      "displayName": "Seasonal Eggnog",
+      "description": "Sydney whipped up seasonal eggnog for our second Sips of the Week - because if you're going to build a segment, you might as well do it with something festive in the glass. We also opened the Healing Inbox for the very first time that week, so the sip set the tone for a whole new era of the pod.",
+      "ingredients": [
+        "eggnog",
+        "bourbon",
+        "nutmeg",
+        "cinnamon"
+      ],
+      "vessel": ""
+    },
+    "3": {
+      "displayName": "Cottage Apple Tea",
+      "description": "M's Cottage Apple Tea from the Louisville Tea Company - one of Em's absolute favorites. Green tea base with apple, nutmeg, and warming spices.",
+      "descriptionHtml": "We're back with another Sips of the Week, featuring M's yummy Cottage Apple Tea. One of Em's absolute favorites from the <a href=\"https://www.louisvilleteacompany.com/\" target=\"_blank\" rel=\"noopener\">Louisville Tea Company</a> - green tea base with apple, nutmeg, and warming spices. We couldn't find a direct link to this blend; it may have been discontinued, but the shop is still worth a browse.",
+      "ingredients": [
+        "green tea",
+        "apple",
+        "nutmeg",
+        "warming spices"
+      ],
+      "notes": "Blend may be discontinued - no product page found.",
+      "needsListen": false
+    },
+    "4": {
+      "displayName": "White Chocolate Coffee + Salted Caramel Cold Foam",
+      "description": "This week we started out strong with white chocolate coffee topped with salted caramel cold foam, served in our matching Up mugs - cozy home vibes while we talked nervous system burnout, got a little vulnerable in the Healing Inbox, and had another top-tier Spill It, Bestie submission.",
+      "ingredients": [
+        "white chocolate",
+        "coffee",
+        "salted caramel cold foam"
+      ],
+      "vessel": "matching Up mugs",
+      "method": ""
+    },
+    "5": {
+      "displayName": "McDonald's Dr Pepper",
+      "description": "This week's Sips of the Week was a \"nice and good\" McDonald's Dr Pepper (babaayyy). Simple, chaotic, perfect - the kind of sip that keeps you going while you're celebrating anniversaries, hyped about IU wins, and catching up on the newest Crime Junkie episode.",
+      "ingredients": [
+        "Dr Pepper"
+      ],
+      "method": ""
+    },
+    "6": {
+      "displayName": "Nick's Sick Mix",
+      "description": "A beautiful and cozy recipe from Louisville Tea Company called Nick's Sick Mix - and trust us, it was sooo yummy.",
+      "descriptionHtml": "A beautiful and cozy recipe from the <a href=\"https://www.louisvilleteacompany.com/\" target=\"_blank\" rel=\"noopener\">Louisville Tea Company</a> called Nick's Sick Mix - and trust us, it was sooo yummy. Perfect for surviving a snowstorm, showing off new hair, and proudly applauding M for not getting a cat… yet.",
+      "ingredients": [
+        "Nick's Sick Mix tea"
+      ]
+    },
+    "7": {
+      "displayName": "Coffee with Buffalo Trace Bourbon Sipping Cream",
+      "description": "The ultimate winter treat: coffee with Buffalo Trace bourbon sipping cream - chef's kiss. We were fully leaning into the vibes in our matching \"Overstimulated\" shirts while everything outside looked like a literal winter wonderland.",
+      "ingredients": [
+        "coffee",
+        "Buffalo Trace bourbon sipping cream"
+      ],
+      "method": "",
+      "vessel": ""
+    },
+    "8": {
+      "displayName": "Coffee for the Modern Witch",
+      "description": "This week's Sips felt extra magical - coffee inspired by Coffee for the Modern Witch, the book we picked up in Salem (obviously we're leaning into our cozy, mystical era). Syd sipped from the Valentine's mug her sweet hubby gifted her, complete with a chaotic internet meme quote that truly represents her spirit.",
+      "ingredients": [
+        "coffee"
+      ],
+      "vessel": "Valentine's mug"
+    },
+    "9": {
+      "displayName": "Fresh Strawberry Margaritas",
+      "description": "We had our first ever guest - our girl Lauren! - and since we're all three bartenders, our Sips of the Week were fresh strawberry margaritas handcrafted by Laur herself. It quickly turned into a little midday margarita madness and the giggles were flowing. No exact recipe on the episode, so here's a solid baseline.",
+      "hosts": [
+        {
+          "host": "Lauren",
+          "drink": "fresh strawberry margaritas (handcrafted)"
+        }
+      ],
+      "ingredients": [
+        "tequila",
+        "fresh lime juice",
+        "orange liqueur",
+        "fresh strawberries",
+        "agave syrup (optional)",
+        "salt for rim (optional)"
+      ],
+      "method": "Muddle 3-4 fresh strawberries in a shaker. Add 2 oz tequila, 1 oz fresh lime juice, 1 oz orange liqueur, and a small splash of agave if you like it sweeter. Shake hard with ice and strain into a salt-rimmed glass over fresh ice.",
+      "needsListen": false
+    },
+    "10": {
+      "displayName": "The Raven Tea",
+      "description": "Our 10th-episode Sips were the most perfectly moody tea called The Raven - dramatic, mysterious, and honestly fitting for the unhinged tangents we went on. Cozy, chaotic, honest, and very episode-ten coded.",
+      "ingredients": [
+        "The Raven tea blend"
+      ],
+      "method": ""
+    },
+    "11": {
+      "displayName": "Spicy Tea + Girl Scout Cookies",
+      "description": "A spicy tea that we very scientifically paired with Girl Scout cookies and banana peppers… because why not? Syd also managed to literally spill her tea on mic at one point, which honestly feels very on-brand for us.",
+      "pairedFood": "Girl Scout cookies and banana peppers",
+      "ingredients": [
+        "spicy tea"
+      ],
+      "method": ""
+    },
+    "12": {
+      "displayName": "Green Tea Jasmine",
+      "description": "A cozy cup of green tea jasmine while we recapped Sydney's whirlwind trip to Cleveland - must-see spots, 27 Club Coffee, a Cavaliers game, a concert, and seriously amazing food. She was barely home a full day before packing up for Cincinnati because the motto is basically \"we can sleep when we're dead.\"",
+      "ingredients": [
+        "green tea jasmine"
+      ],
+      "method": ""
+    },
+    "13": {
+      "displayName": "Coffee with Homemade Blueberry Creamer",
+      "description": "A springy dream - coffee with homemade blueberry creamer, and we are FEELING the fresh vibes. Happy Ostara! The kind of sip that makes you believe winter might actually be over, even while adults who cannot read the room are testing our patience.",
+      "ingredients": [
+        "coffee",
+        "homemade blueberry creamer"
+      ],
+      "method": "Add homemade blueberry creamer to your coffee."
+    },
+    "14": {
+      "displayName": "Mango Tea with Nick's Sick Mix + Honey",
+      "description": "This might actually be the BEST sip we've ever made - mango tea with Nick's Sick Mix and honey. The most soothing, perfect spring blend, even while our sinuses were fighting for their lives with this weather and spring was doing whatever it wanted.",
+      "ingredients": [
+        "mango tea",
+        "Nick's Sick Mix",
+        "honey"
+      ],
+      "method": ""
+    },
+    "15": {
+      "displayName": "Mango Tea Sangria with Rosé",
+      "description": "A refreshing mango tea sangria infused with rosé - and let's just say… she paired PERFECTLY with the international snack haul from Syd's trip to Jungle Jim's in Cincinnati. M really did her thing with this one.",
+      "descriptionHtml": "A refreshing mango tea sangria infused with rosé - and let's just say… she paired PERFECTLY with the international snack haul from Syd's trip to <a href=\"https://www.junglejims.com/\" target=\"_blank\" rel=\"noopener\">Jungle Jim's</a> in Cincinnati. M really did her thing with this one.",
+      "ingredients": [
+        "mango tea",
+        "rosé"
+      ],
+      "pairedFood": "international snacks from Jungle Jim's"
+    },
+    "16": {
+      "displayName": "Black Cat Riesling + Turkish Delight",
+      "description": "A surprise find from Jungle Jim's - an amazing Riesling in the CUTEST black cat bottle, paired perfectly with a quirky little Turkish delight treat that Syd picked out. She really nailed the vibe on this one.",
+      "descriptionHtml": "A surprise find from <a href=\"https://www.junglejims.com/\" target=\"_blank\" rel=\"noopener\">Jungle Jim's</a> - an amazing Riesling in the CUTEST black cat bottle, paired perfectly with a quirky little Turkish delight treat that Syd picked out. She really nailed the vibe on this one - cozy, reflective, and just the right amount of unhinged.",
+      "ingredients": [
+        "Riesling wine"
+      ],
+      "pairedFood": "Turkish delight",
+      "vessel": "black cat bottle",
+      "method": ""
+    },
+    "17": {
+      "displayName": "Spiced Coffee with French Vanilla + Cinnamon Sugar",
+      "description": "Sips of the Week was a cozy coffee moment - M whipped up a spiced creation and Syd made hers extra sweet with French vanilla creamer and cinnamon sugar, because balance. We were feeling accomplished filming at 11am like productive queens, fueled by M's incredible home-cooked breakfast.",
+      "hosts": [
+        {
+          "host": "M",
+          "drink": "spiced coffee"
+        },
+        {
+          "host": "Syd",
+          "drink": "extra sweet with French vanilla creamer and cinnamon sugar"
+        }
+      ],
+      "ingredients": [
+        "coffee",
+        "French vanilla creamer",
+        "cinnamon sugar"
+      ],
+      "method": ""
+    },
+    "18": {
+      "displayName": "Mango and Spicy Chili Tea",
+      "description": "M's elite concoction - mango and spicy chili tea paired with pastries from her homemade breakfast. Chef energy, always - even while we were both just… surviving, Syd had thrown her back out again, and M's eye was swollen shut from allergies.",
+      "ingredients": [
+        "mango tea",
+        "spicy chili tea"
+      ],
+      "pairedFood": "homemade breakfast pastries",
+      "method": ""
+    },
+    "19": {
+      "displayName": "Japanese Mango Cream Soda + Vodka",
+      "description": "Japanese mango cream soda plus vodka… basically a mango screwdriver, and we're not mad about it. A chaotic but delicious mix for a week when life felt like a scam, everything was a scam, and we were a little all over the place - you get it.",
+      "ingredients": [
+        "Japanese mango cream soda",
+        "vodka"
+      ],
+      "method": ""
+    },
+    "20": {
+      "displayName": "Brown Sugar Caramel Iced Coffee",
+      "description": "Brown sugar caramel iced coffees served in the cutest Dolly Parton cups gifted by Syd's mother-in-law - which immediately sent us into our feelings after seeing Dolly's recent video and absolutely crushed our souls. Twenty episodes of hanging out with us, and this sip felt like a milestone moment.",
+      "ingredients": [
+        "brown sugar",
+        "caramel",
+        "iced coffee"
+      ],
+      "vessel": "Dolly Parton cups",
+      "method": "",
+      "pairedFood": ""
+    },
+    "21": {
+      "displayName": "Giant Spicy Mango Margarita",
+      "description": "This episode is powered by a GIANT spicy mango margarita literally the size of our heads, paired perfectly with killer chips and queso - as all good decisions are. We filmed ahead of time because M was back home in Colorado for Mother's Day, but the sip energy was very much present.",
+      "ingredients": [
+        "spicy mango margarita"
+      ],
+      "pairedFood": "chips and queso"
+    },
+    "22": {
+      "displayName": "Peanut Butter Iced Coffee",
+      "description": "Peanut butter iced coffees paired perfectly with chips and queso while our brains rode the absolute struggle bus. Sometimes the sip matches the mental weather - and this week, we were very much on the struggle bus.",
+      "ingredients": [
+        "peanut butter",
+        "iced coffee"
+      ],
+      "pairedFood": "chips and queso"
+    },
+    "23": {
+      "displayName": "Cozy Coffee + Muffin Tin Brownies",
+      "description": "A cozy coffee paired with M's homemade muffin tin brownies with walnuts - which of course sent Syd into a story about her great aunt lovingly known as \"Bessie Cracking Walnuts.\" Naturally. Cozy, chaotic, honest, and cut a little short because we're working gals and had to run.",
+      "ingredients": [
+        "coffee"
+      ],
+      "pairedFood": "muffin tin brownies with walnuts",
+      "method": ""
+    },
+    "24": {
+      "displayName": "Sunset Sarsaparilla Floats",
+      "description": "Boozy Sunset Sarsaparilla floats inspired by the Fallout universe (thank you, Costco) - and honestly, they were as fun as they sound. Happy Pride Month, friends - we celebrated love, community, and the beautiful history behind Pride with this one.",
+      "ingredients": [
+        "Sunset Sarsaparilla",
+        "ice cream",
+        "vodka"
+      ],
+      "method": "",
+      "vessel": ""
+    },
+    "25": {
+      "displayName": "De-Stress Tea + Bloom Vodka Shot",
+      "description": "A much-needed two-parter: some de-stress tea that honestly revived our souls, followed by a shot of vodka mixed with Sydney's very first Bloom drink. Listen, we're bartenders and life has been life-ing lately, so we're just keeping it real with y'all.",
+      "ingredients": [
+        "de-stress tea",
+        "vodka",
+        "Bloom energy drink"
+      ],
+      "method": "Steep de-stress tea; follow with a shot of vodka mixed with Bloom."
+    },
+    "26": {
+      "displayName": "Coffee + King Donuts",
+      "description": "A cozy coffee paired with an assortment of donuts from King Donuts and some absolutely incredible chocolate hazelnut-filled beignets. The kind of spread that makes you forget about the disaster-movie storms that had both of us waking up wondering if we'd ended up in the middle of an action film.",
+      "ingredients": [
+        "coffee"
+      ],
+      "pairedFood": "King Donuts assortment and chocolate hazelnut beignets"
+    },
+    "27": {
+      "displayName": "Passionfruit Margarita",
+      "description": "A refreshing passionfruit margarita while we welcomed the first day of summer with a little chat about paganism and the changing of the seasons. The episode name-checks a tequila seltzer, but no full recipe - here's a classic passionfruit margarita to match the vibe.",
+      "ingredients": [
+        "tequila",
+        "fresh lime juice",
+        "passionfruit puree or syrup",
+        "orange liqueur",
+        "agave syrup (optional)",
+        "salt for rim (optional)"
+      ],
+      "method": "Add 2 oz tequila, 1 oz fresh lime juice, 1 oz passionfruit puree or syrup, and ½ oz orange liqueur to a shaker with ice. Shake until chilled and strain into a salt-rimmed glass over fresh ice. Adjust sweetness with agave if needed.",
+      "notes": "Episode mentions a tequila seltzer by name only - no measured recipe given.",
+      "needsListen": false
+    },
+    "28": {
+      "displayName": "7 Brew Milkshake Concoctions",
+      "description": "7 Brew milkshakes - we took our favorite drinks, added some ice cream, and turned them into delicious concoctions that were so worth it.",
+      "descriptionHtml": "This week's Sips were inspired by <a href=\"https://7brew.com/\" target=\"_blank\" rel=\"noopener\">7 Brew</a> - we took our favorite drinks, added some ice cream, and turned them into delicious milkshake concoctions that were so worth it. In the spirit of the 4th of July, grab your favorite drink, get comfy, and come hang out with us.",
+      "hosts": [
+        {
+          "host": "Em",
+          "drink": "Brewberry Freeze with vanilla ice cream"
+        },
+        {
+          "host": "Syd",
+          "drink": "Pixie Stick (almond, cherry, strawberry) topped with Moose Tracks ice cream"
+        }
+      ],
+      "ingredients": [
+        "7 Brew Brewberry Freeze",
+        "7 Brew Pixie Stick (almond, cherry, strawberry)",
+        "vanilla ice cream",
+        "Moose Tracks ice cream"
+      ],
+      "method": "Order your 7 Brew drink, blend with ice cream of choice, and enjoy as a milkshake.",
+      "needsListen": false
+    },
+    "29": {
+      "displayName": "Brown Sugar Latte + Peach Cobbler",
+      "description": "We didn't even care about our Sips of the Week because we had the real Treat of the Week - M made the most incredible homemade peach cobbler using fresh peaches from a roadside stand, and honestly… it completely stole the show. We paired it with a classic brown sugar latte as we both continue our yearly transition into fall the second the Fourth of July is over.",
+      "pairedFood": "homemade peach cobbler with fresh roadside peaches",
+      "ingredients": [
+        "brown sugar latte",
+        "coffee",
+        "peaches"
+      ]
+    },
+    "30": {
+      "displayName": "Tea Frog",
+      "description": "Happy Episode 30! A summery blend called Tea Frog, served in the new spooky cups Syd brought back from her trip home. She also introduced M to the infamous Double Kiwi gas station pizza rolls - if you've never had them, consider this your official sign to change that.",
+      "ingredients": [
+        "Tea Frog tea blend"
+      ],
+      "vessel": "spooky cups from Syd's trip home"
+    },
+    "31": {
+      "displayName": "McDonald's Refreshers",
+      "description": "McDonald's Refreshers served in our cutest glasses - because we're classy like that. Syd sipped a Sprite Berry Blast while M enjoyed the Mango Pineapple, and somehow our adorable hats spiraled into one of the messiest Spill It, Bestie conversations we've had yet.",
+      "hosts": [
+        {
+          "host": "Syd",
+          "drink": "Sprite Berry Blast Refresher"
+        },
+        {
+          "host": "M",
+          "drink": "Mango Pineapple Refresher"
+        }
+      ],
+      "vessel": "cutest glasses"
+    },
+    "32": {
+      "displayName": "Strawberry Watermelon Mint Frozen Margaritas",
+      "description": "STRAWBERRY WATERMELON MINT FROZEN MARGARITAS - because honestly… we deserved this one. Syd is soaking up her last few days of \"freedom\" before starting a new job, M is schooling us on paganism and the moon, and this sip was the perfect reward.",
+      "ingredients": [
+        "strawberry",
+        "watermelon",
+        "mint",
+        "tequila",
+        "margarita"
+      ]
+    },
+    "33": {
+      "displayName": "Lemon Ginger Tea with Brown Sugar Cinnamon Syrup",
+      "description": "A cozy lemon ginger tea sweetened with brown sugar cinnamon syrup - delicious and a little spiritually charged. M brewed it after a Google deep-dive on what helps with cramps (lemon and ginger), then added Torani brown sugar cinnamon syrup because balance. Lemon for purification, ginger for fire and courage - and apparently episode 33 numerology energy too.",
+      "ingredients": [
+        "lemon ginger tea",
+        "Torani brown sugar cinnamon syrup"
+      ],
+      "method": "Steep lemon ginger tea, then add brown sugar cinnamon syrup to taste.",
+      "vessel": "TJ Maxx mugs"
+    }
+  }
+}
