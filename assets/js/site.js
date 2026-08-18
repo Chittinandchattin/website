@@ -264,7 +264,7 @@ function renderTeaser({ eyebrow, title, body, href, cta, image, reverse = false,
         </div>
       </div>
       <div class="teaser-visual reveal" aria-hidden="true">
-        <div class="teaser-frame" style="background-image:url('${image}')"></div>
+        <img class="teaser-frame" src="${image}" alt="" loading="lazy" />
       </div>
     </div>
   </section>`;
