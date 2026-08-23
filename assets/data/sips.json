@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-17T11:17:56Z",
-  "count": 34,
+  "updated": "2026-08-23T20:49:26Z",
+  "count": 35,
   "sips": [
     {
       "episodeNumber": 1,
@@ -1061,6 +1061,35 @@
       "pairedFood": "",
       "vessel": "",
       "sourceExcerpt": "Sips of the Week are farmers market vibes with blueberry iced tea and lemonade for a little homemade Arnold Palmer! 🫐🍋 And in a shocking confession, Sydney reveals she HATED tea her entire childhood… despite being raised a southern bumpkin",
+      "sources": [
+        "rss"
+      ],
+      "transcriptPath": "",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 35,
+      "title": "If You Give a Neuro-Spicy Brain a Cookie",
+      "published": "Fri, 21 Aug 2026 17:50:55 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/If-You-Give-a-Neuro-Spicy-Brain-a-Cookie-e3nnf8a",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/124549834/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-7-21%2F430289050-44100-2-b5e6e9b4bb184.mp3",
+      "duration": "01:07:00",
+      "displayName": "went HARD with a homemade salted caramel mocha freeze",
+      "description": "Sips of the Week went HARD with a homemade salted caramel mocha freeze-complete with M’s frozen coffee ice cubes because apparently regular ice just wasn’t enough",
+      "descriptionHtml": "",
+      "name": "went HARD with a homemade salted caramel mocha freeze-complete with M’s frozen coffee ice cubes because apparently regular ice just wasn’t enough",
+      "hosts": [],
+      "ingredients": [
+        "caramel",
+        "coffee"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "is week’s Sips of the Week went HARD with a homemade salted caramel mocha freeze-complete with M’s frozen coffee ice cubes because apparently regular ice just wasn’t enough",
       "sources": [
         "rss"
       ],
