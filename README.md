@@ -6,7 +6,7 @@ Static site for **chittinandchattin.com** — listen links, host bios, Spill it 
 
 - Static HTML + CSS + JS (no build step)
 - GitHub → Cloudflare Pages (auto-deploy on push to `main`)
-- **Repo:** https://github.com/laughingdragonsproductions/Chittinandchattin
+- **Repo:** https://github.com/Chittinandchattin/website
 - Google AdSense (`ca-pub-7048606415692002`) — shared with Laughing Dragons
 
 ## Preview locally
@@ -31,3 +31,5 @@ See [UPDATE.md](UPDATE.md) for content edits and phase-2 plans.
 ## Deploy
 
 See [DEPLOY.md](DEPLOY.md) for GitHub, Cloudflare Pages, dual domains, and AdSense.
+
+**Account migration:** [MIGRATION.md](MIGRATION.md) · **Handoff (girls):** [HANDOFF.md](HANDOFF.md)
