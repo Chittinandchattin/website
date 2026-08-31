@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-24T11:58:49Z",
-  "count": 35,
+  "updated": "2026-08-31T11:06:55Z",
+  "count": 36,
   "sips": [
     {
       "episodeNumber": 1,
@@ -1090,6 +1090,34 @@
       "pairedFood": "",
       "vessel": "",
       "sourceExcerpt": "is week’s Sips of the Week went HARD with a homemade salted caramel mocha freeze-complete with M’s frozen coffee ice cubes because apparently regular ice just wasn’t enough",
+      "sources": [
+        "rss"
+      ],
+      "transcriptPath": "",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 36,
+      "title": "Good Golly Miss Dolly, We're Trying",
+      "published": "Sat, 29 Aug 2026 13:01:14 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Good-Golly-Miss-Dolly--Were-Trying-e3o241n",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/124898807/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-7-29%2Fd5c79308-8e7b-f47a-71d4-946fa3f28b07.mp3",
+      "duration": "00:53:03",
+      "displayName": "Bananas Foster Black Tea, which was a birthday gift to M from one…",
+      "description": "Sips of the Week are Bananas Foster Black Tea, which was a birthday gift to M from one of our listeners!! 🥹🍌☕ And speaking of birthdays… M turns 30 THE DAY THIS EPISODE IS RELEASED!!! 🎂✨ So naturally, in between fighting technology and mourning our video, we’ve also been preparing for M to officially enter her 30s. And, of course, we couldn’t let this week pass without talking about the absolute amazingness that is Dolly Parton and all the joy she brought into this world. 💕🌸 So thank you for your patience, your love, and for sticking with us through the technical difficulties",
+      "descriptionHtml": "",
+      "name": "Bananas Foster Black Tea, which was a birthday gift to M from one of our listeners!! 🥹🍌☕ And speaking of birthdays… M turns 30 THE DAY THIS EPISODE IS RELEASED!!! 🎂✨ So naturally, in between fighting technology and mourning our video, we’ve also been preparing for M to officiall",
+      "hosts": [],
+      "ingredients": [
+        "tea"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "YWAY… our Sips of the Week are Bananas Foster Black Tea, which was a birthday gift to M from one of our listeners!! 🥹🍌☕ And speaking of birthdays… M turns 30 THE DAY THIS EPISODE IS RELEASED!!! 🎂✨ So naturally, in between fighting technology and mourning our video, we’ve also been preparing for M to",
       "sources": [
         "rss"
       ],
