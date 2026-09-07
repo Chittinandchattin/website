@@ -1,6 +1,6 @@
 {
-  "updated": "2026-08-31T11:06:55Z",
-  "count": 36,
+  "updated": "2026-09-07T11:13:06Z",
+  "count": 37,
   "sips": [
     {
       "episodeNumber": 1,
@@ -1124,6 +1124,34 @@
       "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 37,
+      "title": "Hammocks and Heat Rashes",
+      "published": "Fri, 04 Sep 2026 20:48:05 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Hammocks-and-Heat-Rashes-e3obrn5",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/125217957/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-8-4%2F431203739-44100-2-8e1bdeb2c0eae.mp3",
+      "duration": "00:53:39",
+      "displayName": "",
+      "description": "",
+      "descriptionHtml": "",
+      "name": "",
+      "hosts": [],
+      "ingredients": [
+        "tea"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "",
+      "sources": [
+        "rss"
+      ],
+      "transcriptPath": "",
+      "completeness": "blank",
+      "needsListen": true,
       "manualNotes": ""
     }
   ]

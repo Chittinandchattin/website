@@ -1,6 +1,6 @@
 CHITTIN' AND CHATTIN' - SIPS OF THE WEEK
-Updated: 2026-08-31T11:06:55Z
-Episodes: 36
+Updated: 2026-09-07T11:13:06Z
+Episodes: 37
 
 ============================================================
 
@@ -431,5 +431,15 @@ Description: Sips of the Week are Bananas Foster Black Tea, which was a birthday
 Ingredients: tea
 Status: full
 Link: https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Good-Golly-Miss-Dolly--Were-Trying-e3o241n
+
+------------------------------------------------------------
+
+EPISODE 37: Hammocks and Heat Rashes
+Published: Fri, 04 Sep 2026 20:48:05 GMT
+
+Sip: (unknown)
+Ingredients: tea
+Status: blank - needs listen
+Link: https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Hammocks-and-Heat-Rashes-e3obrn5
 
 ------------------------------------------------------------
