@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-07T11:13:06Z",
-  "count": 37,
+  "updated": "2026-09-14T11:13:15Z",
+  "count": 38,
   "sips": [
     {
       "episodeNumber": 1,
@@ -1152,6 +1152,32 @@
       "transcriptPath": "",
       "completeness": "blank",
       "needsListen": true,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 38,
+      "title": "We Saw a Boulder and Made a Decision",
+      "published": "Thu, 10 Sep 2026 00:09:33 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/We-Saw-a-Boulder-and-Made-a-Decision-e3ok9i1",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/125494273/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-8-10%2F431568278-44100-2-e53befc1efd0b.mp3",
+      "duration": "01:12:38",
+      "displayName": "Witches Brew Alani + WATER because your girls went on a HIKE!…",
+      "description": "Sips of the Week are Witches Brew Alani + WATER because your girls went on a HIKE! We’re coming at you from Clifty Falls State Park, AKA Indiana's stair master, in Madison, Indiana, on the most perfect early-fall morning",
+      "descriptionHtml": "",
+      "name": "Witches Brew Alani + WATER because your girls went on a HIKE! We’re coming at you from Clifty Falls State Park, AKA Indiana's stair master, in Madison, Indiana, on the most perfect early-fall morning",
+      "hosts": [],
+      "ingredients": [],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "is week's Sips of the Week are Witches Brew Alani + WATER because your girls went on a HIKE! We’re coming at you from Clifty Falls State Park, AKA Indiana's stair master, in Madison, Indiana, on the most perfect early-fall morning",
+      "sources": [
+        "rss"
+      ],
+      "transcriptPath": "",
+      "completeness": "full",
+      "needsListen": false,
       "manualNotes": ""
     }
   ]
