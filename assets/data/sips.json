@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-21T11:12:25Z",
-  "count": 38,
+  "updated": "2026-09-28T11:13:13Z",
+  "count": 39,
   "sips": [
     {
       "episodeNumber": 1,
@@ -1172,6 +1172,34 @@
       "pairedFood": "",
       "vessel": "",
       "sourceExcerpt": "is week's Sips of the Week are Witches Brew Alani + WATER because your girls went on a HIKE! We’re coming at you from Clifty Falls State Park, AKA Indiana's stair master, in Madison, Indiana, on the most perfect early-fall morning",
+      "sources": [
+        "rss"
+      ],
+      "transcriptPath": "",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 39,
+      "title": "POV: You're on a Roadtrip With Us",
+      "published": "Tue, 22 Sep 2026 00:44:33 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/POV-Youre-on-a-Roadtrip-With-Us-e3p7495",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/126111461/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-8-22%2F432399957-44100-2-b15a57d47bf36.mp3",
+      "duration": "00:42:05",
+      "displayName": "coming with us this time because Chittin’ & Chattin’ is ON THE…",
+      "description": "Sips of the Week are coming with us this time because Chittin’ & Chattin’ is ON THE ROAD AGAIN ! We’ve got homemade coffee, Witches Brew Alani, and of course WATER because apparently hiking requires us to pretend we’re responsible adults. 😂 This episode is a little different because we’re bringing you along for the whole mini road trip to Clifty Falls State Park in Madison, Indiana ! You get to ride shotgun with us as we make our way down the backroads, admire all the tree farms and corn fields, and repeatedly yell “YOU GUYS” because FALL IS COMING and we are WAY too excited about it. 🍁🎃 Sydney is testing out her new Luna 360 camera and… well… let’s just say the joystick has given her entirely too much power. 😂 Watch her look like a toddler proudly showing you every single pretty tree and corn field along the way while we embrace the absolute chaos of the two of us trapped in a car together",
+      "descriptionHtml": "",
+      "name": "coming with us this time because Chittin’ & Chattin’ is ON THE ROAD AGAIN ! We’ve got homemade coffee, Witches Brew Alani, and of course WATER because apparently hiking requires us to pretend we’re responsible adults",
+      "hosts": [],
+      "ingredients": [
+        "coffee"
+      ],
+      "method": "homemade coffee",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "GUYS!! 🍂 Sips of the Week are coming with us this time because Chittin’ & Chattin’ is ON THE ROAD AGAIN ! We’ve got homemade coffee, Witches Brew Alani, and of course WATER because apparently hiking requires us to pretend we’re responsible adults",
       "sources": [
         "rss"
       ],
