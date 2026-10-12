@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-28T11:13:13Z",
-  "count": 39,
+  "updated": "2026-10-12T20:09:46Z",
+  "count": 41,
   "sips": [
     {
       "episodeNumber": 1,
@@ -1206,6 +1206,63 @@
       "transcriptPath": "",
       "completeness": "full",
       "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 40,
+      "title": "Spooky Stories, Cozy Sips, and Sweet Treats",
+      "published": "Thu, 01 Oct 2026 01:24:02 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Spooky-Stories--Cozy-Sips--and-Sweet-Treats-e3plrgr",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/126594011/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-1%2F433043893-44100-2-522ea2be93263.mp3",
+      "duration": "01:09:14",
+      "displayName": "came from Mickey’s Coffee Shop in New Albany, Indiana",
+      "description": "sips of the week came from Mickey’s Coffee Shop in New Albany, Indiana - M went for a maple spiced chai while Syd got a cookie butter cinnamon latte, and honestly… both were giving FALL",
+      "descriptionHtml": "",
+      "name": "came from Mickey’s Coffee Shop in New Albany, Indiana - M went for a maple spiced chai while Syd got a cookie butter cinnamon latte, and honestly… both were giving FALL",
+      "hosts": [],
+      "ingredients": [
+        "chai",
+        "cinnamon",
+        "coffee",
+        "latte"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "Our sips of the week came from Mickey’s Coffee Shop in New Albany, Indiana - M went for a maple spiced chai while Syd got a cookie butter cinnamon latte, and honestly… both were giving FALL",
+      "sources": [
+        "rss"
+      ],
+      "transcriptPath": "",
+      "completeness": "full",
+      "needsListen": false,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 41,
+      "title": "That Man Was a Serial Killer...",
+      "published": "Fri, 09 Oct 2026 17:39:42 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/That-Man-Was-a-Serial-Killer-e3q85ev",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/127194015/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-9%2F433802294-44100-2-d61f872159a15.mp3",
+      "duration": "01:10:17",
+      "displayName": "",
+      "description": "",
+      "descriptionHtml": "",
+      "name": "",
+      "hosts": [],
+      "ingredients": [],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "",
+      "sources": [
+        "rss"
+      ],
+      "transcriptPath": "",
+      "completeness": "blank",
+      "needsListen": true,
       "manualNotes": ""
     }
   ]
