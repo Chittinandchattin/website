@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-12T20:09:46Z",
-  "count": 41,
+  "updated": "2026-10-19T17:21:40Z",
+  "count": 42,
   "sips": [
     {
       "episodeNumber": 1,
@@ -1263,6 +1263,32 @@
       "transcriptPath": "",
       "completeness": "blank",
       "needsListen": true,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 42,
+      "title": "Bardstown True-Crime with a side of Hiking",
+      "published": "Sun, 18 Oct 2026 04:09:25 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Bardstown-True-Crime-with-a-side-of-Hiking-e3qlv2m",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/127646230/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-18%2F434402409-44100-2-70d14e189d8b2.mp3",
+      "duration": "01:10:39",
+      "displayName": "made with love, by one of our friends who works at Starbucks, hehe",
+      "description": "sips of the week were made with love, by one of our friends who works at Starbucks, hehe, and we started out on the Canopy Tree Walk overlooking the vast forest",
+      "descriptionHtml": "",
+      "name": "made with love, by one of our friends who works at Starbucks, hehe, and we started out on the Canopy Tree Walk overlooking the vast forest",
+      "hosts": [],
+      "ingredients": [],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "KY. Our sips of the week were made with love, by one of our friends who works at Starbucks, hehe, and we started out on the Canopy Tree Walk overlooking the vast forest",
+      "sources": [
+        "rss"
+      ],
+      "transcriptPath": "",
+      "completeness": "full",
+      "needsListen": false,
       "manualNotes": ""
     }
   ]
