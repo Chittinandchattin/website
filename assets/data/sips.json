@@ -1,6 +1,6 @@
 {
-  "updated": "2026-10-26T17:09:18Z",
-  "count": 43,
+  "updated": "2026-11-02T20:38:47Z",
+  "count": 44,
   "sips": [
     {
       "episodeNumber": 1,
@@ -1315,6 +1315,35 @@
       "transcriptPath": "",
       "completeness": "blank",
       "needsListen": true,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 44,
+      "title": "Exploring an Abandoned Amusement Park!",
+      "published": "Thu, 29 Oct 2026 03:12:46 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Exploring-an-Abandoned-Amusement-Park-e3ra3oe",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/128306382/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-28%2F435277678-44100-2-8797c0863e00a.mp3",
+      "duration": "01:42:15",
+      "displayName": "",
+      "description": "This week, we’re kicking things off at Charlestown Coffee & Cream (YUM!!) with some seriously good fall sips! Syd gets a London Fog, aka Niagara Falls (IYKYK), with no lavender and extra brown sugar",
+      "descriptionHtml": "",
+      "name": "This week, we’re kicking things off at Charlestown Coffee & Cream (YUM!!) with some seriously good fall sips! Syd gets a London Fog, aka Niagara Falls (IYKYK), with no lavender and extra brown sugar",
+      "hosts": [],
+      "ingredients": [
+        "coffee",
+        "cream"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "This week, we’re kicking things off at Charlestown Coffee & Cream (YUM!!) with some seriously good fall sips! Syd gets a London Fog, aka Niagara Falls (IYKYK), with no lavender and extra brown sugar",
+      "sources": [
+        "rss"
+      ],
+      "transcriptPath": "",
+      "completeness": "full",
+      "needsListen": false,
       "manualNotes": ""
     }
   ]
