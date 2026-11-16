@@ -1,6 +1,6 @@
 CHITTIN' AND CHATTIN' - SIPS OF THE WEEK
-Updated: 2026-11-09T21:19:29Z
-Episodes: 45
+Updated: 2026-11-16T20:50:09Z
+Episodes: 46
 
 ============================================================
 
@@ -522,5 +522,16 @@ Published: Sat, 07 Nov 2026 19:59:14 GMT
 Sip: (unknown)
 Status: blank - needs listen
 Link: https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Just-Screaming-in-a-Cemetery-e3rvcf3
+
+------------------------------------------------------------
+
+EPISODE 46: Stories of Diwali from Two Yappers
+Published: Sat, 14 Nov 2026 21:49:07 GMT
+
+Sip: come from Phalcha Coffee, where we try a little flight and M gives…
+Description: Sips of the Week come from Phalcha Coffee, where we try a little flight and M gives us some of the backstory behind this coffee
+Ingredients: coffee
+Status: full
+Link: https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Stories-of-Diwali-from-Two-Yappers-e3scrcj
 
 ------------------------------------------------------------

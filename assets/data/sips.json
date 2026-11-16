@@ -1,6 +1,6 @@
 {
-  "updated": "2026-11-09T21:19:29Z",
-  "count": 45,
+  "updated": "2026-11-16T20:50:09Z",
+  "count": 46,
   "sips": [
     {
       "episodeNumber": 1,
@@ -1370,6 +1370,34 @@
       "transcriptPath": "",
       "completeness": "blank",
       "needsListen": true,
+      "manualNotes": ""
+    },
+    {
+      "episodeNumber": 46,
+      "title": "Stories of Diwali from Two Yappers",
+      "published": "Sat, 14 Nov 2026 21:49:07 GMT",
+      "link": "https://podcasters.spotify.com/pod/show/sydney-lashae-waddle/episodes/Stories-of-Diwali-from-Two-Yappers-e3scrcj",
+      "audioUrl": "https://anchor.fm/s/10d11a464/podcast/play/129444691/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-14%2F436741525-44100-2-a64e6f6eeed26.mp3",
+      "duration": "00:40:53",
+      "displayName": "come from Phalcha Coffee, where we try a little flight and M gives…",
+      "description": "Sips of the Week come from Phalcha Coffee, where we try a little flight and M gives us some of the backstory behind this coffee",
+      "descriptionHtml": "",
+      "name": "come from Phalcha Coffee, where we try a little flight and M gives us some of the backstory behind this coffee",
+      "hosts": [],
+      "ingredients": [
+        "coffee"
+      ],
+      "method": "",
+      "notes": "",
+      "pairedFood": "",
+      "vessel": "",
+      "sourceExcerpt": "ghts! Our Sips of the Week come from Phalcha Coffee, where we try a little flight and M gives us some of the backstory behind this coffee",
+      "sources": [
+        "rss"
+      ],
+      "transcriptPath": "",
+      "completeness": "full",
+      "needsListen": false,
       "manualNotes": ""
     }
   ]
